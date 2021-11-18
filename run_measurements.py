@@ -11,6 +11,7 @@ import hashlib
 import uuid
 import os
 
+dnsproxy_dir = "/home/ubuntu/dnsproxy/"
 # download top list
 t = Tranco(cache=True, cache_dir='.tranco')
 tranco_list = t.list(date='2021-10-18')
@@ -188,14 +189,14 @@ def insert_performance(page, performance, timestamp, cache_warming=0, error=''):
 
 
 def insert_qlogs(uid):
-    with open("qlogs.txt", "r") as qlogs:
+    with open(f"{dnsproxy_dir}qlogs.txt", "r") as qlogs:
         log = qlogs.read()
         cursor.execute("""
             INSERT INTO qlogs VALUES (?,?);
             """, (uid, log))
         db.commit()
     # remove the qlogs after dumping it into the db
-    with open("qlogs.txt", "w") as qlogs:
+    with open(f"{dnsproxy_dir}qlogs.txt", "w") as qlogs:
         qlogs.write('')
 
 
