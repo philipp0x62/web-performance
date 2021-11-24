@@ -15,15 +15,14 @@ dnsproxy_dir = "/home/ubuntu/dnsproxy/"
 # download top list
 t = Tranco(cache=True, cache_dir='.tranco')
 tranco_list = t.list(date='2021-10-18')
-pages = tranco_list.top(25)
+pages = tranco_list.top(50)
 
 # performance elements to extract
 measurement_elements = ('id', 'protocol', 'server', 'domain', 'timestamp', 'connectEnd', 'connectStart', 'domComplete',
                         'domContentLoadedEventEnd', 'domContentLoadedEventStart', 'domInteractive', 'domainLookupEnd',
                         'domainLookupStart', 'duration', 'encodedBodySize', 'decodedBodySize', 'transferSize',
-                        'fetchStart', 'loadEventEnd', 'loadEventStart', 'redirectCount', 'redirectEnd', 'redirectStart',
-                        'requestStart', 'responseEnd', 'responseStart', 'secureConnectionStart', 'startTime',
-                        'unloadEventEnd', 'unloadEventStart', 'workerStart', 'nextHopProtocol', 'cacheWarming', 'error')
+                        'fetchStart', 'loadEventEnd', 'loadEventStart', 'requestStart', 'responseEnd', 'responseStart',
+                        'secureConnectionStart', 'startTime', 'nextHopProtocol', 'cacheWarming', 'error')
 
 # create db
 db = sqlite3.connect('web-performance.db')
@@ -116,17 +115,11 @@ def create_measurements_table():
             fetchStart integer,
             loadEventEnd integer,
             loadEventStart integer,
-            redirectCount integer,
-            redirectEnd integer,
-            redirectStart integer,
             requestStart integer,
             responseEnd integer,
             responseStart integer,
             secureConnectionStart integer,
             startTime integer,
-            unloadEventEnd integer,
-            unloadEventStart integer,
-            workerStart integer,
             nextHopProtocol string,
             cacheWarming integer,
             error string,
@@ -184,7 +177,7 @@ def insert_performance(page, performance, timestamp, cache_warming=0, error=''):
     if protocol == 'quic':
         insert_qlogs(str(uid))
     # insert all domain lookups into second table
-    if error == '':
+    if error == '' and proxyPID != 0:
         insert_lookups(str(uid))
 
 
