@@ -1,4 +1,5 @@
 import re
+import time
 import selenium.common.exceptions
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options as firefoxOptions
@@ -70,6 +71,7 @@ def get_page_performance_metrics(driver, page):
             return entry.toJSON();
             """
     try:
+        driver.set_page_load_timeout(30)
         driver.get(f'https://{page}')
         return driver.execute_script(script)
     except selenium.common.exceptions.WebDriverException as e:
@@ -90,6 +92,7 @@ def perform_page_load(page, cache_warming=0):
     # send restart signal to dnsProxy after loading the page
     if proxyPID != 0:
         os.system("sudo kill -SIGUSR1 %d" % proxyPID)
+        time.sleep(0.5)
 
 
 def create_measurements_table():
