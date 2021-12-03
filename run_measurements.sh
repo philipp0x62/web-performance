@@ -13,10 +13,9 @@ sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
 sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
 sudo sysctl -w net.ipv6.conf.lo.disable_ipv6=1
 
-cd /home/ubuntu/dnsproxy
-
 declare -a protocols=("quic" "tls" "https" "tcp" "udp")
 while read upstream; do
+	cd /home/ubuntu/dnsproxy
 	https_upstream="${upstream}/dns-query"
 	for p in "${protocols[@]}"
 	do
@@ -48,7 +47,7 @@ while read upstream; do
 		echo "killing dnsproxy"
 		sudo kill -SIGTERM $dnsproxyPID
 	done
-done < nameservers.txt
+done < /home/ubuntu/web-performance/nameservers.txt
 
 # restart systemd-resolved
 sudo systemctl enable systemd-resolved
