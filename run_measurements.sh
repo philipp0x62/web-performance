@@ -15,40 +15,40 @@ sudo sysctl -w net.ipv6.conf.lo.disable_ipv6=1
 
 cd /home/ubuntu/dnsproxy
 
-upstream="94.140.15.15"
-https_upstream="94.140.15.15/dns-query"
 declare -a protocols=("quic" "tls" "https" "tcp" "udp")
+while read upstream; do
+	https_upstream="${upstream}/dns-query"
+	for p in "${protocols[@]}"
+	do
+		echo $p
 
-for p in "${protocols[@]}"
-do
-	echo $p
+		if [ $p = "udp" ]
+		then
+			resolver="${upstream}"
+		elif [ $p = "https" ]
+		then
+			resolver="${p}://${https_upstream}"
+		else
+			resolver="${p}://${upstream}"
+		fi
 
-	if [ $p = "udp" ]
-	then
-		resolver="${upstream}"
-	elif [ $p = "https" ]
-	then
-		resolver="${p}://${https_upstream}"
-	else
-		resolver="${p}://${upstream}"
-	fi
+		sleep 1
+		echo "starting dnsproxy"
+		./dnsproxy -u ${resolver} -v --ipv6-disabled -l "127.0.0.2" >& /home/ubuntu/web-performance/dnsproxy.log &
+		dnsproxyPID=$!
 
-	sleep 1
-	echo "starting dnsproxy"
-	./dnsproxy -u ${resolver} -v --ipv6-disabled -l "127.0.0.2" >& /home/ubuntu/web-performance/dnsproxy.log &
-	dnsproxyPID=$!
+		# measurements
+		sleep 1
+		echo "starting measurements"
+		cd /home/ubuntu/web-performance
+		python3 run_measurements.py $p $upstream $dnsproxyPID chrome
+		cd /home/ubuntu/dnsproxy
 
-	# measurements
-	sleep 1
-	echo "starting measurements"
-	cd /home/ubuntu/web-performance
-	python3 run_measurements.py $p $upstream $dnsproxyPID chrome
-	cd /home/ubuntu/dnsproxy
-
-	sleep 1
-	echo "killing dnsproxy"
-	sudo kill -SIGTERM $dnsproxyPID
-done
+		sleep 1
+		echo "killing dnsproxy"
+		sudo kill -SIGTERM $dnsproxyPID
+	done
+done < nameservers.txt
 
 # restart systemd-resolved
 sudo systemctl enable systemd-resolved
