@@ -16,14 +16,14 @@ dnsproxy_dir = "/home/ubuntu/dnsproxy/"
 # download top list
 t = Tranco(cache=True, cache_dir='.tranco')
 tranco_list = t.list(date='2021-10-18')
-pages = tranco_list.top(50)
+pages = tranco_list.top(13)
 
 # performance elements to extract
 measurement_elements = ('id', 'protocol', 'server', 'domain', 'timestamp', 'connectEnd', 'connectStart', 'domComplete',
                         'domContentLoadedEventEnd', 'domContentLoadedEventStart', 'domInteractive', 'domainLookupEnd',
                         'domainLookupStart', 'duration', 'encodedBodySize', 'decodedBodySize', 'transferSize',
                         'fetchStart', 'loadEventEnd', 'loadEventStart', 'requestStart', 'responseEnd', 'responseStart',
-                        'secureConnectionStart', 'startTime', 'nextHopProtocol', 'cacheWarming', 'error')
+                        'secureConnectionStart', 'startTime', 'firstPaint', 'nextHopProtocol', 'cacheWarming', 'error')
 
 # create db
 db = sqlite3.connect('web-performance.db')
@@ -62,13 +62,28 @@ def create_driver():
 
 def get_page_performance_metrics(driver, page):
     script = """
-            // Get a resource performance entry
+            // Get performance and paint entries
             var perfEntries = performance.getEntriesByType("navigation");
-
+            var paintEntries = performance.getEntriesByType("paint");
+    
             var entry = perfEntries[0];
-
-            // Get the JSON
-            return entry.toJSON();
+            var paintEntry = paintEntries[0];
+    
+            // Get the JSON and first paint
+            var resultJson = entry.toJSON();
+            try {
+                paintJson = paintEntry.toJSON();
+                if (paintJson.name == 'first-paint') {
+                    resultJson.firstPaint = paintJson.startTime;
+                } else {
+                    resultJson.firstPaint = 0;
+                }
+            }
+            catch {
+                resultJson.firstPaint = 0;
+            }
+            
+            return resultJson;
             """
     try:
         driver.set_page_load_timeout(30)
@@ -123,6 +138,7 @@ def create_measurements_table():
             responseStart integer,
             secureConnectionStart integer,
             startTime integer,
+            firstPaint integer,
             nextHopProtocol string,
             cacheWarming integer,
             error string,
