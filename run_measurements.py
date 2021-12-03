@@ -23,7 +23,7 @@ measurement_elements = ('id', 'protocol', 'server', 'domain', 'timestamp', 'conn
                         'domContentLoadedEventEnd', 'domContentLoadedEventStart', 'domInteractive', 'domainLookupEnd',
                         'domainLookupStart', 'duration', 'encodedBodySize', 'decodedBodySize', 'transferSize',
                         'fetchStart', 'loadEventEnd', 'loadEventStart', 'requestStart', 'responseEnd', 'responseStart',
-                        'secureConnectionStart', 'startTime', 'firstPaint', 'nextHopProtocol', 'cacheWarming', 'error')
+                        'secureConnectionStart', 'startTime', 'firstPaint', 'firstContentfulPaint', 'nextHopProtocol', 'cacheWarming', 'error')
 
 # create db
 db = sqlite3.connect('web-performance.db')
@@ -67,20 +67,24 @@ def get_page_performance_metrics(driver, page):
             var paintEntries = performance.getEntriesByType("paint");
     
             var entry = perfEntries[0];
-            var paintEntry = paintEntries[0];
+            var fpEntry = paintEntries[0];
+            var fcpEntry = paintEntries[1];
     
-            // Get the JSON and first paint
+            // Get the JSON and first paint + first contentful paint
             var resultJson = entry.toJSON();
             try {
-                paintJson = paintEntry.toJSON();
-                if (paintJson.name == 'first-paint') {
-                    resultJson.firstPaint = paintJson.startTime;
-                } else {
-                    resultJson.firstPaint = 0;
+                for (var i=0; i<paintEntries.length; i++) {
+                    var pJson = paintEntries[i].toJSON();
+                    if (pJson.name == 'first-paint') {
+                        resultJson.firstPaint = pJson.startTime;
+                    } else if (pJson.name == 'first-contentful-paint') {
+                        resultJson.firstContentfulPaint = pJson.startTime;
+                    }
                 }
             }
             catch {
                 resultJson.firstPaint = 0;
+                resultJson.firstContentfulPaint = 0;
             }
             
             return resultJson;
@@ -139,6 +143,7 @@ def create_measurements_table():
             secureConnectionStart integer,
             startTime integer,
             firstPaint integer,
+            firstContentfulPaint integer,
             nextHopProtocol string,
             cacheWarming integer,
             error string,
