@@ -72,6 +72,8 @@ def get_page_performance_metrics(driver, page):
     
             // Get the JSON and first paint + first contentful paint
             var resultJson = entry.toJSON();
+            resultJson.firstPaint = 0;
+            resultJson.firstContentfulPaint = 0;
             try {
                 for (var i=0; i<paintEntries.length; i++) {
                     var pJson = paintEntries[i].toJSON();
@@ -81,11 +83,7 @@ def get_page_performance_metrics(driver, page):
                         resultJson.firstContentfulPaint = pJson.startTime;
                     }
                 }
-            }
-            catch {
-                resultJson.firstPaint = 0;
-                resultJson.firstContentfulPaint = 0;
-            }
+            } catch(e) {}
             
             return resultJson;
             """
