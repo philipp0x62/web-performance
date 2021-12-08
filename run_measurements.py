@@ -19,11 +19,12 @@ tranco_list = t.list(date='2021-10-18')
 pages = tranco_list.top(13)
 
 # performance elements to extract
-measurement_elements = ('id', 'protocol', 'server', 'domain', 'timestamp', 'connectEnd', 'connectStart', 'domComplete',
-                        'domContentLoadedEventEnd', 'domContentLoadedEventStart', 'domInteractive', 'domainLookupEnd',
-                        'domainLookupStart', 'duration', 'encodedBodySize', 'decodedBodySize', 'transferSize',
-                        'fetchStart', 'loadEventEnd', 'loadEventStart', 'requestStart', 'responseEnd', 'responseStart',
-                        'secureConnectionStart', 'startTime', 'firstPaint', 'firstContentfulPaint', 'nextHopProtocol', 'cacheWarming', 'error')
+measurement_elements = (
+    'id', 'protocol', 'server', 'domain', 'vantagePoint', 'timestamp', 'connectEnd', 'connectStart', 'domComplete',
+    'domContentLoadedEventEnd', 'domContentLoadedEventStart', 'domInteractive', 'domainLookupEnd', 'domainLookupStart',
+    'duration', 'encodedBodySize', 'decodedBodySize', 'transferSize', 'fetchStart', 'loadEventEnd', 'loadEventStart',
+    'requestStart', 'responseEnd', 'responseStart', 'secureConnectionStart', 'startTime', 'firstPaint',
+    'firstContentfulPaint', 'nextHopProtocol', 'cacheWarming', 'error')
 
 # create db
 db = sqlite3.connect('web-performance.db')
@@ -35,13 +36,19 @@ try:
     server = sys.argv[2]
     proxyPID = int(sys.argv[3])
 except IndexError:
-    print("Input params incomplete (protocol, server, dnsproxyPID) - set dnsproxyPID to 0 if you dont use dnsproxy")
+    print("Input params incomplete (protocol, server, dnsproxyPID) - set dnsproxyPID to 0 if you don't use dnsproxy")
     sys.exit(1)
 
 if len(sys.argv) > 4:
     browser = sys.argv[4]
 else:
     browser = 'firefox'
+
+if len(sys.argv) > 5:
+    vp_dict = {'compute-1': 'US East', 'ap-northeast-3': 'Asia Pacific Northeast', 'af-south-1': 'Africa South',
+               'eu-central-1': 'Europe Central', 'ap-southeast-2': 'Asia Pacific Southeast', 'us-west-1': 'US West',
+               'sa-east-1': 'South America East'}
+    vantage_point = vp_dict.get(sys.argv[5], '')
 
 # Chrome options
 chrome_options = chromeOptions()
@@ -119,6 +126,7 @@ def create_measurements_table():
             protocol string,
             server string,
             domain string,
+            vantagePoint string,
             timestamp datetime,
             connectEnd integer,
             connectStart integer,
@@ -183,9 +191,10 @@ def insert_performance(page, performance, timestamp, cache_warming=0, error=''):
     performance['timestamp'] = timestamp
     performance['cacheWarming'] = cache_warming
     performance['error'] = error
+    performance['vantagePoint'] = vantage_point
     # generate unique ID
     sha = hashlib.md5()
-    sha_input = ('' + protocol + server + page + str(cache_warming))
+    sha_input = ('' + protocol + server + page + str(cache_warming) + vantage_point + timestamp.strftime("%H:%d"))
     sha.update(sha_input.encode())
     uid = uuid.UUID(sha.hexdigest())
     performance['id'] = str(uid)
