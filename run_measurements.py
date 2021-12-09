@@ -17,6 +17,8 @@ dnsproxy_dir = "/home/ubuntu/dnsproxy/"
 t = Tranco(cache=True, cache_dir='.tranco')
 tranco_list = t.list(date='2021-10-18')
 pages = tranco_list.top(13)
+# this specific Chinese page often has problems loading with our setup, so we will just remove it
+pages.remove('qq.com')
 
 # performance elements to extract
 measurement_elements = (
@@ -49,6 +51,8 @@ if len(sys.argv) > 5:
                'eu-central-1': 'Europe Central', 'ap-southeast-2': 'Asia Pacific Southeast', 'us-west-1': 'US West',
                'sa-east-1': 'South America East'}
     vantage_point = vp_dict.get(sys.argv[5], '')
+else:
+    vantage_point = ''
 
 # Chrome options
 chrome_options = chromeOptions()
@@ -95,7 +99,7 @@ def get_page_performance_metrics(driver, page):
             return resultJson;
             """
     try:
-        driver.set_page_load_timeout(60)
+        driver.set_page_load_timeout(30)
         driver.get(f'https://{page}')
         return driver.execute_script(script)
     except selenium.common.exceptions.WebDriverException as e:

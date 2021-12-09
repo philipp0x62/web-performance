@@ -43,11 +43,12 @@ while read upstream; do
 		echo "starting measurements"
 		cd /home/ubuntu/web-performance
 		python3 run_measurements.py $p $upstream $dnsproxyPID chrome $vp
-		cd /home/ubuntu/dnsproxy
 
 		sleep 1
 		echo "killing dnsproxy"
 		sudo kill -SIGTERM $dnsproxyPID
+		sudo rm dnsproxy.log
+		cd /home/ubuntu/dnsproxy
 	done
 done < /home/ubuntu/web-performance/nameservers.txt
 

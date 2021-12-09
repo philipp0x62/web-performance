@@ -2,3 +2,4 @@
 .tranco/
 *.log
 *.db
+nameservers.txt
