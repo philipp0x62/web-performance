@@ -15,10 +15,19 @@ sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
 sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
 sudo sysctl -w net.ipv6.conf.lo.disable_ipv6=1
 
-declare -a protocols=("quic784" "quic853" "quic8853" "tls" "https" "tcp" "udp")
 while read upstream; do
 	cd /home/ubuntu/dnsproxy
+
+	declare -a protocols=("tls" "https" "tcp" "udp")
+	if [ "${upstream: -4}" = ":853" ]
+	then
+		protocols=("${protocols[@]}" "quic853")
+		upstream="${upstream::-4}"
+	else
+		protocols=("${protocols[@]}" "quic8853" "quic784")
+	fi
 	https_upstream="${upstream}/dns-query"
+	
 	for p in "${protocols[@]}"
 	do
 		echo $p
