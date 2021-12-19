@@ -19,14 +19,19 @@ while read upstream; do
 	cd /home/ubuntu/dnsproxy
 
 	declare -a protocols=("tls" "https" "tcp" "udp")
-	# temporary
+	
 	if [ "${upstream: -4}" = ":853" ]
 	then
 		protocols=("${protocols[@]}" "quic853")
 		upstream="${upstream::-4}"
+	elif [ "${upstream: -5}" = ":8853" ]
+	then
+		protocols=("${protocols[@]}" "quic8853")
+		upstream="${upstream::-5}"
 	else
-		protocols=("${protocols[@]}" "quic853" "quic8853" "quic784")
+		protocols=("${protocols[@]}" "quic784")
 	fi
+
 	https_upstream="${upstream}/dns-query"
 	
 	for p in "${protocols[@]}"
