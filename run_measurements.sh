@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo "starting measurement process..."
+date
 
 # get vantage point info
 vp=$(curl -s http://169.254.169.254/latest/meta-data/public-hostname | cut -d . -f2)
@@ -15,22 +16,10 @@ sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
 sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
 sudo sysctl -w net.ipv6.conf.lo.disable_ipv6=1
 
+declare -a protocols=("tls" "https" "quic" "tcp" "udp")
+
 while read upstream; do
 	cd /home/ubuntu/dnsproxy
-
-	declare -a protocols=("tls" "https" "tcp" "udp")
-	
-	if [ "${upstream: -4}" = ":853" ]
-	then
-		protocols=("${protocols[@]}" "quic853")
-		upstream="${upstream::-4}"
-	elif [ "${upstream: -5}" = ":8853" ]
-	then
-		protocols=("${protocols[@]}" "quic8853")
-		upstream="${upstream::-5}"
-	else
-		protocols=("${protocols[@]}" "quic784")
-	fi
 
 	https_upstream="${upstream}/dns-query"
 	
@@ -44,15 +33,9 @@ while read upstream; do
 		elif [ $p = "https" ]
 		then
 			resolver="${p}://${https_upstream}"
-		elif [ $p = "quic784" ]
+		elif [ $p = "quic" ]
 		then
 			resolver="quic://${upstream}:784"
-		elif [ $p = "quic853" ]
-                then
-                        resolver="quic://${upstream}:853"
-		elif [ $p = "quic8853" ]
-                then
-                        resolver="quic://${upstream}:8853"
 		else
 			resolver="${p}://${upstream}"
 		fi
@@ -80,4 +63,5 @@ done < /home/ubuntu/web-performance/nameservers.txt
 sudo systemctl enable systemd-resolved
 sudo systemctl start systemd-resolved
 
+date
 echo "FIN"
