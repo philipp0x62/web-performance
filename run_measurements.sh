@@ -19,44 +19,51 @@ sudo sysctl -w net.ipv6.conf.lo.disable_ipv6=1
 declare -a protocols=("tls" "https" "quic" "tcp" "udp")
 
 while read upstream; do
-	cd /home/ubuntu/dnsproxy
-
-	https_upstream="${upstream}/dns-query"
-	
-	for p in "${protocols[@]}"
-	do
-		echo $p
-
-		if [ $p = "udp" ]
-		then
-			resolver="${upstream}"
-		elif [ $p = "https" ]
-		then
-			resolver="${p}://${https_upstream}"
-		elif [ $p = "quic" ]
-		then
-			resolver="quic://${upstream}:784"
-		else
-			resolver="${p}://${upstream}"
-		fi
-
-		sleep 1
-		echo "starting dnsproxy"
-		./dnsproxy -u ${resolver} -v --insecure --ipv6-disabled -l "127.0.0.2" >& /home/ubuntu/web-performance/dnsproxy.log &
-		dnsproxyPID=$!
-
-		# measurements
-		sleep 1
-		echo "starting measurements"
-		cd /home/ubuntu/web-performance
-		python3 run_measurements.py $p $upstream $dnsproxyPID chrome $vp
-
-		sleep 1
-		echo "killing dnsproxy"
-		sudo kill -SIGTERM $dnsproxyPID
-		sudo rm dnsproxy.log
+	ping -c 1 ${upstream} 2>&1 >/dev/null ;
+	ping_code=$?
+	if [ $ping_code = 0 ]
+	then
 		cd /home/ubuntu/dnsproxy
-	done
+	
+		https_upstream="${upstream}/dns-query"
+		
+		for p in "${protocols[@]}"
+		do
+			echo $p
+	
+			if [ $p = "udp" ]
+			then
+				resolver="${upstream}"
+			elif [ $p = "https" ]
+			then
+				resolver="${p}://${https_upstream}"
+			elif [ $p = "quic" ]
+			then
+				resolver="quic://${upstream}:784"
+			else
+				resolver="${p}://${upstream}"
+			fi
+	
+			sleep 1
+			echo "starting dnsproxy"
+			./dnsproxy -u ${resolver} -v --insecure --ipv6-disabled -l "127.0.0.2" >& /home/ubuntu/web-performance/dnsproxy.log &
+			dnsproxyPID=$!
+	
+			# measurements
+			sleep 1
+			echo "starting measurements"
+			cd /home/ubuntu/web-performance
+			python3 run_measurements.py $p $upstream $dnsproxyPID chrome $vp
+	
+			sleep 1
+			echo "killing dnsproxy"
+			sudo kill -SIGTERM $dnsproxyPID
+			sudo rm dnsproxy.log
+			cd /home/ubuntu/dnsproxy
+		done
+	else
+		echo "${upstream} not reachable"
+	fi
 done < /home/ubuntu/web-performance/nameservers.txt
 
 # restart systemd-resolved
