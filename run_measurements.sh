@@ -19,6 +19,7 @@ sudo sysctl -w net.ipv6.conf.lo.disable_ipv6=1
 declare -a protocols=("tls" "https" "quic" "tcp" "udp")
 
 while read upstream; do
+  # skip server if it is unreachable
 	ping -c 1 ${upstream} 2>&1 >/dev/null ;
 	ping_code=$?
 	if [ $ping_code = 0 ]
@@ -64,7 +65,7 @@ while read upstream; do
 	else
 		echo "${upstream} not reachable"
 	fi
-done < /home/ubuntu/web-performance/nameservers.txt
+done < /home/ubuntu/web-performance/servers.txt
 
 # restart systemd-resolved
 sudo systemctl enable systemd-resolved
