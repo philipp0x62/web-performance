@@ -9,7 +9,7 @@ while read upstream; do
     ping_code=$?
     if [ $ping_code = 0 ]
     then
-	    echo ${upstream} >> servers.txt
+      echo ${upstream} >> servers.txt
       ((i=i+1))
     fi
   fi
