@@ -14,14 +14,17 @@ import os
 
 dnsproxy_dir = "/home/ubuntu/dnsproxy/"
 # download top list
-t = Tranco(cache=True, cache_dir='.tranco')
-tranco_list = t.list(date='2022-02-01')
-pages = tranco_list.top(11)
-# this specific Chinese page often has problems loading with our setup, so we will just remove it
-#pages.remove('qq.com')
+
+#t = Tranco(cache=True, cache_dir='.tranco')
+#tranco_list = t.list(date='2022-02-01')
+#pages = tranco_list.top(11)
 # avoid initial redirects (not necessary for twitter)
-pages = [f'www.{page}' for page in pages]
-pages[pages.index('www.twitter.com')] = 'twitter.com'
+#pages = [f'www.{page}' for page in pages]
+#pages[pages.index('www.twitter.com')] = 'twitter.com'
+
+# just manually get pages list so the domain does not need to be resolved each time
+pages = ['www.google.com', 'www.netflix.com', 'www.youtube.com', 'www.facebook.com', 'www.microsoft.com', 'twitter.com',
+         'www.instagram.com', 'www.baidu.com', 'www.linkedin.com', 'www.apple.com', 'www.wikipedia.org']
 
 # performance elements to extract
 measurement_elements = (
