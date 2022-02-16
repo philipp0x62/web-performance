@@ -105,7 +105,7 @@ def get_page_performance_metrics(driver, page):
             return resultJson;
             """
     try:
-        driver.set_page_load_timeout(30)
+        driver.set_page_load_timeout(15)
         driver.get(f'https://{page}')
         return driver.execute_script(script)
     except selenium.common.exceptions.WebDriverException as e:
