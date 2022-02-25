@@ -19,6 +19,8 @@ sudo sysctl -w net.ipv6.conf.lo.disable_ipv6=1
 declare -a protocols=("tls" "https" "quic" "tcp" "udp")
 
 while read upstream; do
+  qport=$(echo ${upstream} | cut -d: -f2)
+  upstream=$(echo ${upstream} | cut -d: -f1)
   # skip server if it is unreachable
 	ping -c 1 ${upstream} 2>&1 >/dev/null ;
 	ping_code=$?
@@ -40,7 +42,12 @@ while read upstream; do
 				resolver="${p}://${https_upstream}"
 			elif [ $p = "quic" ]
 			then
-				resolver="quic://${upstream}:784"
+			  if [ $qport = "8853" ]
+			  then
+			    resolver="quic://${upstream}:8853"
+			  else
+				  resolver="quic://${upstream}:784"
+				fi
 			else
 				resolver="${p}://${upstream}"
 			fi
