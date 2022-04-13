@@ -107,7 +107,7 @@ def get_page_performance_metrics(driver, page):
             return resultJson;
             """
     try:
-        driver.set_page_load_timeout(15)
+        driver.set_page_load_timeout(10)
         driver.get(f'https://{page}')
         return driver.execute_script(script)
     except selenium.common.exceptions.WebDriverException as e:
@@ -122,13 +122,17 @@ def perform_page_load(page, cache_warming=0):
     # insert page into database
     if 'error' not in performance_metrics:
         insert_performance(page, performance_metrics, timestamp, cache_warming=cache_warming)
+        pl_status = 0
     else:
         insert_performance(page, {k: 0 for k in measurement_elements}, timestamp, cache_warming=cache_warming,
                            error=performance_metrics['error'])
+        pl_status = -1
     # send restart signal to dnsProxy after loading the page
     if proxyPID != 0:
         os.system("sudo kill -SIGUSR1 %d" % proxyPID)
         time.sleep(0.5)
+    return pl_status
+
 
 
 def create_measurements_table():
@@ -314,9 +318,10 @@ create_qlogs_table()
 for p in pages:
     # cache warming
     print(f'{p}: cache warming')
-    perform_page_load(p, 1)
-    # performance measurement
-    print(f'{p}: measuring')
-    perform_page_load(p)
+    status = perform_page_load(p, 1)
+    if status == 0:
+        # performance measurement if cache warming succeeded
+        print(f'{p}: measuring')
+        perform_page_load(p)
 
 db.close()
