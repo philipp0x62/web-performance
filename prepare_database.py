@@ -10,8 +10,8 @@ from selenium.webdriver.common.by import By
 
 
 # connect to db
-#db = sqlite3.connect('web-performance.db')
-#cursor = db.cursor()
+db = sqlite3.connect('web-performance.db')
+cursor = db.cursor()
 
 # get tranco list file
 driver = webdriver.Chrome()

@@ -1,27 +1,46 @@
 import re
 import time
-import selenium.common.exceptions
-from selenium import webdriver
-from selenium.webdriver.firefox.options import Options as firefoxOptions
-from selenium.webdriver.chrome.options import Options as chromeOptions
+#import selenium.common.exceptions
+#from selenium import webdriver
+#from selenium.webdriver.firefox.options import Options as firefoxOptions
+#from selenium.webdriver.chrome.options import Options as chromeOptions
 import sys
-from tranco import Tranco
 import sqlite3
 from datetime import datetime
 import hashlib
 import uuid
 import os
+from browsermobproxy import Server
+import json
+from selenium import webdriver
+
+server = Server("/Users/zitrusdrop/master_thesis/browsermob-proxy-2.1.4/bin/browsermob-proxy")
+server.start()
+proxy = server.create_proxy()
+
+
+profile  = webdriver.Chrome()
+profile.set_proxy(proxy.selenium_proxy())
+driver = webdriver.Chrome(chrome_profile=profile)
+
+
+proxy.new_har("http://stackoverflow.com", options={'captureHeaders': True})
+driver.get("http://www.google.co.uk")
+#proxy.har # returns a HAR JSON blob
+result = json.dumps(proxy.har, ensure_ascii=False)
+server.stop()
+driver.quit()
+
 
 dnsproxy_dir = "/home/ubuntu/dnsproxy/"
-# download top list
 
-# t = Tranco(cache=True, cache_dir='.tranco')
-# tranco_list = t.list(date='2022-02-24')
-# pages = tranco_list.top(13)
-# avoid initial redirects (not necessary for twitter)
-# pages = [f'www.{page}' for page in pages]
-# pages[pages.index('www.twitter.com')] = 'twitter.com'
-# pages.remove('www.qq.com')
+# avoid initial redirects
+#TODO query every website one time and if redirected update url in database 
+
+
+'''
+
+
 
 # just manually get pages list so the domain does not need to be resolved each time
 pages = ['www.google.com', 'www.netflix.com', 'www.youtube.com', 'www.facebook.com', 'www.microsoft.com', 'twitter.com',
@@ -36,7 +55,6 @@ measurement_elements = (
     'requestStart', 'responseEnd', 'responseStart', 'secureConnectionStart', 'startTime', 'firstPaint',
     'firstContentfulPaint', 'nextHopProtocol', 'cacheWarming', 'error', 'redirectStart', 'redirectEnd', 'redirectCount')
 
-# create db
 db = sqlite3.connect('web-performance.db')
 cursor = db.cursor()
 
@@ -325,3 +343,4 @@ for p in pages:
         perform_page_load(p)
 
 db.close()
+'''
