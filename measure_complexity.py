@@ -38,7 +38,8 @@ cursor = db.cursor()
 
 # get url 
 # check that there is data in the database 
-cursor.execute("SELECT _id, dns FROM websites LIMIT 10")
+#cursor.execute("SELECT _id, dns FROM websites LIMIT 1000")
+cursor.execute("SELECT _id, dns FROM websites WHERE _id > 62 LIMIT 928")
 
 for row in cursor:
     print(row)

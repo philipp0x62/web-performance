@@ -89,17 +89,39 @@ def create_websites_table():
             CREATE TABLE IF NOT EXISTS websites (
                 _id INT AUTO_INCREMENT PRIMARY KEY,
                 dns string NOT NULL,
-                number_dns_queries INT
+                number_dns_queries INT,
+                number_objects_loaded INT,
+                number_queried_servers INT,
+                number_non_origin_servers INT,
+                number_mime_types INT,
+                bytes_downladed INT, 
+                alexa_category string
             );
             """)
     db.commit()
 
+
+def create_mime_types_table():
+    # TODO adding complexity columns
+    cursor.execute("""
+            CREATE TABLE IF NOT EXISTS mime_types (
+                website_id INT,
+                mime_type string,
+                occurences INT,
+                bytes_body_download INT,
+                bytes_header_download INT,
+                FOREIGN KEY(website_id) REFERENCES websites(_id),
+                CONSTRAINT PK_Website_MimeType PRIMARY KEY (mime_type,website_id)
+            );
+            """)
+    db.commit()
 
 create_measurements_table()
 create_lookups_table()
 create_qlogs_table()
 create_resolvers_table()
 create_websites_table()
+create_mime_types_table()
 
 
 db.close()
