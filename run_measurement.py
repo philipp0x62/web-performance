@@ -1,7 +1,8 @@
 import time
 import selenium.common.exceptions
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options as chromeOptions
+from selenium.webdriver.firefox.firefox_profile import FirefoxProfile
+#from selenium.webdriver.chrome.options import Options as chromeOptions
 import sys
 import sqlite3
 from datetime import datetime
@@ -9,10 +10,11 @@ import os
 
 # retrieve input params
 try:
-    dnsproxy_address = sys.argv[0]
-    proxy_pid = int(sys.argv[1])
-    protocol = sys.argv[2]
-    used_dns_server = sys.argv[3]
+    # argv[0] is the name of the calling script
+    dnsproxy_address = sys.argv[1]
+    proxy_pid = int(sys.argv[2])
+    protocol = sys.argv[3]
+    used_dns_server = sys.argv[4]
 except IndexError:
     print("Input params incomplete (dns proxy adddress, dnsproxy PID")
     sys.exit(1)
@@ -28,7 +30,7 @@ cursor = db.cursor()
 
 
 # get pages cursor from database 
-cursor.execute("SELECT _id, dns FROM websites LIMIT 10")
+cursor.execute("SELECT _id, dns FROM websites LIMIT 1")
 
 
 # performance elements to extract
@@ -67,36 +69,56 @@ script = """
             """
 
 # Chrome options
-chrome_options = chromeOptions()
-chrome_options.add_argument('--no-sandbox')
-chrome_options.add_argument('--headless')
-chrome_options.add_argument('--disable-dev-shm-usage')
+#chrome_options = chromeOptions()
+#print(chrome_options)
+#chrome_options.add_argument('--no-sandbox')
+#chrome_options.add_argument('--headless')
+#chrome_options.add_argument('--disable-dev-shm-usage')
 # TODO Set DNS settings via Selenium or 
-local_state = {
-    "dns_over_https.mode": "secure",
+#local_state = {
+#    "dns_over_https.mode": "secure",
 #   "dns_over_https.templates": "https://dns.google/dns-query{?dns}",
-    "dns_over_https.templates": "https://chrome.cloudflare-dns.com/dns-query", # TODO put local dns server here
-}
-chrome_options.add_experimental_option('localState', local_state)
+    #"dns_over_https.templates": "https://chrome.cloudflare-dns.com/dns-query", # TODO put local dns server here
+    #"dns_over_https.templates": dnsproxy_address
+ #   "dns_over_https.templates": "https://127.0.0.1"
+#}
+#chrome_options.add_experimental_option('localState', local_state)
+
+options = webdriver.firefox.options.Options()
+options.add_argument("-headless")
+options.add_argument('--no-sandbox')
+options.set_preference('network.trr.mode', 2)
+options.set_preference('network.trr.uri', 'https://127.0.0.1')
+# if not working set manually exception for the used certificate in firefox 
+
+firefox_profile = FirefoxProfile()
+firefox_profile.set_preference("javascript.enabled", True)
+options.profile = firefox_profile
+
+# options.timeouts = { 'pageLoad': 5000, 'script': 5000 } # default 300k and 30k 
+#driver.install_addon(addon_path_xpi) TODO might be insteresting 
 
 def perform_page_load(page, cache_warming=0):
-    driver = webdriver.Chrome(options=chrome_options)
+    #driver = webdriver.Chrome(options=chrome_options)
+    driver = webdriver.Firefox(options=options)
     timestamp = datetime.now()
     try:
         driver.set_page_load_timeout(10)
         driver.get(f'https://{page}')
         performance_metrics =  driver.execute_script(script)
-        insert_performance(page, performance_metrics, timestamp, cache_warming=cache_warming)
+        print("-------PERFORMANCE--------")
+        print(performance_metrics)
+        print("-------PERFORMANCE ENDE--------")
+        #insert_performance(page, performance_metrics, timestamp, cache_warming=cache_warming)
         pl_status = 0
     except selenium.common.exceptions.WebDriverException as e:
-        insert_performance(page, {k: 0 for k in measurement_elements}, timestamp, cache_warming=cache_warming,
-                           error=str(e))
+        #insert_performance(page, {k: 0 for k in measurement_elements}, timestamp, cache_warming=cache_warming, error=str(e))
         pl_status = -1
     
     driver.quit()
 
     # send restart signal to dnsProxy after loading the page
-    os.system("sudo kill -SIGUSR1 %d" % proxy_pid)
+   # os.system("sudo kill -SIGUSR1 %d" % proxy_pid)
     time.sleep(0.5)
     return pl_status
 
