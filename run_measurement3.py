@@ -20,7 +20,7 @@ except IndexError:
     sys.exit(1)
 
 # connect to database 
-db = sqlite3.connect('web-performance.db')
+db = sqlite3.connect('web-performance3.db')
 cursor = db.cursor()
 insert_cursor = db.cursor() # otherwise the other will get deleted
 

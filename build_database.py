@@ -1,19 +1,18 @@
 import sqlite3
 
 # create db
-db = sqlite3.connect('web-performance.db')
+db = sqlite3.connect('web-performance3.db')
 cursor = db.cursor()
 
 
 def create_measurements_table():
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS measurements (
-            id string,
+            id INT AUTO_INCREMENT PRIMARY KEY,
             protocol string,
             server string,
             domain string,
-            vantagePoint string,
-            timestamp datetime,
+            timestamp integer,
             connectEnd integer,
             connectStart integer,
             domComplete integer,
@@ -41,8 +40,7 @@ def create_measurements_table():
             error string,
             redirectStart integer,
             redirectEnd integer,
-            redirectCount integer,
-            PRIMARY KEY (id)
+            redirectCount integer
         );
         """)
     db.commit()

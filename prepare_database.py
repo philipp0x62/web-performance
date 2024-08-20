@@ -10,7 +10,7 @@ from selenium.webdriver.common.by import By
 
 
 # connect to db
-db = sqlite3.connect('web-performance.db')
+db = sqlite3.connect('web-performance3.db')
 cursor = db.cursor()
 
 # get tranco list file
