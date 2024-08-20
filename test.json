@@ -1,0 +1,131 @@
+{
+  "_id": "669d88761d50b83b3a56c336",
+  "scan": null,
+  "meta": {
+    "scanmetainformation": {
+      "runid": "e5c66bd6-2415-446a-ab0f-032bd5493a55",
+      "scanid": "078ae491-c386-47e0-aeef-2da9e0e13a89",
+      "isonblocklist": false,
+      "parentscanid": "70cd29c6-18a9-493c-97f8-0f560e1c7331",
+      "rootscanid": "70cd29c6-18a9-493c-97f8-0f560e1c7331",
+      "vantagepoint": "hpi",
+      "scheduled": "datetime.datetime(2024, 7, 21, 22, 15, 18, 534000)",
+      "started": "datetime.datetime(2024, 7, 21, 22, 15, 18, 696000)",
+      "finished": "datetime.datetime(2024, 7, 21, 22, 15, 18, 758000)",
+      "children": null,
+      "errors": []
+    }
+  },
+  "query": {
+    "doequery": {
+      "dnsquery": {
+        "host": "dns.adguard-dns.com.",
+        "querymsg": {
+          "msghdr": {
+            "id": 0,
+            "response": false,
+            "opcode": 0,
+            "authoritative": false,
+            "truncated": false,
+            "recursiondesired": true,
+            "recursionavailable": false,
+            "zero": false,
+            "authenticateddata": false,
+            "checkingdisabled": false,
+            "rcode": 0
+          },
+          "compress": false,
+          "question": [
+            {
+              "name": "OQYy1FHOKzIFgvNjrBEy3SuQu.raiun.de.",
+              "qtype": 1,
+              "qclass": 1
+            }
+          ],
+          "answer": null,
+          "ns": null,
+          "extra": [
+            {
+              "hdr": {
+                "name": ".",
+                "rrtype": 41,
+                "class": 1232,
+                "ttl": 32768,
+                "rdlength": 0
+              },
+              "option": null
+            }
+          ]
+        },
+        "port": 853,
+        "timeout": 5000000000,
+        "dnssec": true
+      },
+      "skipcertificateverify": false,
+      "sni": "dns.adguard-dns.com."
+    }
+  },
+  "result": {
+    "doeresponse": {
+      "dnsresponse": {
+        "responsemsg": {
+          "msghdr": {
+            "id": 0,
+            "response": true,
+            "opcode": 0,
+            "authoritative": false,
+            "truncated": false,
+            "recursiondesired": true,
+            "recursionavailable": true,
+            "zero": false,
+            "authenticateddata": false,
+            "checkingdisabled": false,
+            "rcode": 3
+          },
+          "compress": false,
+          "question": [
+            {
+              "name": "OQYy1FHOKzIFgvNjrBEy3SuQu.raiun.de.",
+              "qtype": 1,
+              "qclass": 1
+            }
+          ],
+          "answer": null,
+          "ns": [
+            {
+              "hdr": {
+                "name": "raiun.de.",
+                "rrtype": 6,
+                "class": 1,
+                "ttl": 1800,
+                "rdlength": 34
+              },
+              "ns": "ns1.raiun.de.",
+              "mbox": "admin.raiun.de.",
+              "serial": 20240620,
+              "refresh": 3600,
+              "retry": 900,
+              "expire": 604800,
+              "minttl": 1800
+            }
+          ],
+          "extra": [
+            {
+              "hdr": {
+                "name": ".",
+                "rrtype": 41,
+                "class": 0,
+                "ttl": 0,
+                "rdlength": 0
+              },
+              "option": null
+            }
+          ]
+        },
+        "rtt": 61459875
+      },
+      "certificateverified": true,
+      "certificatevalid": true
+    }
+  }
+}
