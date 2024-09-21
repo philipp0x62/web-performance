@@ -3,6 +3,18 @@ import sqlite3
 import json
 import pandas as pd
 import re
+import pymongo
+from bson.json_util import loads
+
+
+f = open('/Users/zitrusdrop/Desktop/Master/Semester_4/Masterarbeit_HPI/Experiments/forked/web-performance/doeQueries/doeQueries.ipv6.doq.json')
+#dns_data = loads(f.read())
+
+print("data loaded", dns_data)
+
+quit()
+
+
 
 # connect to database 
 db = sqlite3.connect('web-performance.db')

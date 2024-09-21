@@ -10,7 +10,7 @@ from selenium.webdriver.common.by import By
 
 
 # connect to db
-db = sqlite3.connect('web-performance3.db')
+db = sqlite3.connect('web-performance2.0.db')
 cursor = db.cursor()
 
 # get tranco list file
@@ -27,7 +27,7 @@ content = requests.get(download_element.get_attribute('href')).content.decode('u
 #content = requests.get('https://tranco-list.eu/download/J939Y/full').content.decode('utf-8')
 data = list(csv.reader(content.splitlines(), delimiter=','))
 
-#print(data[0])
+print(data[0])
 
 # insert into database
 #pages = [(1, 'www.google.com')]

@@ -1,7 +1,16 @@
 import sqlite3
+import psycopg
 
 # create db
-db = sqlite3.connect('web-performance3.db')
+#db = sqlite3.connect('web-performance2.0.db')
+#db = psycopg.connect(database="web-performance2.0",
+#                        host="localhost",
+#                        user="db_user",
+#                        password="db_pass",
+#                        port="5432")
+#db = psycopg.connect('web-performance2.0.db')
+#db = psycopg.connect(host="localhost", user="", password="", port="5432")
+db = psycopg.connect(dbname='postgres', autocommit=True)
 cursor = db.cursor()
 
 
@@ -86,6 +95,8 @@ def create_websites_table():
     cursor.execute("""
             CREATE TABLE IF NOT EXISTS websites (
                 _id INT AUTO_INCREMENT PRIMARY KEY,
+                has_website BOOL DEFAULT TRUE,
+                has_error BOOL DEFAULT FALSE, 
                 dns string NOT NULL,
                 number_dns_queries INT,
                 number_objects_loaded INT,
