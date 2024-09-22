@@ -1,4 +1,4 @@
-import sqlite3
+import psycopg
 import requests
 import csv
 from selenium import webdriver
@@ -10,7 +10,7 @@ from selenium.webdriver.common.by import By
 
 
 # connect to db
-db = sqlite3.connect('web-performance2.0.db')
+db = psycopg.connect(dbname='web_performance')
 cursor = db.cursor()
 
 # get tranco list file
@@ -32,7 +32,7 @@ print(data[0])
 # insert into database
 #pages = [(1, 'www.google.com')]
 
-insert_statement = "INSERT INTO websites (_id, dns) VALUES (?, ?);"
+insert_statement = "INSERT INTO websites (_id, dns) VALUES (%s, %s);"
 cursor.executemany(insert_statement, data)
 #cursor.executemany(insert_statement, pages)
 

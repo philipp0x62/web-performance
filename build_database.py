@@ -1,26 +1,22 @@
-import sqlite3
 import psycopg
 
 # create db
-#db = sqlite3.connect('web-performance2.0.db')
-#db = psycopg.connect(database="web-performance2.0",
-#                        host="localhost",
-#                        user="db_user",
-#                        password="db_pass",
-#                        port="5432")
-#db = psycopg.connect('web-performance2.0.db')
-#db = psycopg.connect(host="localhost", user="", password="", port="5432")
 db = psycopg.connect(dbname='postgres', autocommit=True)
+cursor = db.cursor()
+cursor.execute("DROP DATABASE web_performance")
+cursor.execute("CREATE DATABASE web_performance")
+db.close()
+db = psycopg.connect(dbname='web_performance', autocommit=True)
 cursor = db.cursor()
 
 
 def create_measurements_table():
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS measurements (
-            id INT AUTO_INCREMENT PRIMARY KEY,
-            protocol string,
-            server string,
-            domain string,
+            id SERIAL PRIMARY KEY,
+            protocol VARCHAR,
+            server VARCHAR,
+            domain VARCHAR,
             timestamp integer,
             connectEnd integer,
             connectStart integer,
@@ -44,70 +40,64 @@ def create_measurements_table():
             startTime integer,
             firstPaint integer,
             firstContentfulPaint integer,
-            nextHopProtocol string,
+            nextHopProtocol VARCHAR,
             cacheWarming integer,
-            error string,
+            error VARCHAR,
             redirectStart integer,
             redirectEnd integer,
             redirectCount integer
         );
         """)
-    db.commit()
 
 
 def create_lookups_table():
     cursor.execute("""
             CREATE TABLE IF NOT EXISTS lookups (
-                measurement_id string,
-                domain string,
+                measurement_id SERIAL,
+                domain VARCHAR,
                 elapsed numeric,
-                status string,
-                answer string,
+                status VARCHAR,
+                answer VARCHAR,
                 FOREIGN KEY (measurement_id) REFERENCES measurements(id)
             );
             """)
-    db.commit()
 
 
 def create_qlogs_table():
     cursor.execute("""
             CREATE TABLE IF NOT EXISTS qlogs (
-                measurement_id string,
-                qlog string,
+                measurement_id SERIAL,
+                qlog VARCHAR,
                 FOREIGN KEY (measurement_id) REFERENCES measurements(id)
             );
             """)
-    db.commit()
 
 
 def create_resolvers_table():
     cursor.execute("""
             CREATE TABLE IF NOT EXISTS resolvers (
-                _id INT AUTO_INCREMENT PRIMARY KEY,
-                ip string NOT NULL,
-                dns string
+                _id SERIAL PRIMARY KEY,
+                ip VARCHAR NOT NULL,
+                dns VARCHAR
             );
             """)
-    db.commit()
 
 def create_websites_table():
     # TODO adding complexity columns
     cursor.execute("""
             CREATE TABLE IF NOT EXISTS websites (
-                _id INT AUTO_INCREMENT PRIMARY KEY,
+                _id SERIAL PRIMARY KEY,
                 has_website BOOL DEFAULT TRUE,
                 has_error BOOL DEFAULT FALSE, 
-                dns string NOT NULL,
+                dns VARCHAR NOT NULL,
                 number_dns_queries INT,
                 number_objects_loaded INT,
                 number_queried_servers INT,
                 number_non_origin_servers INT,
                 number_mime_types INT,
-                bytes_downladed INT, 
-                alexa_category string
+                bytes_downladed INT 
             );
             """)
-    db.commit()
 
 
 def create_mime_types_table():
@@ -115,7 +105,7 @@ def create_mime_types_table():
     cursor.execute("""
             CREATE TABLE IF NOT EXISTS mime_types (
                 website_id INT,
-                mime_type string,
+                mime_type VARCHAR,
                 occurences INT,
                 bytes_body_download INT,
                 bytes_header_download INT,
@@ -123,7 +113,7 @@ def create_mime_types_table():
                 CONSTRAINT PK_Website_MimeType PRIMARY KEY (mime_type,website_id)
             );
             """)
-    db.commit()
+
 
 create_measurements_table()
 create_lookups_table()
