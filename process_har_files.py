@@ -1,4 +1,4 @@
-import sqlite3
+import psycopg
 import json
 import tldextract 
 import pprint
@@ -9,10 +9,10 @@ import os
 
 
 # connect to db
-db = sqlite3.connect('web-performance.db')
+db = psycopg.connect(dbname='web_performance')
 cursor = db.cursor()
 
-cursor.execute("DELETE FROM mime_types")
+#cursor.execute("DELETE FROM mime_types")
 
 # read all files in har_files (should only be har files) 
 files = os.listdir('har_files/')
@@ -67,17 +67,17 @@ for file in files:
         #pprint.pp(mimeTypes)
         # put data in the database 
         res = cursor.execute("""UPDATE websites SET 
-                             number_objects_loaded=?, 
-                             number_queried_servers=?, 
-                             number_non_origin_servers=?, 
-                             number_mime_types=?, 
-                             bytes_downladed=? 
-                             WHERE dns=?""", (objects_total, len(queried_servers), len(non_origin_servers), len(mimeTypes.keys()), bytes_total, file))
-        cursor.execute("SELECT _id FROM websites WHERE dns=?", (file,))
+                             number_objects_loaded=%s, 
+                             number_queried_servers=%s, 
+                             number_non_origin_servers=%s, 
+                             number_mime_types=%s, 
+                             bytes_downladed=%s 
+                             WHERE dns=%s""", (objects_total, len(queried_servers), len(non_origin_servers), len(mimeTypes.keys()), bytes_total, file))
+        cursor.execute("SELECT _id FROM websites WHERE dns=%s", (file,))
         id = res.fetchone()
         keys = mimeTypes.keys()
         for mimeType in keys:
-            res = cursor.execute("INSERT INTO mime_types (website_id, mime_type, occurences, bytes_body_download, bytes_header_download) VALUES(?, ?, ?, ?, ?)", 
+            res = cursor.execute("INSERT INTO mime_types (website_id, mime_type, occurences, bytes_body_download, bytes_header_download) VALUES(%s, %s, %s, %s, %s)", 
                                  (id[0], 
                                  mimeType, 
                                  mimeTypes[mimeType]['occurences'], 

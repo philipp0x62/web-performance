@@ -21,8 +21,8 @@ echo "starting measurement process for complexity..."
 #INSTANCES=30
 #WEBSITE_NUMBER=5000000
 
-INSTANCES=3
-WEBSITE_NUMBER=100
+INSTANCES=10
+WEBSITE_NUMBER=1000
 # quotient is rounded down, -1 makes sure, that the full length is covered
 INTERVAL=$((WEBSITE_NUMBER/(INSTANCES-1)))
 echo "$INTERVAL"

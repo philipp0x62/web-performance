@@ -19,7 +19,8 @@ driver = webdriver.Chrome()
 driver.get("https://tranco-list.eu/latest_list")
 element = driver.find_element(By.ID, "btnGroupDrop1")
 element.click()
-download_element = driver.find_element(By.LINK_TEXT, "Download full list")
+#download_element = driver.find_element(By.LINK_TEXT, "Download full list")
+download_element = driver.find_element(By.LINK_TEXT, "Download CSV of daily list (top 1M)")
 #print(download_element.get_attribute('href'))
 
 

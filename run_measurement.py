@@ -4,7 +4,7 @@ from selenium import webdriver
 from selenium.webdriver.firefox.firefox_profile import FirefoxProfile
 #from selenium.webdriver.chrome.options import Options as chromeOptions
 import sys
-import sqlite3
+import psycopg
 from datetime import datetime
 import os
 
@@ -20,7 +20,7 @@ except IndexError:
     sys.exit(1)
 
 # connect to database 
-db = sqlite3.connect('web-performance.db')
+db = psycopg.connect(dbname='web_performance')
 cursor = db.cursor()
 insert_cursor = db.cursor() # otherwise the other will get deleted
 
@@ -139,7 +139,7 @@ def insert_performance(page, performance, timestamp, cache_warming=0, error=''):
     #print("insert to database")
     # insert into database
     insert_cursor.execute(f"""
-    INSERT INTO measurements ({','.join([e for e in measurement_elements])}) VALUES ({(len(measurement_elements) - 1) * '?,'}?);
+    INSERT INTO measurements ({','.join([e for e in measurement_elements])}) VALUES ({(len(measurement_elements) - 1) * '%s,'}%s);
     """, tuple([performance[m_e] for m_e in measurement_elements]))
     #print("executed")
     db.commit()
