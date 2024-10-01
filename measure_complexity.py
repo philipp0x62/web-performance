@@ -22,6 +22,7 @@ print("Start Point: ", starting_point)
 
 
 server = Server("/Users/zitrusdrop/master_thesis/browsermob-proxy-2.1.4/bin/browsermob-proxy")
+# server = Server("../browsermob-proxy-2.1.4/bin/browsermob-proxy")
 #server.start()
 proxy = server.create_proxy()
 proxy = server.create_proxy(params={"trustAllServers": "true"})
@@ -35,21 +36,21 @@ proxy = server.create_proxy(params={"trustAllServers": "true"})
 
 #options.add_argument("--proxy-server={}".format(proxy.proxy))
 
-options = webdriver.chrome.options.Options()
-options.add_argument("-headless")
+options = webdriver.firefox.options.Options()
+#options.add_argument("-headless")
 options.add_argument('--no-sandbox')
 options.add_argument("--ignore-certificate-errors")
 options.add_argument("--enable-javascript")
 options.add_argument(f'--proxy-server={proxy.proxy}')
-options.timeouts = { 'pageLoad': 5000, 'script': 5000 } # default 300k and 30k 
-driver = webdriver.Chrome(options=options)
+#options.timeouts = {"pageLoad": 5000, "script": 5000} # default 300k and 30k 
+driver = webdriver.Firefox(options=options)
 
 #domain = "stackoverflow.com"
 #domain = "google.com"
 #website = "https://" + domain
 
 # connect to database 
-db = psycopg.connect(dbname='web_performance')
+db = psycopg.connect(dbname='web_performance', user='postgres')
 cursor = db.cursor()
 update_cursor = db.cursor() # cannot use a cursor which is currently used for iterating, therefore second cursor needed
 
@@ -67,8 +68,9 @@ for row in cursor:
     try:
         proxy.new_har(website, options={'capturecaptureContent': True})
         driver.get(website)
-        #time.sleep(2)
-        with open("/Users/zitrusdrop/Desktop/Master/Semester_4/Masterarbeit_HPI/Experiments/forked/web-performance/har_files/"+domain, 'w') as f:
+        time.sleep(20)
+        #with open("/Users/zitrusdrop/Desktop/Master/Semester_4/Masterarbeit_HPI/Experiments/forked/web-performance/har_files/"+domain, 'w') as f:
+        with open("har_files/"+domain, 'w') as f:
             result = json.dump(proxy.har, f)
         driver.save_screenshot('screenshots/' + domain + '.png')
         if 'error' or 'Error' or 'denied' in driver.page_source:

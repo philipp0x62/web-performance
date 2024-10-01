@@ -10,11 +10,15 @@ from selenium.webdriver.common.by import By
 
 
 # connect to db
-db = psycopg.connect(dbname='web_performance')
+db = psycopg.connect(dbname='web_performance', user='postgres')
 cursor = db.cursor()
 
 # get tranco list file
-driver = webdriver.Chrome()
+options = webdriver.firefox.options.Options()
+options.add_argument("-headless")
+driver = webdriver.Firefox(options=options)
+
+
 
 driver.get("https://tranco-list.eu/latest_list")
 element = driver.find_element(By.ID, "btnGroupDrop1")

@@ -1,12 +1,12 @@
 import psycopg
 
 # create db
-db = psycopg.connect(dbname='postgres', autocommit=True)
+db = psycopg.connect(dbname='postgres', user='postgres', autocommit=True)
 cursor = db.cursor()
-cursor.execute("DROP DATABASE web_performance")
+#cursor.execute("DROP DATABASE web_performance")
 cursor.execute("CREATE DATABASE web_performance")
 db.close()
-db = psycopg.connect(dbname='web_performance', autocommit=True)
+db = psycopg.connect(dbname='web_performance', user='postgres', autocommit=True)
 cursor = db.cursor()
 
 
@@ -78,7 +78,10 @@ def create_resolvers_table():
             CREATE TABLE IF NOT EXISTS resolvers (
                 _id SERIAL PRIMARY KEY,
                 ip VARCHAR NOT NULL,
-                dns VARCHAR
+                fqdn VARCHAR,
+                url VARCHAR,
+                protocol VARCHAR,
+                port integer,
             );
             """)
 

@@ -21,8 +21,8 @@ echo "starting measurement process for complexity..."
 #INSTANCES=30
 #WEBSITE_NUMBER=5000000
 
-INSTANCES=10
-WEBSITE_NUMBER=1000
+INSTANCES=15
+WEBSITE_NUMBER=1000000
 # quotient is rounded down, -1 makes sure, that the full length is covered
 INTERVAL=$((WEBSITE_NUMBER/(INSTANCES-1)))
 echo "$INTERVAL"
@@ -30,6 +30,7 @@ echo "$INTERVAL"
 for i in `seq 0 $((INSTANCES-1))`
 do
     #echo "$i"
+    # nohup python3 measure_complexity.py $((i*INTERVAL)) $INTERVAL > complexity_${i}.log &
     python3 measure_complexity.py $((i*INTERVAL)) $INTERVAL > complexity_${i}.log &
 
 done
