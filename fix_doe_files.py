@@ -1,21 +1,100 @@
-import os
 import re
-from bson import json_util
 import json
+import psycopg
+import pandas as pd
+import subprocess
 
 
-import bson
-bs = open('/Users/zitrusdrop/Desktop/Master/Semester_4/Masterarbeit_HPI/Experiments/forked/web-performance/doeQueries/doeQueries.ipv6.doh.json', 'rb').read()
-for valid_dict in bson.decode_all( bs ):
-    print("dict valid")
+# read all files in har_files (should only be har files) 
+# data source: https://port-53.info/data/open-encrypted-dns-servers/
+df_doq = pd.read_json('doeQueries/doq-2024-03.json', lines=True)
+df_doh = pd.read_json('doeQueries/doh3-2024-03.json', lines=True)
+
+
+# merge lists 
+df_doq['protocol'] ='quic'
+df_doh['protocol'] ='h3'
+df_resolvers = pd.concat([df_doh, df_doq])
+
+# connect to database for storing information
+db = psycopg.connect(dbname='web_performance')
+cursor = db.cursor()
+
+# loop over list and discover DoE services
+insert_statement = "INSERT INTO resolvers (ip, fqdn, url, protocol, port) VALUES (%s, %s, %s, %s, %s);"
+# q query, time in microseconds 
+doq_query = "go run . A @quic://?server? google.com --stats --format=json" # DoQ standard port: 853
+doh_query = "go run . A @https://?server? --stats --http3 --format=json" # DoH3 standard port 443
+dou_query = "go run . A @?server? --stats --format=json" # DoU standard port 53
+
+for index, resolver in df_resolvers.iterrows():
+    #print(index)
+    #print("++++++++++")
+    #print(resolver['domain'])
+
+    # prepare queries 
+    prepared_doq_query = doq_query.replace("?server?", resolver['domain'])
+    prepared_doh_query = doh_query.replace("?server?", resolver['domain'])
+    prepared_dou_query = dou_query.replace("?server?", resolver['domain'])
+
+
+    print(prepared_doq_query)
+    print("------------------")
+   #doq_result = subprocess.run(prepared_doq_query.split(), shell=True, capture_output=True, text=True, cwd="../q-main").stdout.strip("\n") # using q
+    doq_result = subprocess.run(prepared_doq_query, shell=True, capture_output=True, text=True, cwd="../q-main") # using q
+    doh_result = subprocess.run(prepared_doh_query, shell=True, capture_output=True, text=True, cwd="../q-main") # using q
+    dou_result = subprocess.run(prepared_dou_query, shell=True, capture_output=True, text=True, cwd="../q-main") # using q
+
+    print("--------DoQ-------")
+    if doq_result.stdout:
+        print(json.loads(doq_result.stdout)[0])
+    #print(type(doq_result.stdout))
+    print(".......error......")
+    if doq_result.stderr:
+        print(type(doq_result.stderr))
+    #print("--------DoH-------")
+    #print(doh_result.stdout)
+    #print(".......error......")
+    #print(doh_result.stderr)
+    #print("--------DoU-------")
+    #print(dou_result.stdout)
+    #print(".......error......")
+    #print(dou_result.stderr)
+    
+    #print(doh_result)
+    #print("--------DoU-------")
+    #print(dou_result)
+    break
+    #subprocess.run(["q", query]) 
 
 quit()
 
-# read all files in har_files (should only be har files) 
-files = os.listdir('doeQueries/')
+# measure RTT per server 
+ping -c 2 94.140.14.14 
 
-# ignore hidden files e.g. .DS_Store under MacOS
-files = [f for f in files if f.endswith('.json')]
+# calculate round trips for QUIC and H3 (round ) (need to be queried with a warmup query)
+# 1 --> 0-RTT supported 
+#  2 --> Session resumption supported
+# 3 --> without support of above features 
+
+
+
+
+#  --http3
+# --stats
+
+# go run . @dns.google.com example.com --stats
+# go run . A @quic://dns.adguard-dns.com example.com --all -v  --additional
+
+#"query.doequery.dnsquery.host"
+#"query.doequery.dnsquery.port"
+#"query.uri"
+#"query.httpversion"
+#"query.method"
+#"query.doequery.dnsquery.sni"
+
+
+
 
 for file in files:
     print("process ", file)

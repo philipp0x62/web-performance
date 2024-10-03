@@ -31,6 +31,9 @@ for i in `seq 0 $((INSTANCES-1))`
 do
     #echo "$i"
     # nohup python3 measure_complexity.py $((i*INTERVAL)) $INTERVAL > complexity_${i}.log &
+    #if [[ $i==1 ]] || [[ $i==9 ]]; then
+    #        continue
+    #fi
     python3 measure_complexity.py $((i*INTERVAL)) $INTERVAL > complexity_${i}.log &
 
 done

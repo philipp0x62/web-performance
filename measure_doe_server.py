@@ -3,6 +3,7 @@ import psycopg
 import pymongo
 import subprocess
 
+
 # connect to database 
 client = pymongo.MongoClient("localhost", 27017)
 db = psycopg.connect(dbname='web_performance')

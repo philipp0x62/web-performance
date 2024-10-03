@@ -23,7 +23,7 @@ print("Start Point: ", starting_point)
 
 server = Server("/Users/zitrusdrop/master_thesis/browsermob-proxy-2.1.4/bin/browsermob-proxy")
 # server = Server("../browsermob-proxy-2.1.4/bin/browsermob-proxy")
-#server.start()
+server.start()
 proxy = server.create_proxy()
 proxy = server.create_proxy(params={"trustAllServers": "true"})
 
@@ -50,7 +50,8 @@ driver = webdriver.Firefox(options=options)
 #website = "https://" + domain
 
 # connect to database 
-db = psycopg.connect(dbname='web_performance', user='postgres')
+#db = psycopg.connect(dbname='web_performance', user='postgres')
+db = psycopg.connect(dbname='web_performance')
 cursor = db.cursor()
 update_cursor = db.cursor() # cannot use a cursor which is currently used for iterating, therefore second cursor needed
 
@@ -106,7 +107,7 @@ for row in cursor:
 #proxy.har
 #with open("/Users/zitrusdrop/Desktop/Master/Semester_4/Masterarbeit_HPI/Experiments/forked/web-performance/har_files/"+domain, 'w') as f:
 #    result = json.dump(proxy.har, f)
-#server.stop()
+server.stop()
 driver.quit()
 
 
