@@ -1,12 +1,13 @@
 import psycopg
 
 # create db
-db = psycopg.connect(dbname='postgres', user='postgres', autocommit=True)
+#db = psycopg.connect(dbname='postgres', user='postgres', autocommit=True)
+db = psycopg.connect(dbname='postgres', autocommit=True)
 cursor = db.cursor()
-#cursor.execute("DROP DATABASE web_performance")
+cursor.execute("DROP DATABASE web_performance")
 cursor.execute("CREATE DATABASE web_performance")
 db.close()
-db = psycopg.connect(dbname='web_performance', user='postgres', autocommit=True)
+db = psycopg.connect(dbname='web_performance', autocommit=True)
 cursor = db.cursor()
 
 
@@ -61,27 +62,32 @@ def create_lookups_table():
                 FOREIGN KEY (measurement_id) REFERENCES measurements(id)
             );
             """)
-
-
-def create_qlogs_table():
-    cursor.execute("""
-            CREATE TABLE IF NOT EXISTS qlogs (
-                measurement_id SERIAL,
-                qlog VARCHAR,
-                FOREIGN KEY (measurement_id) REFERENCES measurements(id)
-            );
-            """)
-
+    
 
 def create_resolvers_table():
     cursor.execute("""
             CREATE TABLE IF NOT EXISTS resolvers (
                 _id SERIAL PRIMARY KEY,
-                ip VARCHAR NOT NULL,
-                fqdn VARCHAR,
-                url VARCHAR,
+                host VARCHAR,
                 protocol VARCHAR,
                 port integer,
+                UNIQUE (host, port),
+                UNIQUE (host, protocol)
+            );
+            """)
+    
+def create_resolver_measurement_table():
+    cursor.execute("""
+            CREATE TABLE IF NOT EXISTS resolver_measurement (
+                _id SERIAL PRIMARY KEY,
+                resolver_id SERIAL,
+                protocol VARCHAR,
+                rtt integer,  
+                total_time integer, 
+                round_trips integer,
+                warm_up bool,
+                raw_data VARCHAR,
+                FOREIGN KEY (resolver_id) REFERENCES resolvers(_id)
             );
             """)
 
@@ -120,8 +126,8 @@ def create_mime_types_table():
 
 create_measurements_table()
 create_lookups_table()
-create_qlogs_table()
 create_resolvers_table()
+create_resolver_measurement_table()
 create_websites_table()
 create_mime_types_table()
 
