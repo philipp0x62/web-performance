@@ -10,7 +10,8 @@ from selenium.webdriver.common.by import By
 
 
 # connect to db
-db = psycopg.connect(dbname='web_performance', user='postgres')
+#db = psycopg.connect(dbname='web_performance', user='postgres')
+db = psycopg.connect(dbname='web_performance')
 cursor = db.cursor()
 
 # get tranco list file

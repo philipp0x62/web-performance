@@ -42,6 +42,12 @@ options.add_argument('--no-sandbox')
 options.add_argument("--ignore-certificate-errors")
 options.add_argument("--enable-javascript")
 options.add_argument(f'--proxy-server={proxy.proxy}')
+
+options.set_preference("browser.cache.disk.enable", False)
+options.set_preference("browser.cache.memory.enable", False)
+options.set_preference("browser.cache.offline.enable", False)
+options.set_preference("network.http.use-cache", False) 
+
 #options.timeouts = {"pageLoad": 5000, "script": 5000} # default 300k and 30k 
 driver = webdriver.Firefox(options=options)
 
@@ -61,8 +67,9 @@ print("starting measurement " + str(time.time()) + "\n==========================
 # check that there is data in the database 
 #cursor.execute("SELECT _id, dns FROM websites LIMIT 100")
 cursor.execute("SELECT _id, dns FROM websites WHERE _id BETWEEN %s AND %s", (starting_point, starting_point+interval-1))
-
+index = 0
 for row in cursor:
+    index+=1
     print(row)
     domain = row[1]
     website = "https://www." + domain
@@ -83,6 +90,13 @@ for row in cursor:
         update_cursor.execute("UPDATE websites SET has_website=FALSE WHERE _id = %s",(row[0],))
         db.commit()
         proxy.har # not sure if needed to reset 
+    
+    if index%10 == 0:
+        # close driver to trigger reclaim garbage memmory in firefox processes
+        driver.quit()
+        driver = webdriver.Firefox(options=options)
+        index = 0
+
 
     #proxy.new_har(domain)
     
