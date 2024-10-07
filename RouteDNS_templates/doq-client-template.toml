@@ -1,0 +1,11 @@
+# Template config using a public DoQ server
+
+[resolvers.doq-resolver]
+address = "domain.com:port"
+protocol = "doq"
+enable-0rtt = true
+
+[listeners.local-udp]
+address = "127.0.0.1:53"
+protocol = "udp"
+resolver = "doq-resolver"
