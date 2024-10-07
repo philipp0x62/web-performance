@@ -76,7 +76,7 @@ for row in cursor:
     try:
         proxy.new_har(website, options={'capturecaptureContent': True})
         driver.get(website)
-        time.sleep(20)
+        #time.sleep(20)
         #with open("/Users/zitrusdrop/Desktop/Master/Semester_4/Masterarbeit_HPI/Experiments/forked/web-performance/har_files/"+domain, 'w') as f:
         with open("har_files/"+domain, 'w') as f:
             result = json.dump(proxy.har, f)

@@ -71,6 +71,8 @@ def create_resolvers_table():
                 host VARCHAR,
                 protocol VARCHAR,
                 port integer,
+                rtt0 bool DEFAULT FALSE,
+                session_resumption bool DEFAULT FALSE,
                 UNIQUE (host, port),
                 UNIQUE (host, protocol)
             );
@@ -86,6 +88,8 @@ def create_resolver_measurement_table():
                 total_time integer, 
                 round_trips integer,
                 warm_up bool,
+                rtt0 bool,
+                session_resumption bool,
                 raw_data VARCHAR,
                 FOREIGN KEY (resolver_id) REFERENCES resolvers(_id)
             );
