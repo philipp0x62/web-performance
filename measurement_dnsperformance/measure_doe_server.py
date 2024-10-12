@@ -2,6 +2,7 @@
 import psycopg
 import pymongo
 import subprocess
+import ipaddress
 
 
 # connect to database 
@@ -13,6 +14,21 @@ cursor = db.cursor()
 doe_db = client.doe
 collection = doe_db['doq-scans']
 cursor = collection.find({})
+
+with open("Steffens_server_list.json", "a") as file:
+   for scan_entry in cursor:
+      try:
+         ipaddress.ip_address( scan_entry['query']['doequery']['dnsquery']['host'])
+         entry_ip = '{"domain": "", "ip": "?", "cert_check": "unknown", "country": "unknown", "as": "unknown"}\n'
+         entry = entry_ip.replace("?", scan_entry['query']['doequery']['dnsquery']['host'])
+      except ValueError:
+         entry_domain = '{"domain": "?", "ip": "", "cert_check": "unknown", "country": "unknown", "as": "unknown"}\n'
+         entry = entry_domain.replace("?", scan_entry['query']['doequery']['dnsquery']['host'])
+      
+      file.write(entry)
+       
+
+quit()
 
 insert_statement = "INSERT INTO resolvers (dns, protocol, port) VALUES (%s, %s, %s);"
 

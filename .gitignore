@@ -3,7 +3,6 @@
 *.log
 *.db
 *.txt
-har_files/
-har_files_alt/
-doeQueries/
-screenshots/
+measurement_complexity/har_files/
+measurement_dnsperformance/doeQueries/
+measurement_complexity/screenshots/

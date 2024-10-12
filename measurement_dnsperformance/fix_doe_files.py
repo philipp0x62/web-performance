@@ -9,12 +9,14 @@ import subprocess
 # data source: https://port-53.info/data/open-encrypted-dns-servers/
 df_doq = pd.read_json('doeQueries/doq-2024-03.json', lines=True)
 df_doh = pd.read_json('doeQueries/doh3-2024-03.json', lines=True)
+df_doe = pd.read_json('doeQueries/doh3-2024-03.json', lines=True)
 
 
 # merge lists 
 df_doq['protocol'] ='quic'
 df_doh['protocol'] ='h3'
-df_resolvers = pd.concat([df_doh, df_doq])
+df_doe['protocol'] ='unknown'
+df_resolvers = pd.concat([df_doh, df_doq, df_doe])
 
 # connect to database for storing information
 db = psycopg.connect(dbname='web_performance')
@@ -82,13 +84,11 @@ for index, resolver in df_resolvers.iterrows():
     route_dns_doq = subprocess.run(sed_command_doq, shell=True, capture_output=False, cwd="../routedns/cmd/routedns", text=True) 
     route_dns_doh = subprocess.run(sed_command_doh, shell=True, capture_output=False, cwd="../routedns/cmd/routedns", text=True) 
 
-    quit()
-
     # start RouteDNS instances
-    route_dns_doq = subprocess.run("nohup go run . doq-client.toml > RouteDNS_DoQ.log & && echo $!", shell=True, capture_output=True, cwd="../routedns/cmd/routedns/example-config", text=True) 
-    route_dns_doh = subprocess.run("nohup go run . doh-client.toml > RouteDNS_DoH3.log & && echo $!", shell=True, capture_output=True, cwd="../routedns/cmd/routedns/example-config", text=True) 
-    route_dns_doq_pid = int(route_dns_doq.stdout)
-    route_dns_doh_pid = int(route_dns_doh.stdout)
+    #route_dns_doq = subprocess.run("nohup go run . doq-client.toml > RouteDNS_DoQ.log & && echo $!", shell=True, capture_output=True, cwd="../routedns/cmd/routedns/example-config", text=True) 
+    #route_dns_doh = subprocess.run("nohup go run . doh-client.toml > RouteDNS_DoH3.log & && echo $!", shell=True, capture_output=True, cwd="../routedns/cmd/routedns/example-config", text=True) 
+    #route_dns_doq_pid = int(route_dns_doq.stdout)
+    #route_dns_doh_pid = int(route_dns_doh.stdout)
 
     # process ping further
     ping_statistics =  rtt_result.stdout.split('\n')[-2]
@@ -281,8 +281,8 @@ for index, resolver in df_resolvers.iterrows():
         db.commit()
 
     # stop RouteDNS instances
-    subprocess.run("kill -7 " + route_dns_doq_pid, shell=True, capture_output=False) 
-    subprocess.run("kill -7 " + route_dns_doh_pid, shell=True, capture_output=False) 
+    #subprocess.run("kill -7 " + route_dns_doq_pid, shell=True, capture_output=False) 
+    #subprocess.run("kill -7 " + route_dns_doh_pid, shell=True, capture_output=False) 
 
 
 
