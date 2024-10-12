@@ -1,0 +1,894 @@
+{"domain":"dns.nextdns.io","ip":"103.127.124.46","cert_check":"valid","country":"South Korea","as":"AS138195 MOACK.Co.LTD","protocol":"h3"}
+{"domain":"dns.keke125.com","ip":"114.33.130.84","cert_check":"valid","country":"Taiwan","as":"AS3462 Data Communication Business Group","protocol":"h3"}
+{"domain":"dns.google","ip":"138.186.176.2","cert_check":"valid","country":"Venezuela","as":"AS269750 Gandalf Comunicaciones C.A.","protocol":"h3"}
+{"domain":"dns.google.com","ip":"138.186.176.2","cert_check":"valid","country":"Venezuela","as":"AS269750 Gandalf Comunicaciones C.A.","protocol":"h3"}
+{"domain":"dns64.dns.google","ip":"138.186.176.2","cert_check":"valid","country":"Venezuela","as":"AS269750 Gandalf Comunicaciones C.A.","protocol":"h3"}
+{"domain":"","ip":"165.154.71.240","cert_check":"valid","country":"Hong Kong","as":"AS135377 UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED","protocol":"h3"}
+{"domain":"dot-ch.blahdns.com","ip":"45.91.92.121","cert_check":"valid","country":"Switzerland","as":"AS63473 HostHatch, LLC","protocol":"h3"}
+{"domain":"doh-ch.blahdns.com","ip":"45.91.92.121","cert_check":"valid","country":"Switzerland","as":"AS63473 HostHatch, LLC","protocol":"h3"}
+{"domain":"cubedns.com","ip":"77.223.128.221","cert_check":"valid","country":"Turkey","as":"AS43391 Netdirekt A.S.","protocol":"h3"}
+{"domain":"family.cloudflare-dns.com","ip":"1.0.0.3","cert_check":"valid","country":"Australia","as":"AS13335 Cloudflare, Inc.","protocol":"h3"}
+{"domain":"alidns.com","ip":"120.55.203.42","cert_check":"valid","country":"China","as":"AS37963 Hangzhou Alibaba Advertising Co.,Ltd.","protocol":"h3"}
+{"domain":"kids.dns0.eu","ip":"185.253.5.1","cert_check":"valid","country":"France","as":"AS50902 DNS0.EU A.D.","protocol":"h3"}
+{"domain":"dns.iij.jp","ip":"210.138.77.115","cert_check":"valid","country":"Japan","as":"AS2497 Internet Initiative Japan Inc.","protocol":"h3"}
+{"domain":"dns.diarbagus.id","ip":"103.150.191.84","cert_check":"valid","country":"Indonesia","as":"AS133800 PT Biznet Gio Nusantara","protocol":"h3"}
+{"domain":"doh.best","ip":"15.235.141.22","cert_check":"valid","country":"Singapore","as":"AS16276 OVH SAS","protocol":"h3"}
+{"domain":"cloudflare-dns.com","ip":"162.159.36.1","cert_check":"valid","country":"Canada","as":"AS13335 Cloudflare, Inc.","protocol":"h3"}
+{"domain":"dns.adguard.com","ip":"176.103.130.131","cert_check":"valid","country":"Canada","as":"AS199274 Serveroid, LLC","protocol":"h3"}
+{"domain":"dns-family.adguard.com","ip":"176.103.130.131","cert_check":"valid","country":"Canada","as":"AS199274 Serveroid, LLC","protocol":"h3"}
+{"domain":"dns-unfiltered.adguard.com","ip":"176.103.130.131","cert_check":"valid","country":"Canada","as":"AS199274 Serveroid, LLC","protocol":"h3"}
+{"domain":"zero.dns0.eu","ip":"193.110.81.9","cert_check":"valid","country":"United States","as":"AS50902 DNS0.EU A.D.","protocol":"h3"}
+{"domain":"security.cloudflare-dns.com","ip":"1.0.0.2","cert_check":"valid","country":"Australia","as":"AS13335 Cloudflare, Inc.","protocol":"h3"}
+{"domain":"dot-tw1.blahdns.com","ip":"2.58.242.209","cert_check":"valid","country":"Taiwan","as":"AS9678 HostingInside LTD.","protocol":"h3"}
+{"domain":"doh-tw1.blahdns.com","ip":"2.58.242.209","cert_check":"valid","country":"Taiwan","as":"AS9678 HostingInside LTD.","protocol":"h3"}
+{"domain":"dns0.eu","ip":"185.253.5.0","cert_check":"valid","country":"France","as":"AS50902 DNS0.EU A.D.","protocol":"h3"}
+{"domain":"open.dns0.eu","ip":"185.253.5.254","cert_check":"valid","country":"United States","as":"AS50902 DNS0.EU A.D.","protocol":"h3"}
+{"domain":"dot-sg.blahdns.com","ip":"103.167.150.45","cert_check":"valid","country":"Singapore","as":"AS63473 HostHatch, LLC","protocol":"h3"}
+{"domain":"doh-sg.blahdns.com","ip":"103.167.150.45","cert_check":"valid","country":"Singapore","as":"AS63473 HostHatch, LLC","protocol":"h3"}
+{"domain":"dot-jp.blahdns.com","ip":"212.52.0.233","cert_check":"valid","country":"Japan","as":"AS63473 HostHatch, LLC","protocol":"h3"}
+{"domain":"doh-jp.blahdns.com","ip":"212.52.0.233","cert_check":"valid","country":"Japan","as":"AS63473 HostHatch, LLC","protocol":"h3"}
+{"domain":"dns.unx.io","ip":"164.90.245.136","cert_check":"valid","country":"United States","as":"AS14061 DigitalOcean, LLC","protocol":"h3"}
+{"domain":"doh.dscloud.me","ip":"45.76.154.33","cert_check":"valid","country":"Singapore","as":"AS20473 The Constant Company, LLC","protocol":"h3"}
+{"domain":"dns.dsbs.kr","ip":"103.150.197.172","cert_check":"valid","country":"Indonesia","as":"AS133800 PT Biznet Gio Nusantara","protocol":"quic"}
+{"domain":"dns.gowwannetwork.fr","ip":"146.59.197.230","cert_check":"valid","country":"France","as":"AS16276 OVH SAS","protocol":"quic"}
+{"domain":"dns.l337.site","ip":"185.195.69.126","cert_check":"valid","country":"Switzerland","as":"AS51395 Datasource AG","protocol":"quic"}
+{"domain":"dns.dnscron.com","ip":"118.31.118.127","cert_check":"valid","country":"China","as":"AS37963 Hangzhou Alibaba Advertising Co.,Ltd.","protocol":"quic"}
+{"domain":"dns.mariasantana.com.br","ip":"177.87.94.144","cert_check":"valid","country":"Brazil","as":"AS52592 CELINO RIBEIRO SERVICOS DE TELECOMUNICACOES LTDA -","protocol":"quic"}
+{"domain":"family.dns.doubleangels.com","ip":"34.217.197.48","cert_check":"valid","country":"United States","as":"AS16509 Amazon.com, Inc.","protocol":"quic"}
+{"domain":"dns.yb777.top","ip":"47.243.62.88","cert_check":"valid","country":"Hong Kong","as":"AS45102 Alibaba (US) Technology Co., Ltd.","protocol":"quic"}
+{"domain":"salvadospuntocerohome.duckdns.org","ip":"87.220.80.173","cert_check":"valid","country":"Spain","as":"AS12479 Orange Espagne SA","protocol":"quic"}
+{"domain":"ortudns.com","ip":"92.205.191.174","cert_check":"valid","country":"France","as":"AS21499 Host Europe GmbH","protocol":"quic"}
+{"domain":"adguardcasa.ddns.net","ip":"129.148.50.107","cert_check":"valid","country":"Brazil","as":"AS31898 Oracle Corporation","protocol":"quic"}
+{"domain":"dns.wang.art","ip":"139.162.109.244","cert_check":"valid","country":"Japan","as":"AS63949 Akamai Connected Cloud","protocol":"quic"}
+{"domain":"dns1.understandingcyber.co.uk","ip":"165.227.239.162","cert_check":"valid","country":"United Kingdom","as":"AS14061 DigitalOcean, LLC","protocol":"quic"}
+{"domain":"dns.tippyturtle.com","ip":"71.227.186.130","cert_check":"valid","country":"United States","as":"AS33650 Comcast Cable Communications, LLC","protocol":"quic"}
+{"domain":"adfreedns.top","ip":"89.58.3.251","cert_check":"valid","country":"Germany","as":"AS197540 netcup GmbH","protocol":"quic"}
+{"domain":"doh.18bit.cn","ip":"101.33.235.10","cert_check":"valid","country":"China","as":"AS45090 Shenzhen Tencent Computer Systems Company Limited","protocol":"quic"}
+{"domain":"doh.cmsdp.my.id","ip":"138.2.70.119","cert_check":"valid","country":"Singapore","as":"AS31898 Oracle Corporation","protocol":"quic"}
+{"domain":"dns.dnssilo.top","ip":"185.34.136.243","cert_check":"valid","country":"The Netherlands","as":"AS34971 CDLAN SpA","protocol":"quic"}
+{"domain":"dns.oned4d.cc","ip":"80.242.57.187","cert_check":"valid","country":"Russia","as":"AS9123 TimeWeb Ltd.","protocol":"quic"}
+{"domain":"dns.pccoach.nl","ip":"172.233.59.98","cert_check":"valid","country":"The Netherlands","as":"AS63949 Akamai Connected Cloud","protocol":"quic"}
+{"domain":"dns.yanknil.com","ip":"172.233.65.40","cert_check":"valid","country":"Japan","as":"AS63949 Akamai Connected Cloud","protocol":"quic"}
+{"domain":"dnshome2.gleeze.com","ip":"2.38.179.97","cert_check":"valid","country":"Italy","as":"AS30722 Vodafone Italia S.p.A.","protocol":"quic"}
+{"domain":"dns.shadabshamsi.com","ip":"46.250.235.154","cert_check":"valid","country":"United Kingdom","as":"AS141995 Contabo Asia Private Limited","protocol":"quic"}
+{"domain":"dns.wdnmd.pro","ip":"8.210.72.184","cert_check":"valid","country":"Hong Kong","as":"AS45102 Alibaba (US) Technology Co., Ltd.","protocol":"quic"}
+{"domain":"dns.zooz.org","ip":"112.14.25.88","cert_check":"valid","country":"China","as":"AS56041 China Mobile communications corporation","protocol":"quic"}
+{"domain":"dns.virtualize.technology","ip":"172.234.64.163","cert_check":"valid","country":"United States","as":"AS63949 Akamai Connected Cloud","protocol":"quic"}
+{"domain":"dns.atri.ink","ip":"175.178.80.157","cert_check":"valid","country":"China","as":"AS45090 Shenzhen Tencent Computer Systems Company Limited","protocol":"quic"}
+{"domain":"dns.stevenz.net","ip":"205.185.117.191","cert_check":"valid","country":"United States","as":"AS53667 FranTech Solutions","protocol":"quic"}
+{"domain":"dns.surobe.com","ip":"4.193.227.64","cert_check":"valid","country":"Singapore","as":"AS8075 Microsoft Corporation","protocol":"quic"}
+{"domain":"doh-agh.spaceyard.ru","ip":"95.79.31.192","cert_check":"valid","country":"Russia","as":"AS42682 JSC \"ER-Telecom Holding\"","protocol":"quic"}
+{"domain":"doq-agh.spaceyard.ru","ip":"95.79.31.192","cert_check":"valid","country":"Russia","as":"AS42682 JSC \"ER-Telecom Holding\"","protocol":"quic"}
+{"domain":"dot-agh.spaceyard.ru","ip":"95.79.31.192","cert_check":"valid","country":"Russia","as":"AS42682 JSC \"ER-Telecom Holding\"","protocol":"quic"}
+{"domain":"dns.dingdangnao.com","ip":"119.28.26.24","cert_check":"valid","country":"Hong Kong","as":"AS132203 Tencent Building, Kejizhongyi Avenue","protocol":"quic"}
+{"domain":"v3.passby.cloudns.biz","ip":"132.226.13.244","cert_check":"valid","country":"Japan","as":"AS31898 Oracle Corporation","protocol":"quic"}
+{"domain":"adsfysdfgiuy.ydns.eu","ip":"172.245.108.15","cert_check":"valid","country":"United States","as":"AS36352 ColoCrossing","protocol":"quic"}
+{"domain":"dns.googlec.cc","ip":"8.138.19.239","cert_check":"valid","country":"China","as":"AS37963 Hangzhou Alibaba Advertising Co.,Ltd.","protocol":"quic"}
+{"domain":"dns3.lancexyb.cf","ip":"82.157.22.30","cert_check":"valid","country":"China","as":"AS45090 Shenzhen Tencent Computer Systems Company Limited","protocol":"quic"}
+{"domain":"dns.ngc7331.top","ip":"195.245.242.47","cert_check":"valid","country":"Japan","as":"AS3258 xTom Pty Ltd","protocol":"quic"}
+{"domain":"dns.91557.cn","ip":"45.155.220.210","cert_check":"valid","country":"Japan","as":"AS134835 Starry Network Limited","protocol":"quic"}
+{"domain":"dns.hrknuddel.de","ip":"89.58.29.209","cert_check":"valid","country":"Germany","as":"AS197540 netcup GmbH","protocol":"quic"}
+{"domain":"dns.laolang.club","ip":"139.9.5.215","cert_check":"valid","country":"China","as":"AS55990 Huawei Cloud Service data center","protocol":"quic"}
+{"domain":"dot.modsh.top","ip":"20.2.89.117","cert_check":"valid","country":"Hong Kong","as":"AS8075 Microsoft Corporation","protocol":"quic"}
+{"domain":"dns.myfox.top","ip":"47.109.100.122","cert_check":"valid","country":"China","as":"AS37963 Hangzhou Alibaba Advertising Co.,Ltd.","protocol":"quic"}
+{"domain":"dns.tran.net.vn","ip":"103.124.93.108","cert_check":"valid","country":"Vietnam","as":"AS131353 NhanHoa Software company","protocol":"quic"}
+{"domain":"57ha.duckdns.org","ip":"114.35.184.15","cert_check":"valid","country":"Taiwan","as":"AS3462 Data Communication Business Group","protocol":"quic"}
+{"domain":"dns.skrep.in","ip":"149.154.68.6","cert_check":"valid","country":"Russia","as":"AS29182 JSC IOT","protocol":"quic"}
+{"domain":"dns.kizuki.lol","ip":"204.216.212.183","cert_check":"valid","country":"Italy","as":"AS31898 Oracle Corporation","protocol":"quic"}
+{"domain":"dns-1.trust2it.ch","ip":"212.227.173.33","cert_check":"valid","country":"Germany","as":"AS8560 IONOS SE","protocol":"quic"}
+{"domain":"dns.r4ha.me","ip":"60.103.221.207","cert_check":"valid","country":"Japan","as":"AS17676 SoftBank Corp.","protocol":"quic"}
+{"domain":"dns.0x55.net","ip":"130.61.92.162","cert_check":"valid","country":"Germany","as":"AS31898 Oracle Corporation","protocol":"quic"}
+{"domain":"dns.lightmaster.space","ip":"137.184.51.44","cert_check":"valid","country":"United States","as":"AS14061 DigitalOcean, LLC","protocol":"quic"}
+{"domain":"dns.murzin.tech","ip":"209.38.240.66","cert_check":"valid","country":"Germany","as":"AS14061 DigitalOcean, LLC","protocol":"quic"}
+{"domain":"dns.crystalyx.net","ip":"51.178.82.98","cert_check":"valid","country":"France","as":"AS16276 OVH SAS","protocol":"quic"}
+{"domain":"dns.oliverweinhold.de","ip":"62.171.146.26","cert_check":"valid","country":"Germany","as":"AS51167 Contabo GmbH","protocol":"quic"}
+{"domain":"dns.phowork.fr","ip":"95.179.217.24","cert_check":"valid","country":"France","as":"AS20473 The Constant Company, LLC","protocol":"quic"}
+{"domain":"dns0.phowork.fr","ip":"95.179.217.24","cert_check":"valid","country":"France","as":"AS20473 The Constant Company, LLC","protocol":"quic"}
+{"domain":"dns1.phowork.fr","ip":"95.179.217.24","cert_check":"valid","country":"France","as":"AS20473 The Constant Company, LLC","protocol":"quic"}
+{"domain":"dns2.phowork.fr","ip":"95.179.217.24","cert_check":"valid","country":"France","as":"AS20473 The Constant Company, LLC","protocol":"quic"}
+{"domain":"dns3.phowork.fr","ip":"95.179.217.24","cert_check":"valid","country":"France","as":"AS20473 The Constant Company, LLC","protocol":"quic"}
+{"domain":"dns.indybanipal.com","ip":"96.126.98.101","cert_check":"valid","country":"United States","as":"AS63949 Akamai Connected Cloud","protocol":"quic"}
+{"domain":"ddnsnet.site","ip":"123.113.253.56","cert_check":"valid","country":"China","as":"AS4808 China Unicom Beijing Province Network","protocol":"quic"}
+{"domain":"www.ddnsnet.site","ip":"123.113.253.56","cert_check":"valid","country":"China","as":"AS4808 China Unicom Beijing Province Network","protocol":"quic"}
+{"domain":"dns.lolik.cc","ip":"124.71.143.243","cert_check":"valid","country":"China","as":"AS55990 Huawei Cloud Service data center","protocol":"quic"}
+{"domain":"dns.ak1m.net","ip":"218.103.144.245","cert_check":"valid","country":"Hong Kong","as":"AS4760 HKT Limited","protocol":"quic"}
+{"domain":"doh.zephyrsec.cfd","ip":"96.9.212.192","cert_check":"valid","country":"Singapore","as":"AS212238 Datacamp Limited","protocol":"quic"}
+{"domain":"dnscdn.bai0012.com","ip":"18.182.5.122","cert_check":"valid","country":"Japan","as":"AS16509 Amazon.com, Inc.","protocol":"quic"}
+{"domain":"dns5.dmsrvc.com","ip":"185.86.79.60","cert_check":"valid","country":"Ukraine","as":"AS201094 Mulgin Alexander Sergeevich","protocol":"quic"}
+{"domain":"dns.koboltmail.de","ip":"77.47.113.47","cert_check":"valid","country":"Germany","as":"AS35244 Tele Columbus AG","protocol":"quic"}
+{"domain":"dns.skazu.net","ip":"89.168.125.225","cert_check":"valid","country":"Germany","as":"AS31898 Oracle Corporation","protocol":"quic"}
+{"domain":"dns.cfd.ar","ip":"131.221.65.5","cert_check":"valid","country":"Argentina","as":"AS265798 LEVEL SEVEN SRL","protocol":"quic"}
+{"domain":"dns.kongjak.com","ip":"158.247.198.10","cert_check":"valid","country":"South Korea","as":"AS20473 The Constant Company, LLC","protocol":"quic"}
+{"domain":"cjhearn-dns.duckdns.org","ip":"51.9.8.255","cert_check":"valid","country":"United Kingdom","as":"AS6871 Plusnet","protocol":"quic"}
+{"domain":"dns.cjhearn.co.uk","ip":"51.9.8.255","cert_check":"valid","country":"United Kingdom","as":"AS6871 Plusnet","protocol":"quic"}
+{"domain":"dns.jhangy.us","ip":"59.127.175.174","cert_check":"expired","country":"Taiwan","as":"AS3462 Data Communication Business Group","protocol":"quic"}
+{"domain":"dns2.tamama.pw","ip":"114.34.133.160","cert_check":"valid","country":"Taiwan","as":"AS3462 Data Communication Business Group","protocol":"quic"}
+{"domain":"dns.1jia.top","ip":"139.224.131.206","cert_check":"valid","country":"China","as":"AS37963 Hangzhou Alibaba Advertising Co.,Ltd.","protocol":"quic"}
+{"domain":"dns.f97.xyz","ip":"103.101.161.231","cert_check":"valid","country":"Vietnam","as":"AS131353 NhanHoa Software company","protocol":"quic"}
+{"domain":"dns.engineer.web.id","ip":"103.181.183.6","cert_check":"valid","country":"Indonesia","as":"AS149391 PT Delta Awan Angkasa","protocol":"quic"}
+{"domain":"www.dns.engineer.web.id","ip":"103.181.183.6","cert_check":"valid","country":"Indonesia","as":"AS149391 PT Delta Awan Angkasa","protocol":"quic"}
+{"domain":"dnscron.com","ip":"111.92.240.140","cert_check":"valid","country":"Hong Kong","as":"AS142032 High Family Technology Co., Limited","protocol":"quic"}
+{"domain":"guardmydns.com","ip":"147.189.143.140","cert_check":"valid","country":"United States","as":"AS23422 Endstream Communications, LLC","protocol":"quic"}
+{"domain":"dns.vdkr.uk","ip":"31.201.82.104","cert_check":"valid","country":"The Netherlands","as":"AS50266 tmobile thuis","protocol":"quic"}
+{"domain":"dns.dzkeji.xyz","ip":"47.236.82.82","cert_check":"valid","country":"Singapore","as":"AS45102 Alibaba (US) Technology Co., Ltd.","protocol":"quic"}
+{"domain":"dns.twopudding.icu","ip":"8.138.94.214","cert_check":"valid","country":"China","as":"AS37963 Hangzhou Alibaba Advertising Co.,Ltd.","protocol":"quic"}
+{"domain":"dns.pnh.my.id","ip":"103.29.215.236","cert_check":"valid","country":"Indonesia","as":"AS58377 Sentra Niaga Solusindo, PT.","protocol":"quic"}
+{"domain":"dns.mateo.ovh","ip":"141.147.104.192","cert_check":"valid","country":"United Kingdom","as":"AS31898 Oracle Corporation","protocol":"quic"}
+{"domain":"dns.enzonix.com","ip":"38.83.113.96","cert_check":"valid","country":"United States","as":"AS63023 GTHost","protocol":"quic"}
+{"domain":"dns.ipv4dns.com","ip":"220.231.145.25","cert_check":"valid","country":"China","as":"AS134774 CHINANET Guangdong province Shenzhen MAN network","protocol":"quic"}
+{"domain":"anton.dns.l6.ee","ip":"79.180.116.22","cert_check":"valid","country":"Israel","as":"AS8551 Bezeq International Ltd.","protocol":"quic"}
+{"domain":"dns.l6.ee","ip":"79.180.116.22","cert_check":"valid","country":"Israel","as":"AS8551 Bezeq International Ltd.","protocol":"quic"}
+{"domain":"dns.powerbs.net","ip":"79.180.116.22","cert_check":"valid","country":"Israel","as":"AS8551 Bezeq International Ltd.","protocol":"quic"}
+{"domain":"gaia.dns.l6.ee","ip":"79.180.116.22","cert_check":"valid","country":"Israel","as":"AS8551 Bezeq International Ltd.","protocol":"quic"}
+{"domain":"hila.dns.l6.ee","ip":"79.180.116.22","cert_check":"valid","country":"Israel","as":"AS8551 Bezeq International Ltd.","protocol":"quic"}
+{"domain":"julia.dns.l6.ee","ip":"79.180.116.22","cert_check":"valid","country":"Israel","as":"AS8551 Bezeq International Ltd.","protocol":"quic"}
+{"domain":"olga.dns.l6.ee","ip":"79.180.116.22","cert_check":"valid","country":"Israel","as":"AS8551 Bezeq International Ltd.","protocol":"quic"}
+{"domain":"dns.zhoolg.com","ip":"110.40.193.47","cert_check":"valid","country":"China","as":"AS45090 Shenzhen Tencent Computer Systems Company Limited","protocol":"quic"}
+{"domain":"dns.mortentoudahl.dk","ip":"35.198.139.194","cert_check":"valid","country":"Germany","as":"AS396982 Google LLC","protocol":"quic"}
+{"domain":"dns.3sn.in","ip":"152.67.0.81","cert_check":"valid","country":"India","as":"AS31898 Oracle Corporation","protocol":"quic"}
+{"domain":"dns.xunpod.com","ip":"119.45.146.112","cert_check":"valid","country":"China","as":"AS45090 Shenzhen Tencent Computer Systems Company Limited","protocol":"quic"}
+{"domain":"dns.ecofriosur.es","ip":"213.194.174.135","cert_check":"valid","country":"Spain","as":"AS15704 XTRA TELECOM S.A.","protocol":"quic"}
+{"domain":"030.ddns.net","ip":"220.135.224.78","cert_check":"valid","country":"Taiwan","as":"AS3462 Data Communication Business Group","protocol":"quic"}
+{"domain":"dns.kloiber.co.at","ip":"37.252.189.117","cert_check":"valid","country":"Austria","as":"AS44133 IPAX GmbH","protocol":"quic"}
+{"domain":"dns1.kloiber.co.at","ip":"37.252.189.117","cert_check":"valid","country":"Austria","as":"AS44133 IPAX GmbH","protocol":"quic"}
+{"domain":"dns2.kloiber.co.at","ip":"37.252.189.117","cert_check":"valid","country":"Austria","as":"AS44133 IPAX GmbH","protocol":"quic"}
+{"domain":"dns.horcrux.vip","ip":"172.232.185.183","cert_check":"valid","country":"United States","as":"AS63949 Akamai Connected Cloud","protocol":"quic"}
+{"domain":"dot.tooli.ca","ip":"74.208.31.168","cert_check":"valid","country":"United States","as":"AS8560 IONOS SE","protocol":"quic"}
+{"domain":"dns.kozich.net","ip":"37.221.65.233","cert_check":"valid","country":"Moldova","as":"AS200019 ALEXHOST SRL","protocol":"quic"}
+{"domain":"dns.siberian.ninja","ip":"62.195.14.120","cert_check":"valid","country":"The Netherlands","as":"AS33915 Vodafone Libertel B.V.","protocol":"quic"}
+{"domain":"azdns.richardapplegate.io","ip":"68.107.211.13","cert_check":"valid","country":"United States","as":"AS22773 Cox Communications Inc.","protocol":"quic"}
+{"domain":"dns.qxwf.fun","ip":"120.76.103.143","cert_check":"valid","country":"China","as":"AS37963 Hangzhou Alibaba Advertising Co.,Ltd.","protocol":"quic"}
+{"domain":"pitchforkwaydns.duckdns.org","ip":"129.213.59.9","cert_check":"valid","country":"United States","as":"AS31898 Oracle Corporation","protocol":"quic"}
+{"domain":"dns.huas.me","ip":"23.102.225.153","cert_check":"valid","country":"Hong Kong","as":"AS8075 Microsoft Corporation","protocol":"quic"}
+{"domain":"2024.dns1.top","ip":"47.109.152.112","cert_check":"valid","country":"China","as":"AS37963 Hangzhou Alibaba Advertising Co.,Ltd.","protocol":"quic"}
+{"domain":"dns.yatima.tv","ip":"83.229.70.182","cert_check":"valid","country":"Israel","as":"AS44709 O.M.C. COMPUTERS & COMMUNICATIONS LTD","protocol":"quic"}
+{"domain":"dns.xydustc.me","ip":"134.195.15.238","cert_check":"valid","country":"United States","as":"AS398491 Hyper Expert, LLC","protocol":"quic"}
+{"domain":"pzp-dns.pzp.co.ua","ip":"176.105.203.65","cert_check":"valid","country":"Ukraine","as":"AS24812 NPK Home-Net Ltd.","protocol":"quic"}
+{"domain":"vokkels-hassio.duckdns.org","ip":"197.234.146.89","cert_check":"valid","country":"South Africa","as":"AS37315 Cipherwave","protocol":"quic"}
+{"domain":"dns.slimp.dev","ip":"77.37.236.59","cert_check":"valid","country":"Russia","as":"AS42610 PJSC Rostelecom","protocol":"quic"}
+{"domain":"dns.dingdangnao.cn","ip":"122.51.9.6","cert_check":"valid","country":"China","as":"AS45090 Shenzhen Tencent Computer Systems Company Limited","protocol":"quic"}
+{"domain":"dns.raingame.top","ip":"159.75.96.245","cert_check":"valid","country":"China","as":"AS45090 Shenzhen Tencent Computer Systems Company Limited","protocol":"quic"}
+{"domain":"dns.raratchet.me","ip":"173.230.135.137","cert_check":"valid","country":"United States","as":"AS63949 Akamai Connected Cloud","protocol":"quic"}
+{"domain":"skaianet-01-node.duckdns.org","ip":"71.251.9.24","cert_check":"valid","country":"United States","as":"AS701 Verizon Business","protocol":"quic"}
+{"domain":"dns2.1val.net","ip":"74.98.196.133","cert_check":"valid","country":"United States","as":"AS701 Verizon Business","protocol":"quic"}
+{"domain":"dns.sns.epikaf.net","ip":"82.65.14.189","cert_check":"valid","country":"France","as":"AS12322 Free SAS","protocol":"quic"}
+{"domain":"dnshome.gleeze.com","ip":"93.144.53.55","cert_check":"valid","country":"Italy","as":"AS30722 Vodafone Italia S.p.A.","protocol":"quic"}
+{"domain":"dns.lmir.info","ip":"144.22.215.19","cert_check":"valid","country":"Brazil","as":"AS31898 Oracle Corporation","protocol":"quic"}
+{"domain":"dns.5824613.xyz","ip":"144.24.101.145","cert_check":"valid","country":"India","as":"AS31898 Oracle Corporation","protocol":"quic"}
+{"domain":"dns.home.ampze.com","ip":"158.174.250.13","cert_check":"valid","country":"Sweden","as":"AS8473 Bahnhof AB","protocol":"quic"}
+{"domain":"dnslan.ru","ip":"93.185.159.23","cert_check":"valid","country":"Russia","as":"AS216127 INTERNATIONAL HOSTING COMPANY LIMITED","protocol":"quic"}
+{"domain":"dns.cnortles.top","ip":"1.117.99.118","cert_check":"valid","country":"China","as":"AS45090 Shenzhen Tencent Computer Systems Company Limited","protocol":"quic"}
+{"domain":"dnsoci.gleeze.com","ip":"158.180.232.134","cert_check":"valid","country":"Italy","as":"AS31898 Oracle Corporation","protocol":"quic"}
+{"domain":"dns2.thylacine.co.nz","ip":"38.242.241.48","cert_check":"valid","country":"Germany","as":"AS51167 Contabo GmbH","protocol":"quic"}
+{"domain":"daniedns.art","ip":"213.219.39.64","cert_check":"valid","country":"United Kingdom","as":"AS63949 Akamai Connected Cloud","protocol":"quic"}
+{"domain":"dns.midping.ir","ip":"37.32.8.86","cert_check":"valid","country":"Iran","as":"AS202468 Noyan Abr Arvan Co. ( Private Joint Stock)","protocol":"quic"}
+{"domain":"dns.aparellador.gal","ip":"83.35.105.57","cert_check":"valid","country":"Spain","as":"AS3352 TELEFONICA DE ESPANA S.A.U.","protocol":"quic"}
+{"domain":"securedns.frodoai.technology","ip":"140.238.255.185","cert_check":"valid","country":"India","as":"AS31898 Oracle Corporation","protocol":"quic"}
+{"domain":"mobile.securedns.frodoai.technology","ip":"140.238.255.185","cert_check":"valid","country":"India","as":"AS31898 Oracle Corporation","protocol":"quic"}
+{"domain":"quic.securedns.frodoai.technology","ip":"140.238.255.185","cert_check":"valid","country":"India","as":"AS31898 Oracle Corporation","protocol":"quic"}
+{"domain":"tls.securedns.frodoai.technology","ip":"140.238.255.185","cert_check":"valid","country":"India","as":"AS31898 Oracle Corporation","protocol":"quic"}
+{"domain":"troubleshooting.securedns.frodoai.technology","ip":"140.238.255.185","cert_check":"valid","country":"India","as":"AS31898 Oracle Corporation","protocol":"quic"}
+{"domain":"dns.labnekotest.site","ip":"161.132.37.60","cert_check":"valid","country":"Peru","as":"AS3132 Red Cientifica Peruana","protocol":"quic"}
+{"domain":"ural36.duckdns.org","ip":"185.17.3.191","cert_check":"valid","country":"Russia","as":"AS204997 FIRST SERVER LIMITED","protocol":"quic"}
+{"domain":"dns.item.ink","ip":"42.193.23.195","cert_check":"valid","country":"China","as":"AS45090 Shenzhen Tencent Computer Systems Company Limited","protocol":"quic"}
+{"domain":"dns.xwdmw.xyz","ip":"45.125.18.25","cert_check":"valid","country":"China","as":"AS55933 Cloudie Limited","protocol":"quic"}
+{"domain":"dns-ads.fanure.com","ip":"206.237.98.122","cert_check":"valid","country":"Indonesia","as":"AS140443 PT Herza Digital Indonesia","protocol":"quic"}
+{"domain":"dns.v6x8.com","ip":"81.68.247.47","cert_check":"valid","country":"China","as":"AS45090 Shenzhen Tencent Computer Systems Company Limited","protocol":"quic"}
+{"domain":"ddns.itsnooblk.xyz","ip":"141.148.215.228","cert_check":"valid","country":"India","as":"AS31898 Oracle Corporation","protocol":"quic"}
+{"domain":"dns.danamas.net","ip":"147.139.145.50","cert_check":"valid","country":"Indonesia","as":"AS45102 Alibaba (US) Technology Co., Ltd.","protocol":"quic"}
+{"domain":"dns.mauromidolo.com","ip":"204.216.222.164","cert_check":"valid","country":"Italy","as":"AS31898 Oracle Corporation","protocol":"quic"}
+{"domain":"dns.maracasbravas.com","ip":"40.68.32.230","cert_check":"valid","country":"Netherlands","as":"AS8075 Microsoft Corporation","protocol":"quic"}
+{"domain":"dns.txma.cn","ip":"47.109.89.63","cert_check":"valid","country":"China","as":"AS37963 Hangzhou Alibaba Advertising Co.,Ltd.","protocol":"quic"}
+{"domain":"dns.freya.homes","ip":"194.195.250.199","cert_check":"valid","country":"Australia","as":"AS63949 Akamai Connected Cloud","protocol":"quic"}
+{"domain":"adg.pidns.de","ip":"212.83.46.189","cert_check":"valid","country":"Germany","as":"AS47447 23M GmbH","protocol":"quic"}
+{"domain":"dns.skrep.eu","ip":"5.2.72.7","cert_check":"valid","country":"The Netherlands","as":"AS60404 Liteserver","protocol":"quic"}
+{"domain":"ipv4dns.com","ip":"112.74.74.116","cert_check":"valid","country":"China","as":"AS37963 Hangzhou Alibaba Advertising Co.,Ltd.","protocol":"quic"}
+{"domain":"dns2.gg0.org","ip":"13.51.142.120","cert_check":"valid","country":"Sweden","as":"AS16509 Amazon.com, Inc.","protocol":"quic"}
+{"domain":"dns.juyouge.net","ip":"142.171.204.73","cert_check":"valid","country":"United States","as":"AS35916 MULTACOM CORPORATION","protocol":"quic"}
+{"domain":"dns.onionfairy.cc","ip":"172.233.215.91","cert_check":"valid","country":"United States","as":"AS63949 Akamai Connected Cloud","protocol":"quic"}
+{"domain":"dns.benoute.com","ip":"73.189.160.134","cert_check":"valid","country":"United States","as":"AS33651 Comcast Cable Communications, LLC","protocol":"quic"}
+{"domain":"dns.sorrait.no","ip":"89.162.113.59","cert_check":"valid","country":"Norway","as":"AS29695 Altibox AS","protocol":"quic"}
+{"domain":"dns.pcr.dog","ip":"157.230.203.215","cert_check":"valid","country":"United States","as":"AS14061 DigitalOcean, LLC","protocol":"quic"}
+{"domain":"michaelgintenreiter.duckdns.org","ip":"185.175.212.11","cert_check":"valid","country":"Austria","as":"AS60517 Noehmer GmbH","protocol":"quic"}
+{"domain":"adfreedns.link","ip":"103.219.153.208","cert_check":"valid","country":"The Netherlands","as":"AS207083 HostSlim B.V.","protocol":"quic"}
+{"domain":"dns.h0schi.cloud","ip":"138.2.129.129","cert_check":"valid","country":"Germany","as":"AS31898 Oracle Corporation","protocol":"quic"}
+{"domain":"adguardcalpena.duckdns.org","ip":"185.95.58.125","cert_check":"valid","country":"Spain","as":"AS3339 FIBRAWORLD TELECOM S.A.U.","protocol":"quic"}
+{"domain":"dns.muellerstech.de","ip":"212.227.183.116","cert_check":"valid","country":"Germany","as":"AS8560 IONOS SE","protocol":"quic"}
+{"domain":"karlsonvds.ddns.net","ip":"45.15.157.181","cert_check":"valid","country":"France","as":"AS210644 AEZA INTERNATIONAL LTD","protocol":"quic"}
+{"domain":"dns.root.me","ip":"129.153.219.77","cert_check":"valid","country":"United States","as":"AS31898 Oracle Corporation","protocol":"quic"}
+{"domain":"dns.fortier.space","ip":"159.203.40.0","cert_check":"valid","country":"Canada","as":"AS14061 DigitalOcean, LLC","protocol":"quic"}
+{"domain":"dns.wahr.top","ip":"192.3.85.97","cert_check":"valid","country":"United States","as":"AS36352 HostPapa","protocol":"quic"}
+{"domain":"dns.you808.com","ip":"42.192.138.123","cert_check":"valid","country":"China","as":"AS45090 Shenzhen Tencent Computer Systems Company Limited","protocol":"quic"}
+{"domain":"dns.blaze-sk.ru","ip":"83.136.232.140","cert_check":"valid","country":"Russia","as":"AS29182 JSC IOT","protocol":"quic"}
+{"domain":"doh.tailscale.unixfox.eu","ip":"176.150.35.61","cert_check":"valid","country":"France","as":"AS5410 Bouygues Telecom SA","protocol":"quic"}
+{"domain":"dns.xiac.cc","ip":"123.119.190.36","cert_check":"valid","country":"China","as":"AS4808 China Unicom Beijing Province Network","protocol":"quic"}
+{"domain":"dns.oriy.net","ip":"87.68.223.208","cert_check":"valid","country":"Israel","as":"AS12400 Partner Communications Ltd.","protocol":"quic"}
+{"domain":"dns.sanmeber.cn","ip":"180.137.132.83","cert_check":"valid","country":"China","as":"AS4134 CHINANET-BACKBONE","protocol":"quic"}
+{"domain":"doh.technochat.in","ip":"20.219.170.173","cert_check":"valid","country":"India","as":"AS8075 Microsoft Corporation","protocol":"quic"}
+{"domain":"aydank.freeddns.org","ip":"80.108.233.198","cert_check":"valid","country":"Austria","as":"AS8412 T-Mobile Austria GmbH","protocol":"quic"}
+{"domain":"security.dns.teknoholistik.com","ip":"103.150.117.225","cert_check":"valid","country":"Indonesia","as":"AS133800 PT Biznet Gio Nusantara","protocol":"quic"}
+{"domain":"homedns.hyperv.net.cn","ip":"39.78.21.36","cert_check":"valid","country":"China","as":"AS4837 CHINA UNICOM China169 Backbone","protocol":"quic"}
+{"domain":"dns6.web.id","ip":"128.199.159.223","cert_check":"valid","country":"Singapore","as":"AS14061 DigitalOcean, LLC","protocol":"quic"}
+{"domain":"wanam.ddns.net","ip":"176.150.56.227","cert_check":"valid","country":"France","as":"AS5410 Bouygues Telecom SA","protocol":"quic"}
+{"domain":"dnsadguard.co.uk","ip":"178.79.172.79","cert_check":"valid","country":"United Kingdom","as":"AS63949 Akamai Connected Cloud","protocol":"quic"}
+{"domain":"anshi168.ddns.net","ip":"125.229.47.12","cert_check":"valid","country":"Taiwan","as":"AS3462 Data Communication Business Group","protocol":"quic"}
+{"domain":"dnsaguard1.duckdns.org","ip":"129.146.181.77","cert_check":"valid","country":"United States","as":"AS31898 Oracle Corporation","protocol":"quic"}
+{"domain":"dns.i6p.eu","ip":"212.113.106.120","cert_check":"valid","country":"Austria","as":"AS210644 AEZA INTERNATIONAL LTD","protocol":"quic"}
+{"domain":"www.dns.i6p.eu","ip":"212.113.106.120","cert_check":"valid","country":"Austria","as":"AS210644 AEZA INTERNATIONAL LTD","protocol":"quic"}
+{"domain":"dns.cnetwork.cloud","ip":"103.215.229.99","cert_check":"valid","country":"Indonesia","as":"AS140443 PT Herza Digital Indonesia","protocol":"quic"}
+{"domain":"dns.simplylinux.ch","ip":"135.125.181.234","cert_check":"valid","country":"Germany","as":"AS16276 OVH SAS","protocol":"quic"}
+{"domain":"dns.passarelli.dev","ip":"164.92.133.254","cert_check":"valid","country":"Germany","as":"AS14061 DigitalOcean, LLC","protocol":"quic"}
+{"domain":"dns.camn.uk","ip":"207.180.203.52","cert_check":"valid","country":"Germany","as":"AS51167 Contabo GmbH","protocol":"quic"}
+{"domain":"dns.tefuir0829.cn","ip":"106.52.83.104","cert_check":"valid","country":"China","as":"AS45090 Shenzhen Tencent Computer Systems Company Limited","protocol":"quic"}
+{"domain":"dns.52306.org","ip":"135.148.148.66","cert_check":"valid","country":"United States","as":"AS16276 OVH SAS","protocol":"quic"}
+{"domain":"dns.noobow.me","ip":"158.101.94.129","cert_check":"valid","country":"Japan","as":"AS31898 Oracle Corporation","protocol":"quic"}
+{"domain":"dns.visioncraft.top","ip":"209.250.238.139","cert_check":"valid","country":"Germany","as":"AS20473 The Constant Company, LLC","protocol":"quic"}
+{"domain":"dns.alwynstudio.com.au","ip":"45.113.232.137","cert_check":"valid","country":"Australia","as":"AS10148 The University of Melbourne, Melbourne, Victoria","protocol":"quic"}
+{"domain":"dns.thebuckners.org","ip":"172.105.152.133","cert_check":"valid","country":"United States","as":"AS63949 Akamai Connected Cloud","protocol":"quic"}
+{"domain":"dns2.saferbfc.org","ip":"188.165.53.130","cert_check":"valid","country":"France","as":"AS16276 OVH SAS","protocol":"quic"}
+{"domain":"dns.vlo.cc","ip":"42.51.21.57","cert_check":"valid","country":"China","as":"AS56005 Zhengzhou Fastidc Technology Co.,Ltd.","protocol":"quic"}
+{"domain":"dns-clean.kaswo.ro","ip":"107.172.216.93","cert_check":"valid","country":"United States","as":"AS36352 ColoCrossing","protocol":"quic"}
+{"domain":"dns.tcp.so","ip":"123.132.205.170","cert_check":"valid","country":"China","as":"AS4837 CHINA UNICOM China169 Backbone","protocol":"quic"}
+{"domain":"hamadns.ddnsgeek.com","ip":"140.83.82.66","cert_check":"valid","country":"Japan","as":"AS31898 Oracle Corporation","protocol":"quic"}
+{"domain":"adguard-dns.gop.id.au","ip":"203.57.114.62","cert_check":"valid","country":"Australia","as":"AS133159 Mammoth Media Pty Ltd","protocol":"quic"}
+{"domain":"dns.phillipjberry.net","ip":"45.79.33.43","cert_check":"valid","country":"United States","as":"AS63949 Akamai Connected Cloud","protocol":"quic"}
+{"domain":"dns.inforlogia.com","ip":"152.70.218.58","cert_check":"valid","country":"Brazil","as":"AS31898 Oracle Corporation","protocol":"quic"}
+{"domain":"dns.omada.cafe","ip":"167.86.91.171","cert_check":"valid","country":"Germany","as":"AS51167 Contabo GmbH","protocol":"quic"}
+{"domain":"dns2.bortus.io","ip":"66.23.193.192","cert_check":"valid","country":"United States","as":"AS400304 Redoubt Networks","protocol":"quic"}
+{"domain":"dns.araulin.eu","ip":"80.67.176.166","cert_check":"valid","country":"France","as":"AS20766 Association \"Gitoyen\"","protocol":"quic"}
+{"domain":"dns2.h0schi.cloud","ip":"130.61.58.64","cert_check":"valid","country":"Germany","as":"AS31898 Oracle Corporation","protocol":"quic"}
+{"domain":"dns.tylxr.net","ip":"67.251.10.51","cert_check":"valid","country":"United States","as":"AS11351 Charter Communications Inc","protocol":"quic"}
+{"domain":"www.dns.tylxr.net","ip":"67.251.10.51","cert_check":"valid","country":"United States","as":"AS11351 Charter Communications Inc","protocol":"quic"}
+{"domain":"dns.sfnet.app","ip":"69.14.251.61","cert_check":"valid","country":"United States","as":"AS12083 WideOpenWest Finance LLC","protocol":"quic"}
+{"domain":"dns.m9i.be","ip":"94.16.114.37","cert_check":"valid","country":"Germany","as":"AS197540 netcup GmbH","protocol":"quic"}
+{"domain":"dns.naidc.top","ip":"113.78.252.16","cert_check":"valid","country":"China","as":"AS4134 CHINANET-BACKBONE","protocol":"quic"}
+{"domain":"jakubaws.dd-dns.de","ip":"13.125.107.63","cert_check":"valid","country":"South Korea","as":"AS16509 Amazon.com, Inc.","protocol":"quic"}
+{"domain":"dns.mikrotikrumahan.my.id","ip":"149.28.144.189","cert_check":"valid","country":"Singapore","as":"AS20473 The Constant Company, LLC","protocol":"quic"}
+{"domain":"dns.netraptor.com.au","ip":"103.4.235.188","cert_check":"valid","country":"Australia","as":"AS133159 Mammoth Media Pty Ltd","protocol":"quic"}
+{"domain":"dns.peytonlou.com","ip":"202.131.84.11","cert_check":"valid","country":"Cambodia","as":"AS17981 Cambo Technology(ISP) Co.,Ltd","protocol":"quic"}
+{"domain":"dns.llamy.be","ip":"51.38.225.140","cert_check":"valid","country":"France","as":"AS16276 OVH SAS","protocol":"quic"}
+{"domain":"dns.h2owr.xyz","ip":"119.193.114.175","cert_check":"valid","country":"South Korea","as":"AS4766 Korea Telecom","protocol":"quic"}
+{"domain":"dns.tryk.app","ip":"158.180.91.241","cert_check":"valid","country":"South Korea","as":"AS31898 Oracle Corporation","protocol":"quic"}
+{"domain":"dns.8yd.cn","ip":"183.236.105.221","cert_check":"valid","country":"China","as":"AS56040 China Mobile communications corporation","protocol":"quic"}
+{"domain":"dns.mikumo.cn","ip":"47.236.39.148","cert_check":"valid","country":"Singapore","as":"AS45102 Alibaba (US) Technology Co., Ltd.","protocol":"quic"}
+{"domain":"site-3.duckdns.org","ip":"192.3.59.136","cert_check":"valid","country":"United States","as":"AS36352 ColoCrossing","protocol":"quic"}
+{"domain":"dns.jundev.org","ip":"114.33.26.67","cert_check":"valid","country":"Taiwan","as":"AS3462 Data Communication Business Group","protocol":"quic"}
+{"domain":"dns.maximilianvonbeck.de","ip":"62.143.78.117","cert_check":"valid","country":"Germany","as":"AS3209 Vodafone GmbH","protocol":"quic"}
+{"domain":"dns.bortus.io","ip":"66.23.193.191","cert_check":"valid","country":"United States","as":"AS400304 Redoubt Networks","protocol":"quic"}
+{"domain":"wejn2f9.tplinkdns.com","ip":"91.214.84.219","cert_check":"valid","country":"Ukraine","as":"AS196777 SKORUK ANDRIY OLEKSANDROVYCH","protocol":"quic"}
+{"domain":"dns.dns-root.id","ip":"103.153.42.199","cert_check":"valid","country":"Indonesia","as":"AS140444 Universitas Binawan","protocol":"quic"}
+{"domain":"dns.yellowduck.site","ip":"159.75.66.85","cert_check":"valid","country":"China","as":"AS45090 Shenzhen Tencent Computer Systems Company Limited","protocol":"quic"}
+{"domain":"dns-fr-psv1.cloudsides.com","ip":"163.172.68.245","cert_check":"valid","country":"France","as":"AS12876 SCALEWAY S.A.S.","protocol":"quic"}
+{"domain":"dns.herkhof.nl","ip":"178.79.171.80","cert_check":"valid","country":"United Kingdom","as":"AS63949 Akamai Connected Cloud","protocol":"quic"}
+{"domain":"dns.landofdream.top","ip":"8.134.105.254","cert_check":"valid","country":"China","as":"AS37963 Hangzhou Alibaba Advertising Co.,Ltd.","protocol":"quic"}
+{"domain":"sarpeldns.com","ip":"95.70.200.14","cert_check":"valid","country":"T\u00fcrkiye","as":"AS12735 TurkNet Iletisim Hizmetleri A.S.","protocol":"quic"}
+{"domain":"dns.web.id","ip":"16.78.0.75","cert_check":"valid","country":"Indonesia","as":"AS16509 Amazon.com, Inc.","protocol":"quic"}
+{"domain":"dns.clanless.ovh","ip":"217.160.68.68","cert_check":"valid","country":"Germany","as":"AS8560 IONOS SE","protocol":"quic"}
+{"domain":"alpakalpha.duckdns.org","ip":"46.151.23.193","cert_check":"valid","country":"Poland","as":"AS50467 Beskid Media Sp. z o.o.","protocol":"quic"}
+{"domain":"shrimpstation.duckdns.org","ip":"99.105.194.213","cert_check":"valid","country":"United States","as":"AS7018 AT&T Services, Inc.","protocol":"quic"}
+{"domain":"dns4.imkvq.com","ip":"103.208.86.63","cert_check":"valid","country":"New Zealand","as":"AS61138 Zappie Host LLC","protocol":"quic"}
+{"domain":"dns1.gdie.top","ip":"124.71.3.160","cert_check":"valid","country":"China","as":"AS55990 Huawei Cloud Service data center","protocol":"quic"}
+{"domain":"dns.racic.rs","ip":"185.203.119.234","cert_check":"valid","country":"Bulgaria","as":"AS44901 Belcloud LTD","protocol":"quic"}
+{"domain":"dns.mesterdodh.cloud","ip":"203.194.112.70","cert_check":"valid","country":"Indonesia","as":"AS58487 CV. Rumahweb Indonesia","protocol":"quic"}
+{"domain":"dns.hujiayucc.cn","ip":"120.24.213.35","cert_check":"valid","country":"China","as":"AS37963 Hangzhou Alibaba Advertising Co.,Ltd.","protocol":"quic"}
+{"domain":"edns.ipv4dns.com","ip":"139.159.238.232","cert_check":"valid","country":"China","as":"AS55990 Huawei Cloud Service data center","protocol":"quic"}
+{"domain":"owndns.dedyn.io","ip":"185.196.117.207","cert_check":"valid","country":"The Netherlands","as":"AS9123 TimeWeb Ltd.","protocol":"quic"}
+{"domain":"edns2.ipv4dns.com","ip":"43.240.222.223","cert_check":"valid","country":"China","as":"AS58519 Cloud Computing Corporation","protocol":"quic"}
+{"domain":"dns-au-syd-02.churcher.au","ip":"139.99.136.97","cert_check":"valid","country":"Australia","as":"AS16276 OVH SAS","protocol":"quic"}
+{"domain":"dns.fengrui.asia","ip":"157.230.255.17","cert_check":"valid","country":"Singapore","as":"AS14061 DigitalOcean, LLC","protocol":"quic"}
+{"domain":"dns.h0me.cc","ip":"39.96.73.37","cert_check":"valid","country":"China","as":"AS37963 Hangzhou Alibaba Advertising Co.,Ltd.","protocol":"quic"}
+{"domain":"xomadns.com","ip":"103.89.13.28","cert_check":"valid","country":"United States","as":"AS36007 Kamatera, Inc.","protocol":"quic"}
+{"domain":"dns.kukal.cz","ip":"185.47.223.200","cert_check":"valid","country":"Czechia","as":"AS62099 JM-Net, z.s.","protocol":"quic"}
+{"domain":"dns.sunging.cn","ip":"81.68.249.212","cert_check":"valid","country":"The Netherlands","as":"AS45090 Shenzhen Tencent Computer Systems Company Limited","protocol":"quic"}
+{"domain":"dns.nicolas.vip","ip":"154.3.36.68","cert_check":"valid","country":"Hong Kong","as":"AS906 DMIT Cloud Services","protocol":"quic"}
+{"domain":"dns.jianyi.studio","ip":"220.135.228.170","cert_check":"valid","country":"Taiwan","as":"AS3462 Data Communication Business Group","protocol":"quic"}
+{"domain":"dns.3iq.quest","ip":"95.181.151.69","cert_check":"valid","country":"Germany","as":"AS216127 INTERNATIONAL HOSTING COMPANY LIMITED","protocol":"quic"}
+{"domain":"dns.search-data.top","ip":"14.198.1.75","cert_check":"valid","country":"Hong Kong","as":"AS9269 Hong Kong Broadband Network Ltd.","protocol":"quic"}
+{"domain":"dns.ger.st","ip":"152.53.1.244","cert_check":"valid","country":"Austria","as":"AS197540 netcup GmbH","protocol":"quic"}
+{"domain":"dns.dv4.club","ip":"193.35.18.137","cert_check":"valid","country":"Netherlands","as":"AS202685 Aggros Operations Ltd.","protocol":"quic"}
+{"domain":"doh.cnetwork.cloud","ip":"202.10.36.29","cert_check":"valid","country":"Indonesia","as":"AS58487 CV. Rumahweb Indonesia","protocol":"quic"}
+{"domain":"dns.r9x.cc","ip":"45.153.48.81","cert_check":"valid","country":"Canada","as":"AS55286 B2 Net Solutions Inc.","protocol":"quic"}
+{"domain":"blog3310.duckdns.org","ip":"46.22.211.142","cert_check":"valid","country":"Estonia","as":"AS34702 Aktsiaselts WaveCom","protocol":"quic"}
+{"domain":"dns1.niub.one","ip":"146.56.187.44","cert_check":"valid","country":"South Korea","as":"AS31898 Oracle Corporation","protocol":"quic"}
+{"domain":"dns.arnotho.com","ip":"150.158.17.128","cert_check":"valid","country":"China","as":"AS45090 Shenzhen Tencent Computer Systems Company Limited","protocol":"quic"}
+{"domain":"clean.dnsforge.de","ip":"49.12.223.2","cert_check":"valid","country":"Germany","as":"AS24940 Hetzner Online GmbH","protocol":"quic"}
+{"domain":"dns.xcn.li","ip":"5.230.56.76","cert_check":"valid","country":"Germany","as":"AS12586 GHOSTnet GmbH","protocol":"quic"}
+{"domain":"private-dns-flying-wyverns.kowlin.xyz","ip":"84.25.166.95","cert_check":"valid","country":"The Netherlands","as":"AS33915 Vodafone Libertel B.V.","protocol":"quic"}
+{"domain":"ad-dns.vip","ip":"101.35.92.96","cert_check":"valid","country":"China","as":"AS45090 Shenzhen Tencent Computer Systems Company Limited","protocol":"quic"}
+{"domain":"www.ad-dns.vip","ip":"101.35.92.96","cert_check":"valid","country":"China","as":"AS45090 Shenzhen Tencent Computer Systems Company Limited","protocol":"quic"}
+{"domain":"dns.yu.dev","ip":"153.126.167.61","cert_check":"valid","country":"Japan","as":"AS7684 SAKURA Internet Inc.","protocol":"quic"}
+{"domain":"dieucq.duckdns.org","ip":"27.77.247.249","cert_check":"valid","country":"Vietnam","as":"AS7552 Viettel Group","protocol":"quic"}
+{"domain":"notebait.ddnsfree.com","ip":"5.252.118.42","cert_check":"valid","country":"The Netherlands","as":"AS210644 AEZA INTERNATIONAL LTD","protocol":"quic"}
+{"domain":"dns.ostfriese.org","ip":"94.250.203.49","cert_check":"valid","country":"Germany","as":"AS51167 Contabo GmbH","protocol":"quic"}
+{"domain":"doh.lululu.eu.org","ip":"158.101.91.60","cert_check":"valid","country":"Japan","as":"AS31898 Oracle Corporation","protocol":"quic"}
+{"domain":"spongeb.duckdns.org","ip":"175.156.153.62","cert_check":"valid","country":"Singapore","as":"AS4773 MobileOne Ltd. Mobile\/Internet Service Provider Singapore","protocol":"quic"}
+{"domain":"dns.nldot.com","ip":"185.238.128.151","cert_check":"valid","country":"The Netherlands","as":"AS206238 Freedom Internet BV","protocol":"quic"}
+{"domain":"dns.ouoai.com","ip":"49.232.155.117","cert_check":"valid","country":"China","as":"AS45090 Shenzhen Tencent Computer Systems Company Limited","protocol":"quic"}
+{"domain":"dns.plsite.net","ip":"74.59.75.37","cert_check":"valid","country":"Canada","as":"AS5769 Videotron Ltee","protocol":"quic"}
+{"domain":"doh.yazawanico.moe","ip":"107.173.156.9","cert_check":"valid","country":"United States","as":"AS36352 HostPapa","protocol":"quic"}
+{"domain":"hotzfellas.duckdns.org","ip":"72.209.121.61","cert_check":"valid","country":"United States","as":"AS22773 Cox Communications Inc.","protocol":"quic"}
+{"domain":"dns.mokyun.cn","ip":"101.35.120.56","cert_check":"valid","country":"China","as":"AS45090 Shenzhen Tencent Computer Systems Company Limited","protocol":"quic"}
+{"domain":"dns.zebrzydowa110.eu","ip":"144.24.174.228","cert_check":"valid","country":"Germany","as":"AS31898 Oracle Corporation","protocol":"quic"}
+{"domain":"dns.home.yurina.dev","ip":"220.135.123.248","cert_check":"valid","country":"Taiwan","as":"AS3462 Data Communication Business Group","protocol":"quic"}
+{"domain":"adguard-public-01-doh.rhmhendriks-systems.nl","ip":"85.215.129.219","cert_check":"valid","country":"Germany","as":"AS8560 IONOS SE","protocol":"quic"}
+{"domain":"dns-2.trust2it.ch","ip":"85.215.215.225","cert_check":"valid","country":"Germany","as":"AS6724 Strato AG","protocol":"quic"}
+{"domain":"dns.pragmasec.nl","ip":"85.215.66.120","cert_check":"valid","country":"Germany","as":"AS8560 IONOS SE","protocol":"quic"}
+{"domain":"secure-dns.pleumkungz.com","ip":"154.90.44.84","cert_check":"valid","country":"Thailand","as":"AS138915 Kaopu Cloud HK Limited","protocol":"quic"}
+{"domain":"dns.mandre.dev","ip":"163.172.130.32","cert_check":"valid","country":"France","as":"AS12876 SCALEWAY S.A.S.","protocol":"quic"}
+{"domain":"adguardmy.duckdns.org","ip":"5.187.1.202","cert_check":"valid","country":"Germany","as":"AS44066 firstcolo GmbH","protocol":"quic"}
+{"domain":"dnss.huangdf.xyz","ip":"101.43.245.73","cert_check":"valid","country":"China","as":"AS45090 Shenzhen Tencent Computer Systems Company Limited","protocol":"quic"}
+{"domain":"family.dns.teknoholistik.com","ip":"103.127.98.137","cert_check":"valid","country":"Philippines","as":"AS133800 PT Biznet Gio Nusantara","protocol":"quic"}
+{"domain":"dns2.imkvq.com","ip":"103.173.179.142","cert_check":"valid","country":"Japan","as":"AS63473 HostHatch, LLC","protocol":"quic"}
+{"domain":"dns.khanhhung.net","ip":"103.188.82.180","cert_check":"valid","country":"Vietnam","as":"AS135918 VIET DIGITAL TECHNOLOGY LIABILITY COMPANY","protocol":"quic"}
+{"domain":"dottwo.wxbu.de","ip":"130.61.152.126","cert_check":"valid","country":"Germany","as":"AS31898 Oracle Corporation","protocol":"quic"}
+{"domain":"dns1.thylacine.co.nz","ip":"154.26.156.127","cert_check":"valid","country":"Australia","as":"AS141995 Contabo Asia Private Limited","protocol":"quic"}
+{"domain":"ruviklabsdns.duckdns.org","ip":"161.97.99.10","cert_check":"valid","country":"Germany","as":"AS51167 Contabo GmbH","protocol":"quic"}
+{"domain":"dns.lgprk.com","ip":"213.226.127.98","cert_check":"valid","country":"Russia","as":"AS9123 TimeWeb Ltd.","protocol":"quic"}
+{"domain":"doh.azoris.ovh","ip":"37.235.49.95","cert_check":"valid","country":"Iceland","as":"AS50613 Advania Island ehf","protocol":"quic"}
+{"domain":"hedigehog.ddns.net","ip":"77.91.69.184","cert_check":"valid","country":"Israel","as":"AS206446 CLOUD LEASE Ltd","protocol":"quic"}
+{"domain":"2ni-system.duckdns.org","ip":"82.64.75.131","cert_check":"valid","country":"France","as":"AS12322 Free SAS","protocol":"quic"}
+{"domain":"dns.abppro.ru","ip":"147.78.66.155","cert_check":"valid","country":"Russia","as":"AS204997 FIRST SERVER LIMITED","protocol":"quic"}
+{"domain":"goofas.duckdns.org","ip":"178.218.193.74","cert_check":"valid","country":"Poland","as":"AS198948 UNINET Sp. z o.o.","protocol":"quic"}
+{"domain":"nargang-nest.duckdns.org","ip":"99.99.29.164","cert_check":"valid","country":"United States","as":"AS7018 AT&T Services, Inc.","protocol":"quic"}
+{"domain":"dns.18bit.cn","ip":"120.48.59.82","cert_check":"valid","country":"China","as":"AS38365 Beijing Baidu Netcom Science and Technology Co., Ltd.","protocol":"quic"}
+{"domain":"dns.warma.me","ip":"131.186.63.153","cert_check":"valid","country":"Japan","as":"AS31898 Oracle Corporation","protocol":"quic"}
+{"domain":"dns.loe-ma.de","ip":"20.73.17.123","cert_check":"valid","country":"Netherlands","as":"AS8075 Microsoft Corporation","protocol":"quic"}
+{"domain":"dns2.enzonix.com","ip":"23.134.94.109","cert_check":"valid","country":"United States","as":"AS63023 GTHost","protocol":"quic"}
+{"domain":"masanos.duckdns.org","ip":"5.12.42.245","cert_check":"valid","country":"Romania","as":"AS8708 RCS & RDS SA","protocol":"quic"}
+{"domain":"notmasan.duckdns.org","ip":"5.12.42.245","cert_check":"valid","country":"Romania","as":"AS8708 RCS & RDS SA","protocol":"quic"}
+{"domain":"dns.elhabhab.com","ip":"134.195.88.138","cert_check":"valid","country":"United States","as":"AS63473 HostHatch, LLC","protocol":"quic"}
+{"domain":"dns.retakecs.com","ip":"144.22.212.131","cert_check":"valid","country":"Brazil","as":"AS31898 Oracle Corporation","protocol":"quic"}
+{"domain":"dns1.zettawize.xyz","ip":"199.247.26.160","cert_check":"valid","country":"The Netherlands","as":"AS20473 The Constant Company, LLC","protocol":"quic"}
+{"domain":"www.dns1.zettawize.xyz","ip":"199.247.26.160","cert_check":"valid","country":"The Netherlands","as":"AS20473 The Constant Company, LLC","protocol":"quic"}
+{"domain":"dns.edgeburnmedia.com","ip":"207.246.122.17","cert_check":"valid","country":"United States","as":"AS20473 The Constant Company, LLC","protocol":"quic"}
+{"domain":"dns.meguhub.com","ip":"73.216.36.155","cert_check":"valid","country":"United States","as":"AS21508 Comcast Cable Communications, LLC","protocol":"quic"}
+{"domain":"dns.ours.luxe","ip":"149.104.24.210","cert_check":"valid","country":"Hong Kong","as":"AS139659 LUCIDACLOUD LIMITED","protocol":"quic"}
+{"domain":"dns.mazix.keenetic.pro","ip":"178.140.79.57","cert_check":"valid","country":"Russia","as":"AS42610 PJSC Rostelecom","protocol":"quic"}
+{"domain":"dns.francescodb.me","ip":"152.67.70.175","cert_check":"valid","country":"Switzerland","as":"AS31898 Oracle Corporation","protocol":"quic"}
+{"domain":"dns.ple91.uk","ip":"152.67.79.124","cert_check":"valid","country":"Switzerland","as":"AS31898 Oracle Corporation","protocol":"quic"}
+{"domain":"dbv111m-ag.duckdns.org","ip":"185.188.182.39","cert_check":"valid","country":"Russia","as":"AS204997 FIRST SERVER LIMITED","protocol":"quic"}
+{"domain":"dns.lyhepj.cn","ip":"47.108.238.37","cert_check":"valid","country":"China","as":"AS37963 Hangzhou Alibaba Advertising Co.,Ltd.","protocol":"quic"}
+{"domain":"dns.drnarrow.com","ip":"84.247.181.95","cert_check":"valid","country":"Germany","as":"AS51167 Contabo GmbH","protocol":"quic"}
+{"domain":"www.dns.drnarrow.com","ip":"84.247.181.95","cert_check":"valid","country":"Germany","as":"AS51167 Contabo GmbH","protocol":"quic"}
+{"domain":"darius-doh-nl.sserver.org","ip":"159.223.230.238","cert_check":"valid","country":"The Netherlands","as":"AS14061 DigitalOcean, LLC","protocol":"quic"}
+{"domain":"doh.xiui.top","ip":"154.21.192.37","cert_check":"valid","country":"United States","as":"AS174 Cogent Communications","protocol":"quic"}
+{"domain":"dns.rshtkdn.ru","ip":"194.35.116.163","cert_check":"valid","country":"Poland","as":"AS200088 Artnet Sp. z o.o.","protocol":"quic"}
+{"domain":"doh.morizt.id","ip":"103.189.111.251","cert_check":"valid","country":"Indonesia","as":"AS149749 Morizt ID","protocol":"quic"}
+{"domain":"doh.xiac.cc","ip":"117.50.163.175","cert_check":"valid","country":"China","as":"AS23724 IDC, China Telecommunications Corporation","protocol":"quic"}
+{"domain":"dns.zenkexi.com","ip":"142.171.237.4","cert_check":"valid","country":"United States","as":"AS35916 MULTACOM CORPORATION","protocol":"quic"}
+{"domain":"dns.nas-server.ru","ip":"185.17.3.188","cert_check":"valid","country":"Russia","as":"AS204997 FIRST SERVER LIMITED","protocol":"quic"}
+{"domain":"dnswebvsn.com","ip":"66.55.159.186","cert_check":"valid","country":"United States","as":"AS20473 The Constant Company, LLC","protocol":"quic"}
+{"domain":"dns.x11.pw","ip":"103.179.44.88","cert_check":"valid","country":"Singapore","as":"AS149020 WebHorizon Internet Services","protocol":"quic"}
+{"domain":"dns.rkjha.com.np","ip":"146.56.49.98","cert_check":"valid","country":"India","as":"AS31898 Oracle Corporation","protocol":"quic"}
+{"domain":"dns-privacy.puregeni.us","ip":"198.244.189.180","cert_check":"valid","country":"United Kingdom","as":"AS16276 OVH SAS","protocol":"quic"}
+{"domain":"dns.nekofish.cc","ip":"51.222.142.14","cert_check":"valid","country":"Canada","as":"AS16276 OVH SAS","protocol":"quic"}
+{"domain":"ralfs-dns.dsh.lol","ip":"139.99.184.108","cert_check":"valid","country":"Australia","as":"AS16276 OVH SAS","protocol":"quic"}
+{"domain":"dns.lyxlz.cn","ip":"101.43.65.9","cert_check":"valid","country":"China","as":"AS45090 Shenzhen Tencent Computer Systems Company Limited","protocol":"quic"}
+{"domain":"dnsdoh.art","ip":"194.180.189.33","cert_check":"valid","country":"Finland","as":"AS57043 HOSTKEY B.V.","protocol":"quic"}
+{"domain":"staniranon.duckdns.org","ip":"23.94.205.106","cert_check":"valid","country":"United States","as":"AS36352 HostPapa","protocol":"quic"}
+{"domain":"dns.itsud.in","ip":"51.79.146.162","cert_check":"valid","country":"Singapore","as":"AS16276 OVH SAS","protocol":"quic"}
+{"domain":"doh.iranet.cam","ip":"78.110.120.188","cert_check":"valid","country":"Iran","as":"AS48715 Sefroyek Pardaz Engineering PJSC","protocol":"quic"}
+{"domain":"mydns.24ke.cc","ip":"106.52.85.114","cert_check":"valid","country":"China","as":"AS45090 Shenzhen Tencent Computer Systems Company Limited","protocol":"quic"}
+{"domain":"dns.asysec.com","ip":"167.114.2.241","cert_check":"valid","country":"Canada","as":"AS16276 OVH SAS","protocol":"quic"}
+{"domain":"dns1.corneliupr.com","ip":"195.231.85.175","cert_check":"valid","country":"Italy","as":"AS31034 Aruba S.p.A.","protocol":"quic"}
+{"domain":"dns.aguiarvieira.pt","ip":"51.178.89.24","cert_check":"valid","country":"France","as":"AS16276 OVH SAS","protocol":"quic"}
+{"domain":"ejdns.ejproduction.ru","ip":"193.233.233.204","cert_check":"valid","country":"Austria","as":"AS210644 AEZA INTERNATIONAL LTD","protocol":"quic"}
+{"domain":"dns1.saferbfc.org","ip":"51.254.88.96","cert_check":"valid","country":"France","as":"AS16276 OVH SAS","protocol":"quic"}
+{"domain":"dns.fengyewuyu.com","ip":"101.132.226.222","cert_check":"valid","country":"China","as":"AS37963 Hangzhou Alibaba Advertising Co.,Ltd.","protocol":"quic"}
+{"domain":"dns2.lancexyb.cf","ip":"117.165.177.228","cert_check":"valid","country":"China","as":"AS9808 China Mobile Communications Group Co., Ltd.","protocol":"quic"}
+{"domain":"dns.haoxuan.xyz","ip":"15.235.198.183","cert_check":"valid","country":"Singapore","as":"AS16276 OVH SAS","protocol":"quic"}
+{"domain":"www.dns.haoxuan.xyz","ip":"15.235.198.183","cert_check":"valid","country":"Singapore","as":"AS16276 OVH SAS","protocol":"quic"}
+{"domain":"dns.neonteam.cc","ip":"130.61.140.249","cert_check":"valid","country":"Germany","as":"AS31898 Oracle Corporation","protocol":"quic"}
+{"domain":"wisewebworks.duckdns.org","ip":"130.61.178.131","cert_check":"valid","country":"Germany","as":"AS31898 Oracle Corporation","protocol":"quic"}
+{"domain":"dns.2t9.de","ip":"185.132.36.107","cert_check":"valid","country":"United Kingdom","as":"AS8560 IONOS SE","protocol":"quic"}
+{"domain":"hosl12.duckdns.org","ip":"77.98.4.86","cert_check":"valid","country":"United Kingdom","as":"AS5089 Virgin Media Limited","protocol":"quic"}
+{"domain":"slp4h.duckdns.org","ip":"77.98.4.86","cert_check":"valid","country":"United Kingdom","as":"AS5089 Virgin Media Limited","protocol":"quic"}
+{"domain":"dns.narrowband.net.au","ip":"170.64.184.244","cert_check":"valid","country":"Australia","as":"AS14061 DigitalOcean, LLC","protocol":"quic"}
+{"domain":"dns.nas.labouret.fr","ip":"86.245.28.236","cert_check":"valid","country":"France","as":"AS3215 Orange S.A.","protocol":"quic"}
+{"domain":"dns.nas.labouret.paris","ip":"86.245.28.236","cert_check":"valid","country":"France","as":"AS3215 Orange S.A.","protocol":"quic"}
+{"domain":"dns.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.horus-team.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"unfiltered.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.andrewnw.xyz.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"d6c41833.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.natehumbert.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.moeyk.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"app.yihaocode.cn.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"mikatos.de.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard.exium.net.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"uncensored.freedns.controld.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"d3e8e453.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"srv5.jiripocta.cz.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"family.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.bortus.io.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.wahr.top.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"chenxiang719.top.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"d1cfa716.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"ns2.exanders.fr.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"filter.das.sch.id.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"lostonight.asia.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.linksuspeito.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adg.papsic.ru.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.nhcloud.xyz.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adblock.indianets.net.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"seyon.level3.support.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"illic.xyz.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.korzhyk.pp.ua.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.abutalha.co.uk.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.nullgate.net.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"netsvcs.708.hoff.mn.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"bb4943aa.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"us1.lavesto.me.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.mymanga.pro.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.kwellkorn.de.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard.stiki.ac.id.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.multi30.pl.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dnslan.ru.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"gaia.plonknet.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"28cec729.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.eliv.co.kr.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"7d1a5b56.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"www.vpn.bergcom.de.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"ba2ae1d6.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":".","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"d32efb4d.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard.tarsnet.cloud.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"ads.phuocserver.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"794a87e7.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"goldstarbag.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"79181393.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.funplus.io.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"sg.dns1.top.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"2e1cb784.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"ag.okin.cloud.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"pub.hsuan.ink.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.keviland.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"mci.hyperresolve.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"colired.secolima.gob.mx.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"tls.timochan.cn.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dnsbl.duyquy.cloud.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"npm.car-lions.de.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns-unfiltered.adguard.ch.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.wujunyang.top.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"doh.srv00.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"ns.dnsviewer.org.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adg.devops.joseangel.dev.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.isp.dhoho.net.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard.sparshbajaj.me.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"ad.theanch.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns2.h0schi.cloud.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"8a751337.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dos.win.hn.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.yatima.tv.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"2bb5bd7d.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard.abdullahabas.online.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"services.verstandlxs.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"e31dcf81.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"addns.yserver.top.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"nsc.torgues.net.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard.jordinateur.fr.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"kids.5ososea.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"b139cfcd.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"secure.onedns.cc.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"ezinet.level3.support.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"d9.luck13.me.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard.acrobyte.org.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dnsresolver.qharib.ir","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"s2.gofi.top.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns-query.freedns.controld.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard.howitare.net.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard01.server-schwabe.de.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard.iaus.ac.ir.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"df245d2b.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"ns1.exanders.fr.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"sv.saigondata.us.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"ag.manolit.de.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"ns2.altafocus.id.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dohsg.goitoi.co.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"879696de.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard.mythiccloud.net.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"math.netlab.my.id.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.adguard.ch.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"a5e69867.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"2f07i9strpu.dns.controld.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"c31c238b.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns1.hauer-network.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"marginnote.ga.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.lagoland.xyz.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"nas.wryhf.cn.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"gia.soyokaze.asia.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"72dfb31c.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.mohan43u.space.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard.ruhlmann.dev.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns2.sillis.ru.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.7sec.com.br.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.yingroad.top.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.mznt.eu.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns1-secure.wifire.it.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.lvl-network.de.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"a6b173cd.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.ds920-m.dscloud.me.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.comss.one.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"us1.blissdns.net.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"netcupgmbh.mehmetarikan.com.tr.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"3f1e2cd2.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"c5bdd242.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.yuu-g.net.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"unifi.studioszczecin.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"hayjo.ddns.net.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.pcffm.net.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"jonci.myqnapcloud.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"hgmusic963.zapto.org.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.readlook.tk.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard.jnkl.de.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"a76d3eab.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"2adace8hybt.dns.controld.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"c3267d42.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"tikhvin.net.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.kabudac.top.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"fdt.team.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"1f61da9f.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"ruviklabsdns.duckdns.org.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"ad.52736995.xyz.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dnsnoads.francecentral.cloudapp.azure.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"doh2.almir1904.eu.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.controld.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.omada.cafe.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"comss.dns.controld.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.ze.fyi.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"f8b93a2b.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"mrjsv.in.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.tcp.so.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dlamx.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"trevalim.fr.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"2c7bfd15.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.pcr.dog.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adc62ec2.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"lion.dns.qwer.pw.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"3eea84f5.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"srv01.dr-adguard.de.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"78ca3dde.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguardhome.eways.co.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard.ulbricht.cloud.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"ag.jdaongy.top.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"6358cbd1.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"ag.snrka.ru.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"doh3.almir1904.eu.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.adm-sdnv.ru.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.edgeburnmedia.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.taoday.top.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"p2.freedns.controld.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"66a65c42.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"vds.xv.fi.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"knightsnet.me.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"67174b1c.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.d96.info.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.howmao.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"4eb58517.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"6b461c9b.d.adguard.ch.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"9777f899.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"3v9vwp7apu.dns.controld.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard.tmdproject.nl.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"ba7947eb.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"d52ae5a2.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"ag02.de.hallmen.it.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"zgo.firegod.eu.org.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.tfkzptzt.top.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"bba7642b.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"285ed99e.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.ofdoom.net.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"jgw.keguazi.eu.org.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.lx4cg.ampr.org.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"a.lx1duc.ampr.org.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"4cf98962.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"acezy.top.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"d4ac5914.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"netcup.mismat.ch.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dnspods.xiumaos.cn.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"d3e6d2e6.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.bulletproof.rs.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adhome.mn83.fr.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard.ai5.app.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.milftech.xyz.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"ad3bbfb1.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.mrzgh.top.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"fatahnetwork.eu.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns01.sdu.pp.ua.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dnsadguard.ru.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"hkg.core.access.zznet.fun.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"e271a7e6.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns1.tardis33.ru.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"65a3a235.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"www.iw-u.cn.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns1.newapi.host.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"6dfd3fbb.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.llzz.top.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"tiarap.net.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.leif.digital.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.s2time.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"b4e3b1ef.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard.kenolas.xyz.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.qiyuwork.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"2bb2eb19.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns0.eu.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"ad.hunga1k47.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.enzonix.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard.sudobox.net.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"d88dfd7c.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"zzxxcc.top.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"71ca9cc7.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard.pangerl.it.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard.szerver.dscloud.me.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.nubacuk.dev.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"73fdd94d.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"be7865cd.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.shbox.ru.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard.jasanix.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"kids.dns0.eu.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.xinghaihengliu.top.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"8325d373.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"odysseusnetwork.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"flohdurs.de.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"65ea66bf.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"lbawd.top.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.dns-root.id.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"4743bd5f.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"aw.tailnet-f07e.ts.net.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"213f9136.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"X.laoban.fun.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.lolyoulab.site.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"cloud1.amazehome.xyz.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"tt.lianshow.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"edns.bourassa.cc.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.rjls.me.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard.fam-rodenburg.nl.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"privacy.plumedns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"ad.systemfall.ru.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dot.sccheng.top.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"secure-dns.pleumkungz.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"stargate.stu.cn.ua.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"99979127.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"kbox.nacan.xyz.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"38bfd781.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.demoniak.ch.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"alk.li.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"d4aaf3fe.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"yxhvps.tk.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"atsilva.link.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"64225e3c.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"5.196.88.160.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.sabuj.in.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"ff7eb9c5.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"ad.chen16366.top.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.vint1024.net.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"defense.crstin.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.code66.de.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard.fuzzycloud.ru.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.linlin00.top.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"bb8eda8d.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"server-plex.jpginformatica.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"bubu-cloud.myds.me.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"uranus.plonknet.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"d9ce3674.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"znegin.online.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"5b55d769.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"amlegion.org.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"xyz3.zmjflow.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.davil.top.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.xintron.se.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"pg.mandre.dev.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"townefilter.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard.foltynski.eu.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.sachinchakraborty.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard.stealbit.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"ns2.hjk.kr.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.vmv-service.ru.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"bf37232c.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard.nas01.gravfu.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"sriedmueadguard.casa.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"4df2cd42.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"sakuraknight2024.top.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"friend.bedro.cloud.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"app.victorlinares94.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"ltx.at.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"4b8a9abf.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"eu.agrigoryev.ru:3000.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.mazix.keenetic.pro.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"d4e28549.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"testaghome.meshkov.info.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.googlec.cc.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.txq.life.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.diebus.fr.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"3546d165.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"ns1.znit.net.bd.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"resolve.r9x.cc.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.2048.design.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"4dd34a27.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"kklevita.duckdns.org.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns1.niub.one.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns3.r1bnc.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"a91588b8.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard.leohub.net.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"d7f6cdae.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"ce.dnscron.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard.radioreset.net.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"agh.spritz.top.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"djeffker.ynh.fr.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"guard.kunnia.duckdns.org.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"hk.jiusi.online.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.lvqing.eu.org.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.aaayun.cc.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.micro.alloxr.info.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.sstomp.nl.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"zspinformatika.hu.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"a83a171a.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"agdns.alexlnrd.fr.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard.verstandlxs.eu.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"4dc636e8.d.adguard.ch.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard.kesimunka.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.madmarx.dev.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"d.luck13.me.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.homecode.top.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"shield1.eranext.net.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"baze.ouache.net.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard-minhyeok.duckdns.org.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"glpdns.australiaeast.cloudapp.azure.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns-vlvn.freemyip.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.jserv.cn.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.hubservices.vn.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"cimol.duckdns.org.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"be884619.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"cac882b5.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.sweettea.health.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.raykat.ir.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.jimwelanobong.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"query.sxueck.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.lmpower.love.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns2.bortus.io.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.mcexp.it.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"3oumwsh6sy.dns.controld.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"a.papertsar.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"guard.lumusimc.co.uk.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"6d45f3db.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"ns1.sc-lezhi.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"235f51e4.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"s1.srch.top.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adblock.unarelith.net.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"block.abstergo.it.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"de.teradns.org.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"f111f9c6.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.skyversehosting.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"kirkscloud.online.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dnsvps.familiamv.net.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"ddns.99165.net.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.sapphire-cloud.co.uk.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"184ae657.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard.elc.monster.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"www.yuanronghua.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"xu3u04u48.synology.me.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"marschi.ovh.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.gigl.fr.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"b-ii.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard.qyo.lol.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.panszelescik.pl.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"a42dabc4.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"732b9dda.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"hb-dns.strangebits.net.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"ad.kiemthedenhat.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"s1.s2.shahramv1.site.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"wu48.duckdns.org.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.noahmarleaux.de.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"deguo.12342345.xyz.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.haoxuan.me.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"bh.wael.name.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.2smile.top.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"46a8ab6c.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"hk.terrytyc.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"pzp-dns.pzp.co.ua.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dok65.ru.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"cays.eyecay.xyz.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"sossong-bayern.de.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"172737.xyz.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"ce2552ae.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard.aavesh.dev.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.superhori.ro.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adg.llou.app.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"addns.jpr.space.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.f4a.fun.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"742af9ac.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"sentinel.diecezja.gliwice.pl.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"v-yajie.dynv6.net.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adghome.charleschan.net.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.srijan.site.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"avehomenas2.fuseits.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"tls.truimo.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns01.enginyring.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"syn.mrps.in.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.mikeyg.top.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.marasov.id.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"d9fac4ae.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"vps.grussenmeyer.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"b144ed47.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguardcalpena.duckdns.org.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"c775a1a2.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"ad.aquapro.top.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard-us1.cloudmini.net.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"us.terrytyc.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"98f9f68e.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.libertesrc.com.tr.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.ajp.cam.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"2db5c681.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.thac.dev.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"jarvis1.ru.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.udi.pl.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"oblivious.dns.aka-mcqa.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.0ooo.icu.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"2fccff36.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.horcrux.vip.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns0.saif.zone.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"5d4e8e5b.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard.localhome.app.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dnsadmin.hjemmeserver.net.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.kizuki.lol.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dbf1bf6f.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"52b6c643.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.skazu.net.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"open.dns0.eu.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"neutrino.ruar.net.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"d3f73d48.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"ad2.johnwick.me.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"e1d5c61f.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"4ca513fc.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.spil.co.id.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.maosekai.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"look.cdn.td.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.anri-barsovski.ru.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.phillipjberry.net.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.lilith.cloud.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"www.xihuanhuihui.top.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"nastuf.ru.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"ooovpn.xyz.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns-adguard.zen3515.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard.adrianofrongillo.ovh.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"7816b55c.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"77cef4ca.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"homita.id.vn.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"timedns.net.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"vnpt.sonlt.name.vn.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"twjeffchen.dsmynas.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"whoswhip.top.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"ad.03vps.cn.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"bb98c7df.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.ger.st.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dog.dns.qwer.pw.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.mvincent.xyz.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"hoavan.io.vn.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"monty.best.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"chungocoai.name.vn.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"zero.dns0.eu.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"highigh.tech.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adgdh.omkv.in.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"c2efc77b.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard.thetips.dev.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"185.225.20.152.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"roldera.net.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard.gambini.org.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"2vp.in.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"gmf2.ddns.net.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"chekryzh-wg.duckdns.org.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"bt.wujunyang.top.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard.karimovgroup.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"th2.dnsfinder.ir.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"zneginnuxt.ddns.net.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"adguard-vn1.cloudmini.net.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns01.ngits.uk.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.mexpert.eu.org.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"eliatofani.ovh.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"c3.i88.xyz.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dns.ador.com.bd.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dc7152e2.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"b.alancooper.online.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"homelab2.terabit.net.id.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"secure-dns-2.nexashield.fr.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"dandelionsprout.asuscomm.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}
+{"domain":"b8fc8775.d.adguard-dns.com.","ip":"","cert_check":"unknown","country":"unknown","as":"unknown","protocol":"unknown"}

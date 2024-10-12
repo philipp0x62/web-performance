@@ -2,5 +2,5 @@ selenium~=4.0.0a1
 tranco~=0.6
 requests~=2.26.0
 browsermob-proxy~=0.8.0
-tldextract~=5.1.2 
-
+tldextract~=5.1.2
+pandas~=2.2.2

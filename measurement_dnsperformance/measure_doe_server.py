@@ -1,4 +1,3 @@
-import re
 import json
 import psycopg
 import pandas as pd
@@ -9,7 +8,7 @@ import subprocess
 # data source: https://port-53.info/data/open-encrypted-dns-servers/
 df_doq = pd.read_json('doeQueries/doq-2024-03.json', lines=True)
 df_doh = pd.read_json('doeQueries/doh3-2024-03.json', lines=True)
-df_doe = pd.read_json('doeQueries/doh3-2024-03.json', lines=True)
+df_doe = pd.read_json('doeQueries/Steffens_server_list.json', lines=True)
 
 
 # merge lists 
@@ -19,6 +18,7 @@ df_doe['protocol'] ='unknown'
 df_resolvers = pd.concat([df_doh, df_doq, df_doe])
 
 # connect to database for storing information
+#db = psycopg.connect(dbname='web_performance', user='postgres')
 db = psycopg.connect(dbname='web_performance')
 cursor = db.cursor()
 
@@ -30,10 +30,15 @@ update_resolver_session_resumption = "UPDATE resolvers SET session_resumption = 
 update_resolver_rtt0 = "UPDATE resolvers SET rtt0 = TRUE WHERE _id = %s"
 
 # q query, time in nanoseconds 
+# RouteDNS 0-RTT can result in no connection at all --> instances without 0-RTT enabled and instances with 0-RTT enabled
 doq_query = "go run . A @quic://?server? google.com --stats --format=json" # DoQ standard port: 853
 doh_query = "go run . A @https://?server? --stats --http3 --format=json" # DoH3 standard port 443
-doq_query_intermediate = "go run . A @127.0.0.1 google.com --stats --format=json" # DoQ standard port: 853
-doh_query_intermediate = "go run . A @127.0.0.2 --stats --format=json" # DoH3 standard port 443
+
+doq_query_intermediate_rtt0 = "go run . A @127.0.0.1 google.com --stats --format=json" # DoQ standard port: 853 with 0-RTT support
+doh_query_intermediate_rtt0 = "go run . A @127.0.0.2 google.com--stats --format=json" # DoH3 standard port 443 with 0-RTT support
+doq_query_intermediate = "go run . A @127.0.0.3 google.com --stats --format=json" # DoQ standard port: 853
+doh_query_intermediate = "go run . A @127.0.0.4 google.com --stats --format=json" # DoH3 standard port 443
+
 dou_query = "go run . A @?server? --stats --format=json" # DoU standard port 53
 rtt_query = "ping -c 3 ?server?" # ping via ICMP
 
@@ -78,17 +83,27 @@ for index, resolver in df_resolvers.iterrows():
         continue # host does not exist, skip
 
     # prepare RouteDNS config
-    sed_command_doq = "sed 's/address = " + '"domain.com:port"/address = ' + '"' + resolver['domain'] + ':853"/' + "' doq-client-template.toml > doq-client.toml"
-    sed_command_doh = "sed 's/address = " + '"domain.com:port"/address = ' + '"' + resolver['domain'] + ':443"/' + "' doh-client-template.toml > doh-client.toml"
+    sed_command_doq_rtt0 = "sed 's/address = " + '"domain.com:port"/address = ' + '"' + resolver['domain'] + ':853"/' + "' doq-client-template.toml > doq-client.toml"
+    # RouteDNS requires https: and no port at the end of the name. tested with https://dns.google/dns-query, quic support enabled via the transport layer protocol
+    # servers which do not support 0rtt can cause a resolve fail, route DNS does not seem to be able to detect that and retry autommatically
+    sed_command_doh_rtt0 = "sed 's/address = " + '"https://domain.com:port"/address = ' + '"https://' + resolver['domain'] + '"' + "' doh-client-template.toml > doh-client.toml"
+    sed_command_doq = "sed 's/address = " + '"domain.com:port"/address = ' + '"' + resolver['domain'] + ':853"/' + "' doq-client-template-rtt0-disabled.toml > doq-client-rtt0-disabled.toml"
+    sed_command_doh = "sed 's/address = " + '"https://domain.com:port"/address = ' + '"https://' + resolver['domain'] + '"' + "' doh-client-template-rtt0-disabled.toml > doh-client-rtt0-disabled.toml"
 
+    # with 0-RTT
+    route_dns_doq_rtt0 = subprocess.run(sed_command_doq_rtt0, shell=True, capture_output=False, cwd="../routedns/cmd/routedns", text=True) 
+    route_dns_doh_rtt0 = subprocess.run(sed_command_doh_rtt0, shell=True, capture_output=False, cwd="../routedns/cmd/routedns", text=True) 
+    # without 0-RTT
     route_dns_doq = subprocess.run(sed_command_doq, shell=True, capture_output=False, cwd="../routedns/cmd/routedns", text=True) 
     route_dns_doh = subprocess.run(sed_command_doh, shell=True, capture_output=False, cwd="../routedns/cmd/routedns", text=True) 
 
     # start RouteDNS instances
-    #route_dns_doq = subprocess.run("nohup go run . doq-client.toml > RouteDNS_DoQ.log & && echo $!", shell=True, capture_output=True, cwd="../routedns/cmd/routedns/example-config", text=True) 
-    #route_dns_doh = subprocess.run("nohup go run . doh-client.toml > RouteDNS_DoH3.log & && echo $!", shell=True, capture_output=True, cwd="../routedns/cmd/routedns/example-config", text=True) 
-    #route_dns_doq_pid = int(route_dns_doq.stdout)
-    #route_dns_doh_pid = int(route_dns_doh.stdout)
+    # with 0-RTT
+    route_dns_doq_rtt0 = subprocess.Popen("nohup go run . doq-client.toml > RouteDNS_DoQ_RTT0.log &", shell=True, cwd="../../routedns/cmd/routedns/example-config")
+    route_dns_doh_rtt0 = subprocess.Popen("nohup go run . doh-client.toml > RouteDNS_DoH3_RTT0.log &", shell=True, cwd="../../routedns/cmd/routedns/example-config") 
+    # without 0-RTT
+    route_dns_doq = subprocess.Popen("nohup go run . doq-client-rtt0-disabled.toml > RouteDNS_DoQ.log &", shell=True, cwd="../../routedns/cmd/routedns/example-config")
+    route_dns_doh = subprocess.Popen("nohup go run . doh-client-rtt0-disabled.toml > RouteDNS_DoH3.log &", shell=True, cwd="../../routedns/cmd/routedns/example-config") 
 
     # process ping further
     ping_statistics =  rtt_result.stdout.split('\n')[-2]
@@ -110,10 +125,10 @@ for index, resolver in df_resolvers.iterrows():
     support_doh = False
     support_dou = False
 
-   #doq_result = subprocess.run(prepared_doq_query.split(), shell=True, capture_output=True, text=True, cwd="../q-main").stdout.strip("\n") # using q
-    doq_result = subprocess.run(prepared_doq_query, shell=True, capture_output=True, text=True, cwd="../q-main") # using q
-    doh_result = subprocess.run(prepared_doh_query, shell=True, capture_output=True, text=True, cwd="../q-main") # using q
-    dou_result = subprocess.run(prepared_dou_query, shell=True, capture_output=True, text=True, cwd="../q-main") # using q
+   #doq_result = subprocess.run(prepared_doq_query.split(), shell=True, capture_output=True, text=True, cwd="../../q").stdout.strip("\n") # using q
+    doq_result = subprocess.run(prepared_doq_query, shell=True, capture_output=True, text=True, cwd="../../q") # using q
+    doh_result = subprocess.run(prepared_doh_query, shell=True, capture_output=True, text=True, cwd="../../q") # using q
+    dou_result = subprocess.run(prepared_dou_query, shell=True, capture_output=True, text=True, cwd="../../q") # using q
 
 
     ## Insert results 
@@ -168,7 +183,7 @@ for index, resolver in df_resolvers.iterrows():
     # DoU
     if support_dou:
         # run same query again to have a fair comparison of the run times
-        dou_result = subprocess.run(prepared_dou_query, shell=True, capture_output=True, text=True, cwd="../q-main") # using q
+        dou_result = subprocess.run(prepared_dou_query, shell=True, capture_output=True, text=True, cwd="../../q") # using q
         raw_data = json.loads(dou_result.stdout)[0]
         
         if ping_blocked: # DoU completes request in one RTT --> use as alternative 
@@ -184,7 +199,7 @@ for index, resolver in df_resolvers.iterrows():
    # DoQ
     if support_doq:
         # send to queries to the intermediate
-        doq_result = subprocess.run(doq_query_intermediate, shell=True, capture_output=True, text=True, cwd="../q-main") # using q
+        doq_result = subprocess.run(doq_query_intermediate_rtt0, shell=True, capture_output=True, text=True, cwd="../../q") # using q
         raw_data = json.loads(doq_result.stdout)[0]
 
         if ping_blocked and dou_blocked:
@@ -199,7 +214,7 @@ for index, resolver in df_resolvers.iterrows():
         db.commit()
 
         # do second measurement to find support for session resumption and 0-RTT
-        doq_result = subprocess.run(doq_query_intermediate, shell=True, capture_output=True, text=True, cwd="../q-main") # using q
+        doq_result = subprocess.run(doq_query_intermediate_rtt0, shell=True, capture_output=True, text=True, cwd="../../q") # using q
         raw_data_second = json.loads(doq_result.stdout)[0]
 
         if ping_blocked and dou_blocked:
@@ -232,8 +247,11 @@ for index, resolver in df_resolvers.iterrows():
 
    # DoH  
     if support_doh:
-        doh_result = subprocess.run(doh_query_intermediate, shell=True, capture_output=True, text=True, cwd="../q-main") # using q
+        doh_result = subprocess.run(doh_query_intermediate_rtt0, shell=True, capture_output=True, text=True, cwd="../../q") # using q
         raw_data = json.loads(doh_result.stdout)[0]
+
+        if(raw_data['replies'][0]['rcode'] == 2): # SERVFAIL
+        print("SERVFAIL")
 
         if ping_blocked and dou_blocked:
             print("RTT measurement blocked")
@@ -247,7 +265,7 @@ for index, resolver in df_resolvers.iterrows():
         db.commit()
 
         # do second measurement to find support for session resumption and 0-RTT
-        doh_result = subprocess.run(doh_query_intermediate, shell=True, capture_output=True, text=True, cwd="../q-main") # using q
+        doh_result = subprocess.run(doh_query_intermediate_rtt0, shell=True, capture_output=True, text=True, cwd="../../q") # using q
         raw_data_second = json.loads(doh_result.stdout)[0]
 
         if ping_blocked and dou_blocked:
@@ -279,29 +297,9 @@ for index, resolver in df_resolvers.iterrows():
         db.commit()
 
     # stop RouteDNS instances
-    #subprocess.run("kill -7 " + route_dns_doq_pid, shell=True, capture_output=False) 
-    #subprocess.run("kill -7 " + route_dns_doh_pid, shell=True, capture_output=False) 
-
-
-
-
-
-    #print(type(doq_result.stdout))
-    #print(".......error......")
-    #if doq_result.stderr:
-     #   print(type(doq_result.stderr))
-    #print("--------DoH-------")
-    #print(doh_result.stdout)
-    #print(".......error......")
-    #print(doh_result.stderr)
-    #print("--------DoU-------")
-    #print(dou_result.stdout)
-    #print(".......error......")
-    #print(dou_result.stderr)
-    
-    #print(doh_result)
-    #print("--------DoU-------")
-    #print(dou_result)
-    #subprocess.run(["q", query]) 
+    route_dns_doq_rtt0.kill() 
+    route_dns_doh_rtt0.kill()
+    route_dns_doq.kill() 
+    route_dns_doh.kill()  
 
 print("measurement completed")
