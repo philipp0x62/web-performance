@@ -1,11 +1,12 @@
-# Template config using a public DoQ server
+# Template config using a public DoH server
 
-[resolvers.doq-resolver]
-address = "domain.com:port"
-protocol = "doq"
+[resolvers.doh-resolver]
+address = "https://domain.com:port"
+protocol = "doh"
+transport = "quic"
 enable-0rtt = false
 
 [listeners.local-udp]
 address = "127.0.0.4:53"
 protocol = "udp"
-resolver = "doq-resolver"
+resolver = "doh-resolver"
