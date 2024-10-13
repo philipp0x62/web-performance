@@ -24,4 +24,15 @@
     ADD UNIQUE (host, protocol);
 
 -- --------------------------------------------------------;
+
+
+ALTER TABLE "resolvers"
+  ADD COLUMN serv_fail_rtt0 bool DEFAULT FALSE,
+  ADD COLUMN unreliable bool DEFAULT FALSE;
+
+
+ALTER TABLE "websites"
+  ADD COLUMN har_file bool DEFAULT FALSE;
+
+
 COMMIT;

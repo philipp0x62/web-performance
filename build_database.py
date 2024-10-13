@@ -73,6 +73,8 @@ def create_resolvers_table():
                 port integer,
                 rtt0 bool DEFAULT FALSE,
                 session_resumption bool DEFAULT FALSE,
+                serv_fail_rtt0 bool DEFAULT FALSE,
+                unreliable bool DEFAULT FALSE,
                 UNIQUE (host, port),
                 UNIQUE (host, protocol)
             );
@@ -109,6 +111,7 @@ def create_websites_table():
                 number_non_origin_servers INT,
                 number_mime_types INT,
                 bytes_downladed INT 
+                har_file bool DEFAULT FALSE;
             );
             """)
 
