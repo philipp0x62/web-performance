@@ -4,7 +4,17 @@ import pandas as pd
 import subprocess
 import os
 import signal
+import sys
 
+
+# retrieve input param if given
+try:
+    # argv[0] is the name of the calling script
+    index = int(sys.argv[1])
+except IndexError:
+    index = 0
+    print("No starting given, starting from 0")
+    
 
 # read all files in har_files (should only be har files) 
 # data source: https://port-53.info/data/open-encrypted-dns-servers/
@@ -60,7 +70,9 @@ log_doq_rtt0 = open('RouteDNS_DoQ_RTT0.log', 'w')
 log_doh_rtt0 = open('RouteDNS_DoH3_RTT0.log', 'w')
 log_doq = open('RouteDNS_DoQ.log', 'w')
 log_doh = open('RouteDNS_DoH3.log', 'w')
-index = 0
+
+if index > 0:
+    df_resolvers = df_resolvers.iloc[index:]
 
 for __, resolver in df_resolvers.iterrows():
     index+=1
@@ -203,17 +215,22 @@ for __, resolver in df_resolvers.iterrows():
     if support_dou:
         # run same query again to have a fair comparison of the run times
         dou_result = subprocess.run(prepared_dou_query, shell=True, capture_output=True, text=True, cwd="../../q") # using q
-        raw_data = json.loads(dou_result.stdout)[0]
-        
-        if ping_blocked: # DoU completes request in one RTT --> use as alternative 
-            round_trips = 1
-            avg_rtt = raw_data['time']/1000
-        else:
-            round_trips = round(int(int(raw_data['time']/1000))/avg_rtt)
-        print("DoU round trips: ", round_trips)
+        try: 
+            raw_data = json.loads(dou_result.stdout)[0]
+        except: # happens when the server does not answer (None)
+            support_dou = False
+            cursor.execute(update_resolver_unreliable, (dou_id,))
+            db.commit()
+        if support_dou:
+            if ping_blocked: # DoU completes request in one RTT --> use as alternative 
+                round_trips = 1
+                avg_rtt = raw_data['time']/1000
+            else:
+                round_trips = round(int(int(raw_data['time']/1000))/avg_rtt)
+            print("DoU round trips: ", round_trips)
 
-        cursor.execute(insert_resolver_measurement, (dou_id, 'udp', avg_rtt, raw_data['time'], round_trips , False, dou_result.stdout, False, False))
-        db.commit()
+            cursor.execute(insert_resolver_measurement, (dou_id, 'udp', avg_rtt, raw_data['time'], round_trips , False, dou_result.stdout, False, False))
+            db.commit()
 
    # DoQ
     if support_doq:
@@ -253,40 +270,46 @@ for __, resolver in df_resolvers.iterrows():
             db.commit()
 
             # do second measurement to find support for session resumption and 0-RTT
-            if serv_fail:
-                doq_result = subprocess.run(doq_query_intermediate, shell=True, capture_output=True, text=True, cwd="../../q") # using q
-                raw_data_second = json.loads(doq_result.stdout)[0]
-            else:
-                doq_result = subprocess.run(doq_query_intermediate_rtt0, shell=True, capture_output=True, text=True, cwd="../../q") # using q
-                raw_data_second = json.loads(doq_result.stdout)[0]
-
-            if ping_blocked and dou_blocked:
-                print("RTT measurement blocked")
-                round_trips = -1
-                avg_rtt = -1
-            else:
-                round_trips = round(int(int(raw_data_second['time']/1000))/avg_rtt)
-            print("DoQ round trips: ", round_trips)
-
-            session_resumption = False
-            rtt0 = False
-
-            if(round(raw_data['time'] / raw_data_second['time']) <= 3):
-                # session resumption and 0-RTT are supported
-                session_resumption = True
-                rtt0 = True
-                cursor.execute(update_resolver_session_resumption, (doq_id,))
-                cursor.execute(update_resolver_rtt0, (doq_id,))
-                db.commit()
-            elif (round(raw_data['time'] / raw_data_second['time']) == 2):
-                # session resumption is supported but not 0-RTT
-                session_resumption = True
-                cursor.execute(update_resolver_session_resumption, (doq_id,))
+            try:
+                if serv_fail:
+                    doq_result = subprocess.run(doq_query_intermediate, shell=True, capture_output=True, text=True, cwd="../../q") # using q
+                    raw_data_second = json.loads(doq_result.stdout)[0]
+                else:
+                    doq_result = subprocess.run(doq_query_intermediate_rtt0, shell=True, capture_output=True, text=True, cwd="../../q") # using q
+                    raw_data_second = json.loads(doq_result.stdout)[0]
+            except:
+                support_doq = False
+                cursor.execute(update_resolver_unreliable, (doq_id,))
                 db.commit()
             
-            # else session resumption and 0-RTT are not supported, initial values are correct
-            cursor.execute(insert_resolver_measurement, (doq_id, 'quic', avg_rtt, raw_data['time'], round_trips , False, doq_result.stdout, session_resumption, rtt0))
-            db.commit()
+            if support_doq:
+                if ping_blocked and dou_blocked:
+                    print("RTT measurement blocked")
+                    round_trips = -1
+                    avg_rtt = -1
+                else:
+                    round_trips = round(int(int(raw_data_second['time']/1000))/avg_rtt)
+                print("DoQ round trips: ", round_trips)
+
+                session_resumption = False
+                rtt0 = False
+
+                if(round(raw_data['time'] / raw_data_second['time']) <= 3):
+                    # session resumption and 0-RTT are supported
+                    session_resumption = True
+                    rtt0 = True
+                    cursor.execute(update_resolver_session_resumption, (doq_id,))
+                    cursor.execute(update_resolver_rtt0, (doq_id,))
+                    db.commit()
+                elif (round(raw_data['time'] / raw_data_second['time']) == 2):
+                    # session resumption is supported but not 0-RTT
+                    session_resumption = True
+                    cursor.execute(update_resolver_session_resumption, (doq_id,))
+                    db.commit()
+                else:
+                    # else session resumption and 0-RTT are not supported, initial values are correct
+                    cursor.execute(insert_resolver_measurement, (doq_id, 'quic', avg_rtt, raw_data['time'], round_trips , False, doq_result.stdout, session_resumption, rtt0))
+                    db.commit()
 
    # DoH  
     if support_doh:
@@ -325,40 +348,46 @@ for __, resolver in df_resolvers.iterrows():
             db.commit()
 
             # do second measurement to find support for session resumption and 0-RTT
-            if serv_fail:
-                doh_result = subprocess.run(doh_query_intermediate, shell=True, capture_output=True, text=True, cwd="../../q") # using q
-                raw_data_second = json.loads(doh_result.stdout)[0]
-            else:
-                doh_result = subprocess.run(doh_query_intermediate_rtt0, shell=True, capture_output=True, text=True, cwd="../../q") # using q
-                raw_data_second = json.loads(doh_result.stdout)[0]
-
-            if ping_blocked and dou_blocked:
-                print("RTT measurement blocked")
-                round_trips = -1
-                avg_rtt = -1
-            else:
-                round_trips = round(int(int(raw_data_second['time']/1000))/avg_rtt)
-            print("DoH round trips: ", round_trips)
-
-            session_resumption = False
-            rtt0 = False
-
-            if(round(raw_data['time'] / raw_data_second['time']) <= 3):
-                # session resumption and 0-RTT are supported
-                session_resumption = True
-                rtt0 = True
-                cursor.execute(update_resolver_session_resumption, (doh_id,))
-                cursor.execute(update_resolver_rtt0, (doh_id,))
+            try:
+                if serv_fail:
+                    doh_result = subprocess.run(doh_query_intermediate, shell=True, capture_output=True, text=True, cwd="../../q") # using q
+                    raw_data_second = json.loads(doh_result.stdout)[0]
+                else:
+                    doh_result = subprocess.run(doh_query_intermediate_rtt0, shell=True, capture_output=True, text=True, cwd="../../q") # using q
+                    raw_data_second = json.loads(doh_result.stdout)[0]
+            except:
+                support_doh = False
+                cursor.execute(update_resolver_unreliable, (doh_id,))
                 db.commit()
-            elif (round(raw_data['time'] / raw_data_second['time']) == 2):
-                # session resumption is supported but not 0-RTT
-                session_resumption = True
-                cursor.execute(update_resolver_session_resumption, (doh_id,))
-                db.commit()
-            
-            # else session resumption and 0-RTT are not supported, initial values are correct
-            cursor.execute(insert_resolver_measurement, (doh_id, 'h3', avg_rtt, raw_data['time'], round_trips , False, doh_result.stdout, session_resumption, rtt0))
-            db.commit()
+
+            if support_doh:    
+                if ping_blocked and dou_blocked:
+                    print("RTT measurement blocked")
+                    round_trips = -1
+                    avg_rtt = -1
+                else:
+                    round_trips = round(int(int(raw_data_second['time']/1000))/avg_rtt)
+                print("DoH round trips: ", round_trips)
+
+                session_resumption = False
+                rtt0 = False
+
+                if(round(raw_data['time'] / raw_data_second['time']) <= 3):
+                    # session resumption and 0-RTT are supported
+                    session_resumption = True
+                    rtt0 = True
+                    cursor.execute(update_resolver_session_resumption, (doh_id,))
+                    cursor.execute(update_resolver_rtt0, (doh_id,))
+                    db.commit()
+                elif (round(raw_data['time'] / raw_data_second['time']) == 2):
+                    # session resumption is supported but not 0-RTT
+                    session_resumption = True
+                    cursor.execute(update_resolver_session_resumption, (doh_id,))
+                    db.commit()
+                else:
+                    # else session resumption and 0-RTT are not supported, initial values are correct
+                    cursor.execute(insert_resolver_measurement, (doh_id, 'h3', avg_rtt, raw_data['time'], round_trips , False, doh_result.stdout, session_resumption, rtt0))
+                    db.commit()
 
 
     # stop RouteDNS instances

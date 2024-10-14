@@ -34,5 +34,16 @@ ALTER TABLE "resolvers"
 ALTER TABLE "websites"
   ADD COLUMN har_file bool DEFAULT FALSE;
 
+  ALTER TABLE "resolver_measurement"
+    ADD COLUMN _id SERIAL PRIMARY KEY,
+    ADD COLUMN resolver_id SERIAL,
+    ADD COLUMN protocol VARCHAR,
+    ADD FOREIGN KEY (resolver_id) REFERENCES resolvers(_id);
+
+
+
+
+
+
 
 COMMIT;
