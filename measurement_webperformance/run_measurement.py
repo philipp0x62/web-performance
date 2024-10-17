@@ -12,14 +12,16 @@ import os
 try:
     # argv[0] is the name of the calling script
     dnsproxy_address = sys.argv[1]
-    proxy_pid = int(sys.argv[2])
-    protocol = sys.argv[3]
-    used_dns_server = sys.argv[4]
+    protocol = sys.argv[2]
+    used_dns_server = sys.argv[3]
+    starting_point = sys.argv[4]
+    interval = sys.argv[5]
 except IndexError:
     print("Input params incomplete (dns proxy adddress, dnsproxy PID")
     sys.exit(1)
 
 # connect to database 
+#db = psycopg.connect(dbname='web_performance', user='postgres')
 db = psycopg.connect(dbname='web_performance')
 cursor = db.cursor()
 insert_cursor = db.cursor() # otherwise the other will get deleted
@@ -30,7 +32,8 @@ insert_cursor = db.cursor() # otherwise the other will get deleted
 
 
 # get pages cursor from database 
-cursor.execute("SELECT _id, dns FROM websites LIMIT 1000")
+cursor.execute("SELECT _id, dns FROM websites WHERE _id BETWEEN %s AND %s", (starting_point, starting_point+interval-1))
+#cursor.execute("SELECT _id, dns FROM websites LIMIT 1000")
 #cursor.execute("SELECT _id, dns FROM websites WHERE id > 1 LIMIT 999")
 
 
@@ -121,9 +124,6 @@ def perform_page_load(page, cache_warming=0):
     
     driver.quit()
 
-    # send restart signal to dnsProxy after loading the page
-   # os.system("sudo kill -SIGUSR1 %d" % proxy_pid)
-    time.sleep(0.5)
     return pl_status
 
 
@@ -135,25 +135,21 @@ def insert_performance(page, performance, timestamp, cache_warming=0, error=''):
     performance['cacheWarming'] = cache_warming
     performance['error'] = error
 
-
-    #print("insert to database")
     # insert into database
     insert_cursor.execute(f"""
     INSERT INTO measurements ({','.join([e for e in measurement_elements])}) VALUES ({(len(measurement_elements) - 1) * '%s,'}%s);
     """, tuple([performance[m_e] for m_e in measurement_elements]))
-    #print("executed")
     db.commit()
-    #print("committed")
 
 
 for row in cursor:
     # cache warming
     print(f'{row[1]}: cache warming')
     status = perform_page_load(row[1], 1)
-    #print("done")
+
     if status == 0:
         # performance measurement if cache warming succeeded
-        #print(f'{row[1]}: measuring')
+        print(f'{row[1]}: measuring')
         perform_page_load(row[1])
 
 db.close()

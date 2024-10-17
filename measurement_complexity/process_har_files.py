@@ -9,6 +9,7 @@ import os
 
 
 # connect to db
+#db = psycopg.connect(dbname='web_performance', user='postgres')
 db = psycopg.connect(dbname='web_performance')
 cursor = db.cursor()
 
@@ -28,6 +29,10 @@ for file in files:
     print('processing: ', file)
     with open('har_files/' + file) as f:
         har = json.load(f)
+
+        # har file exists and could loaded
+        cursor.execute("UPDATE websites SET har_file=True WHERE dns=%s", (file,))
+        db.commit()
 
         
         for entry in har['log']['entries']:

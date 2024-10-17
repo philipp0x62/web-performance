@@ -66,7 +66,7 @@ print("starting measurement " + str(time.time()) + "\n==========================
 # get url 
 # check that there is data in the database 
 #cursor.execute("SELECT _id, dns FROM websites LIMIT 100")
-cursor.execute("SELECT _id, dns FROM websites WHERE _id BETWEEN %s AND %s", (starting_point, starting_point+interval-1))
+cursor.execute("SELECT _id, dns FROM websites WHERE _id har_file=TRUE BETWEEN %s AND %s", (starting_point, starting_point+interval-1))
 index = 0
 for row in cursor:
     index+=1
