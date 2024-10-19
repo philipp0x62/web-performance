@@ -14,11 +14,13 @@ try:
     dnsproxy_address = sys.argv[1]
     protocol = sys.argv[2]
     used_dns_server = sys.argv[3]
-    starting_point = sys.argv[4]
-    interval = sys.argv[5]
+    starting_point = int(sys.argv[4])
+    interval = int(sys.argv[5])
 except IndexError:
     print("Input params incomplete (dns proxy adddress, dnsproxy PID")
     sys.exit(1)
+
+print("Start Point: ", starting_point)
 
 # connect to database 
 #db = psycopg.connect(dbname='web_performance', user='postgres')
@@ -141,7 +143,7 @@ def insert_performance(page, performance, timestamp, cache_warming=0, error=''):
     """, tuple([performance[m_e] for m_e in measurement_elements]))
     db.commit()
 
-
+print("starting measurement " + str(time.time()) + "\n==========================")
 for row in cursor:
     # cache warming
     print(f'{row[1]}: cache warming')
@@ -153,3 +155,4 @@ for row in cursor:
         perform_page_load(row[1])
 
 db.close()
+print("==========================\n" + "completed measurement " + str(time.time()))

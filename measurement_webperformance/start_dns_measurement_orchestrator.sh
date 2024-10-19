@@ -21,22 +21,23 @@ UDP_SERVER="dns.google.com"
 echo "------starting dnsproxy servers------"
 
 cd ../../routedns/cmd/routedns
-nohup go run . doh-client-webperformance.toml > doh-webperformance.log &
+nohup go run . doh-client-doh-out.toml > doh-webperformance.log &
 PID_H3=$!
 echo "H3 proxy up and running on 127.0.0.1, PID: ${PID_H3}"
-nohup go run . doq-client-webperformance.toml > doq-webperformance.log &
+nohup go run . doq-client-doh-out.toml > doq-webperformance.log &
 PID_QUIC=$!
 echo "QUIC proxy up and running on 127.0.0.2, PID: ${PID_QUIC}"
-nohup go run . dou-client-webperformance.toml > dou-webperformance.log &
+nohup go run . dou-client-doh-out.toml > dou-webperformance.log &
 PID_UDP=$!
 echo "UDP proxy up and running on 127.0.0.3, PID: ${PID_UDP}"
 
+nohup go run . doh-client-doh-out_2.toml > doh-webperformance.log &
 PID_H3_2=$!
 echo "H3 proxy up and running on 127.0.0.4, PID: ${PID_H3_2}"
-nohup go run . doq-client-webperformance.toml > doq-webperformance.log &
+nohup go run . doq-client-doh-out_2.toml > doq-webperformance.log &
 PID_QUIC_2=$!
 echo "QUIC proxy up and running on 127.0.0.5, PID: ${PID_QUIC_2}"
-nohup go run . dou-client-webperformance.toml > dou-webperformance.log &
+nohup go run . dou-client-doh-out_2.toml > dou-webperformance.log &
 PID_UDP_2=$!
 echo "UDP proxy up and running on 127.0.0.6, PID: ${PID_UDP_2}"
 
@@ -78,6 +79,3 @@ do
     #echo "UDP measuremment running PID: $!"
 
 done
-
-
-

@@ -3,6 +3,7 @@ import json
 import tldextract 
 import pprint
 import os
+import time
 
 # just manually get pages list so the domain does not need to be resolved each time
 #pages = ['www.google.com', 'www.netflix.com', 'www.youtube.com', 'www.facebook.com', 'www.microsoft.com', 'twitter.com', 'www.instagram.com', 'www.baidu.com', 'www.linkedin.com', 'www.apple.com', 'www.wikipedia.org', 'www.amazon.com']
@@ -13,6 +14,7 @@ import os
 db = psycopg.connect(dbname='web_performance')
 cursor = db.cursor()
 
+print("processing started " + "==========================\n" + str(time.time()))
 #cursor.execute("DELETE FROM mime_types")
 
 # read all files in har_files (should only be har files) 
@@ -94,3 +96,4 @@ for file in files:
 
 # close connection
 db.close()
+print("==========================\n" + "processing completed " + str(time.time()))

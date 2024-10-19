@@ -1,0 +1,14 @@
+# Template config using a public DoQ server
+
+[resolvers.doh-resolver]
+address = "https://dns.adguard-dns.com/dns-query:443"
+protocol = "doh"
+transport = "quic"
+enable-0rtt = false
+
+[listeners.local-doh2]
+address = "127.0.0.4:443"
+protocol = "doh"
+resolver = "doh-resolver"
+server-crt = "example-config/server.crt"
+server-key = "example-config/server.key"
