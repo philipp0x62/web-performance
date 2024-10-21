@@ -34,7 +34,7 @@ do
     #if [[ $i==1 ]] || [[ $i==9 ]]; then
     #        continue
     #fi
-    python3 measure_complexity.py $((i*INTERVAL)) $INTERVAL > complexity_${i}.log &
+    nohup python measure_complexity.py $((i*INTERVAL)) $INTERVAL > complexity_${i}.log &
 
 done
 ##python3 /Users/zitrusdrop/Desktop/Master/Semester_4/Masterarbeit_HPI/Experiments/forked/web-performance/measure_complexity.py

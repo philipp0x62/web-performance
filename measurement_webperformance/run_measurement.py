@@ -34,7 +34,7 @@ insert_cursor = db.cursor() # otherwise the other will get deleted
 
 
 # get pages cursor from database 
-cursor.execute("SELECT _id, dns FROM websites WHERE _id BETWEEN %s AND %s", (starting_point, starting_point+interval-1))
+cursor.execute("SELECT _id, dns FROM websites WHERE har_file=True AND _id BETWEEN %s AND %s", (starting_point, starting_point+interval-1))
 #cursor.execute("SELECT _id, dns FROM websites LIMIT 1000")
 #cursor.execute("SELECT _id, dns FROM websites WHERE id > 1 LIMIT 999")
 
@@ -93,14 +93,18 @@ script = """
 options = webdriver.firefox.options.Options()
 options.add_argument("-headless")
 options.add_argument('--no-sandbox')
+options.add_argument("--ignore-certificate-errors")
+options.add_argument("--enable-javascript")
 options.set_preference('network.trr.mode', 3) # use only the provided resolver, see https://wiki.mozilla.org/Trusted_Recursive_Resolver
 #options.set_preference('network.trr.uri', 'https://127.0.0.1')
 options.set_preference('network.trr.uri', 'https://'+dnsproxy_address)
-# if not working set manually exception for the used certificate in firefox 
 
-firefox_profile = FirefoxProfile()
-firefox_profile.set_preference("javascript.enabled", True)
-options.profile = firefox_profile
+options.set_preference("browser.cache.disk.enable", False)
+#options.set_preference("browser.cache.memory.enable", False)
+options.set_preference("browser.cache.offline.enable", False)
+#options.set_preference("network.http.use-cache", False) 
+
+# if not working set manually exception for the used certificate in firefox 
 
 # options.timeouts = { 'pageLoad': 5000, 'script': 5000 } # default 300k and 30k 
 #driver.install_addon(addon_path_xpi) TODO might be insteresting 
@@ -123,7 +127,8 @@ def perform_page_load(page, cache_warming=0):
         print("exception")
         insert_performance(page, {k: 0 for k in measurement_elements}, timestamp, cache_warming=cache_warming, error=str(e))
         pl_status = -1
-    
+
+    #driver.delete_all_cookies()
     driver.quit()
 
     return pl_status
@@ -144,9 +149,12 @@ def insert_performance(page, performance, timestamp, cache_warming=0, error=''):
     db.commit()
 
 print("starting measurement " + str(time.time()) + "\n==========================")
+index=0
 for row in cursor:
+    index+=1
     # cache warming
-    print(f'{row[1]}: cache warming')
+    #print(f'{row[1]}: cache warming')
+    print(f'{index}. {row[1]}: cache warming')
     status = perform_page_load(row[1], 1)
 
     if status == 0:

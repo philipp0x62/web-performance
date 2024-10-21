@@ -1,13 +1,14 @@
 # Template config using a public DoQ server
 
 [resolvers.doq-resolver]
-address = "dns.adguard-dns.com:853"
+#address = "dns.adguard-dns.com:853"
+address = "2f07i9strpu.dns.controld.com.:853"
 protocol = "doq"
 enable-0rtt = false
 
 [listeners.local-doh2]
 address = "127.0.0.2:443"
 protocol = "doh"
-resolver = "doh-resolver"
+resolver = "doq-resolver"
 server-crt = "example-config/server.crt"
 server-key = "example-config/server.key"

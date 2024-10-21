@@ -1,7 +1,8 @@
 # Template config using a public DoQ server
 
 [resolvers.dou-resolver]
-address = "94.140.14.14:53"
+address = "2f07i9strpu.dns.controld.com.:53"
+#address = "94.140.14.14:53"
 protocol = "udp"
 
 [listeners.local-doh2]

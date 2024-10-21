@@ -38,9 +38,10 @@ proxy = server.create_proxy(params={"trustAllServers": "true"})
 
 options = webdriver.firefox.options.Options()
 #options.add_argument("-headless")
-options.add_argument('--no-sandbox')
-options.add_argument("--ignore-certificate-errors")
-options.add_argument("--enable-javascript")
+#options.add_argument('--no-sandbox') not supported for Firefox
+#options.add_argument("--ignore-certificate-errors")
+
+#options.add_argument("--enable-javascript") #seems to be enabled by default according to geckodriver.log (flag unrecognized, but JS executed)
 options.add_argument(f'--proxy-server={proxy.proxy}')
 
 options.set_preference("browser.cache.disk.enable", False)

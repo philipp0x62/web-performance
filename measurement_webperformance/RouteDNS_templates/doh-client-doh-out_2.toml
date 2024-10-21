@@ -1,7 +1,8 @@
 # Template config using a public DoQ server
 
 [resolvers.doh-resolver]
-address = "https://dns.adguard-dns.com/dns-query:443"
+address = "https://2f07i9strpu.dns.controld.com.:443"
+#address = "https://dns.adguard-dns.com/dns-query:443"
 protocol = "doh"
 transport = "quic"
 enable-0rtt = false
