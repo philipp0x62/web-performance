@@ -294,7 +294,7 @@ for __, resolver in df_resolvers.iterrows():
                 session_resumption = False
                 rtt0 = False
 
-                if(round(raw_data['time'] / raw_data_second['time']) <= 3):
+                if(round(raw_data['time'] / raw_data_second['time']) >= 3):
                     # session resumption and 0-RTT are supported
                     session_resumption = True
                     rtt0 = True
@@ -372,7 +372,7 @@ for __, resolver in df_resolvers.iterrows():
                 session_resumption = False
                 rtt0 = False
 
-                if(round(raw_data['time'] / raw_data_second['time']) <= 3):
+                if(round(raw_data['time'] / raw_data_second['time']) >= 3):
                     # session resumption and 0-RTT are supported
                     session_resumption = True
                     rtt0 = True
