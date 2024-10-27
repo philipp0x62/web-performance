@@ -110,8 +110,8 @@ def create_websites_table():
                 number_queried_servers INT,
                 number_non_origin_servers INT,
                 number_mime_types INT,
-                bytes_downladed INT 
-                har_file bool DEFAULT FALSE;
+                bytes_downladed INT, 
+                har_file bool DEFAULT FALSE
             );
             """)
 

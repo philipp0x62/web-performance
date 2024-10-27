@@ -92,8 +92,8 @@ script = """
 
 options = webdriver.firefox.options.Options()
 options.add_argument("-headless")
-options.add_argument('--no-sandbox')
-options.add_argument("--ignore-certificate-errors")
+#options.add_argument('--no-sandbox')
+#options.add_argument("--ignore-certificate-errors")
 options.add_argument("--enable-javascript")
 options.set_preference('network.trr.mode', 3) # use only the provided resolver, see https://wiki.mozilla.org/Trusted_Recursive_Resolver
 #options.set_preference('network.trr.uri', 'https://127.0.0.1')

@@ -24,9 +24,9 @@ print("Start Point: ", starting_point)
 server = Server("/Users/zitrusdrop/master_thesis/browsermob-proxy-2.1.4/bin/browsermob-proxy")
 # server = Server("../browsermob-proxy-2.1.4/bin/browsermob-proxy")
 server.start()
-proxy = server.create_proxy()
+#proxy = server.create_proxy()
 proxy = server.create_proxy(params={"trustAllServers": "true"})
-
+selenium_proxy = proxy.selenium_proxy()
 
 # Example for Firefox :
 #options = webdriver.firefox.options.Options()
@@ -37,12 +37,18 @@ proxy = server.create_proxy(params={"trustAllServers": "true"})
 #options.add_argument("--proxy-server={}".format(proxy.proxy))
 
 options = webdriver.firefox.options.Options()
-#options.add_argument("-headless")
+#options = webdriver.chrome.options.Options()
+
+options.add_argument("-headless")
+options.accept_insecure_certs = True
 #options.add_argument('--no-sandbox') not supported for Firefox
 #options.add_argument("--ignore-certificate-errors")
 
 #options.add_argument("--enable-javascript") #seems to be enabled by default according to geckodriver.log (flag unrecognized, but JS executed)
-options.add_argument(f'--proxy-server={proxy.proxy}')
+#options.add_argument(f'--proxy-server={proxy.proxy}')
+
+#options.set_capability("proxy", selenium_proxy)
+options.proxy = selenium_proxy
 
 options.set_preference("browser.cache.disk.enable", False)
 options.set_preference("browser.cache.memory.enable", False)
@@ -50,6 +56,7 @@ options.set_preference("browser.cache.offline.enable", False)
 options.set_preference("network.http.use-cache", False) 
 
 #options.timeouts = {"pageLoad": 5000, "script": 5000} # default 300k and 30k 
+#driver = webdriver.Chrome(options=options)
 driver = webdriver.Firefox(options=options)
 
 #domain = "stackoverflow.com"
@@ -67,7 +74,8 @@ print("starting measurement " + str(time.time()) + "\n==========================
 # get url 
 # check that there is data in the database 
 #cursor.execute("SELECT _id, dns FROM websites LIMIT 100")
-cursor.execute("SELECT _id, dns FROM websites WHERE _id har_file=TRUE BETWEEN %s AND %s", (starting_point, starting_point+interval-1))
+#cursor.execute("SELECT _id, dns FROM websites WHERE har_file=TRUE AND _id BETWEEN %s AND %s", (starting_point, starting_point+interval-1))
+cursor.execute("SELECT _id, dns FROM websites WHERE _id BETWEEN %s AND %s", (starting_point, starting_point+interval-1))
 index = 0
 for row in cursor:
     index+=1
@@ -75,9 +83,9 @@ for row in cursor:
     domain = row[1]
     website = "https://www." + domain
     try:
-        proxy.new_har(website, options={'capturecaptureContent': True})
+        proxy.new_har(website)#, options={'captureContent': True})
         driver.get(website)
-        #time.sleep(20)
+        #time.sleep(10)
         #with open("/Users/zitrusdrop/Desktop/Master/Semester_4/Masterarbeit_HPI/Experiments/forked/web-performance/har_files/"+domain, 'w') as f:
         with open("har_files/"+domain, 'w') as f:
             result = json.dump(proxy.har, f)
@@ -95,7 +103,9 @@ for row in cursor:
     if index%10 == 0:
         # close driver to trigger reclaim garbage memmory in firefox processes
         driver.quit()
+        #driver = webdriver.Chrome(options=options)
         driver = webdriver.Firefox(options=options)
+        
         index = 0
 
 

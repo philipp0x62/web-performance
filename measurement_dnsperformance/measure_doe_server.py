@@ -49,7 +49,7 @@ doq_query = "go run . A @quic://?server? google.com --stats --format=json" # DoQ
 doh_query = "go run . A @https://?server? --stats --http3 --format=json" # DoH3 standard port 443
 
 doq_query_intermediate_rtt0 = "go run . A @127.0.0.1 google.com --stats --format=json" # DoQ standard port: 853 with 0-RTT support
-doh_query_intermediate_rtt0 = "go run . A @127.0.0.2 google.com--stats --format=json" # DoH3 standard port 443 with 0-RTT support
+#doh_query_intermediate_rtt0 = "go run . A @127.0.0.2 google.com--stats --format=json" # DoH3 standard port 443 with 0-RTT support
 doq_query_intermediate = "go run . A @127.0.0.3 google.com --stats --format=json" # DoQ standard port: 853
 doh_query_intermediate = "go run . A @127.0.0.4 google.com --stats --format=json" # DoH3 standard port 443
 
