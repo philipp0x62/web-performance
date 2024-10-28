@@ -49,7 +49,7 @@ doq_query = "go run . A @quic://?server? google.com --stats --format=json" # DoQ
 doh_query = "go run . A @https://?server? --stats --http3 --format=json" # DoH3 standard port 443
 
 doq_query_intermediate_rtt0 = "go run . A @127.0.0.1 google.com --stats --format=json" # DoQ standard port: 853 with 0-RTT support
-#doh_query_intermediate_rtt0 = "go run . A @127.0.0.2 google.com--stats --format=json" # DoH3 standard port 443 with 0-RTT support
+doh_query_intermediate_rtt0 = "go run . A @127.0.0.2 google.com--stats --format=json" # DoH3 standard port 443 with 0-RTT support
 doq_query_intermediate = "go run . A @127.0.0.3 google.com --stats --format=json" # DoQ standard port: 853
 doh_query_intermediate = "go run . A @127.0.0.4 google.com --stats --format=json" # DoH3 standard port 443
 
@@ -306,10 +306,10 @@ for __, resolver in df_resolvers.iterrows():
                     session_resumption = True
                     cursor.execute(update_resolver_session_resumption, (doq_id,))
                     db.commit()
-                else:
-                    # else session resumption and 0-RTT are not supported, initial values are correct
-                    cursor.execute(insert_resolver_measurement, (doq_id, 'quic', avg_rtt, raw_data['time'], round_trips , False, doq_result.stdout, session_resumption, rtt0))
-                    db.commit()
+                
+                # else session resumption and 0-RTT are not supported, initial values are correct
+                cursor.execute(insert_resolver_measurement, (doq_id, 'quic', avg_rtt, raw_data['time'], round_trips , False, doq_result.stdout, session_resumption, rtt0))
+                db.commit()
 
    # DoH  
     if support_doh:
@@ -384,10 +384,10 @@ for __, resolver in df_resolvers.iterrows():
                     session_resumption = True
                     cursor.execute(update_resolver_session_resumption, (doh_id,))
                     db.commit()
-                else:
-                    # else session resumption and 0-RTT are not supported, initial values are correct
-                    cursor.execute(insert_resolver_measurement, (doh_id, 'h3', avg_rtt, raw_data['time'], round_trips , False, doh_result.stdout, session_resumption, rtt0))
-                    db.commit()
+                
+                # else session resumption and 0-RTT are not supported, initial values are correct
+                cursor.execute(insert_resolver_measurement, (doh_id, 'h3', avg_rtt, raw_data['time'], round_trips , False, doh_result.stdout, session_resumption, rtt0))
+                db.commit()
 
 
     # stop RouteDNS instances
