@@ -100,9 +100,9 @@ options.set_preference('network.trr.mode', 3) # use only the provided resolver, 
 options.set_preference('network.trr.uri', 'https://'+dnsproxy_address)
 
 options.set_preference("browser.cache.disk.enable", False)
-#options.set_preference("browser.cache.memory.enable", False)
+options.set_preference("browser.cache.memory.enable", False)
 options.set_preference("browser.cache.offline.enable", False)
-#options.set_preference("network.http.use-cache", False) 
+options.set_preference("network.http.use-cache", False) 
 
 # if not working set manually exception for the used certificate in firefox 
 
@@ -127,7 +127,9 @@ def perform_page_load(page, cache_warming=0):
         print("exception")
         insert_performance(page, {k: 0 for k in measurement_elements}, timestamp, cache_warming=cache_warming, error=str(e))
         pl_status = -1
-
+    except Exception as e:
+        print("non selenium exception")
+        pl_status = -1
     #driver.delete_all_cookies()
     driver.quit()
 
@@ -142,11 +144,16 @@ def insert_performance(page, performance, timestamp, cache_warming=0, error=''):
     performance['cacheWarming'] = cache_warming
     performance['error'] = error
 
-    # insert into database
-    insert_cursor.execute(f"""
+    print(performance)
+    print(f"""
     INSERT INTO measurements ({','.join([e for e in measurement_elements])}) VALUES ({(len(measurement_elements) - 1) * '%s,'}%s);
     """, tuple([performance[m_e] for m_e in measurement_elements]))
-    db.commit()
+
+    # insert into database
+    #insert_cursor.execute(f"""
+    #INSERT INTO measurements ({','.join([e for e in measurement_elements])}) VALUES ({(len(measurement_elements) - 1) * '%s,'}%s);
+    #""", tuple([performance[m_e] for m_e in measurement_elements]))
+    #db.commit()
 
 print("starting measurement " + str(time.time()) + "\n==========================")
 index=0
